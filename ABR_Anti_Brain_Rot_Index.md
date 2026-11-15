@@ -39,6 +39,7 @@
 | 14 | *The Sleepy Little Cloud's Journey (5-Min Anti-Brain Rot for Kids)* | Pillar 1 (Story) | `05:00` (`300s`) | Zero-Music Foley | **Public Live** | [`uJ0fApUkGmI`](https://www.youtube.com/watch?v=uJ0fApUkGmI) | [`1JeHoFPCg57z9U9rBHnsZVjXrdZxYkHJA`](https://drive.google.com/drive/folders/1JeHoFPCg57z9U9rBHnsZVjXrdZxYkHJA) |
 | 15 | *The Gentle Journey of a Tiny Seed (5-Min Anti-Brain Rot for Kids)* | Pillar 1 (Story) | `05:00` (`300s`) | Zero-Music Foley | **Public Live** | [`nn9BToeGuRs`](https://www.youtube.com/watch?v=nn9BToeGuRs) | [`19M1Vcz3g-eZEGG4m5LqkMFBFaVqh4WMx`](https://drive.google.com/drive/folders/19M1Vcz3g-eZEGG4m5LqkMFBFaVqh4WMx) |
 | 16 | *The House of Wisdom & Baghdad's Paper Mills: Inside 9th-Century Quiet Study Halls \| Calm History* | Pillar 2B (History) | `08:00` (`480s`) | **`+31.4 dB`** (`0%` Music) | **Scheduled** (`2026-11-20T15:00:00Z`) | [`brHB17d8UIA`](https://www.youtube.com/watch?v=brHB17d8UIA) | [`1ewDXOyrhZM7kkCRP6ncEQwsXiLy9KQGd`](https://drive.google.com/drive/folders/1ewDXOyrhZM7kkCRP6ncEQwsXiLy9KQGd) |
+| 17 | *The Little River Otter's Cozy Cedar Cove \| 10-Min Calm Bedtime Story for Kids (No Music)* | Pillar 1 (Story) | `10:00` (`600s`) | **`+38.9 dB`** (`0%` Music) | **Scheduled** (`2026-11-23T16:30:00Z`) | [`VeXumi5HL_Q`](https://www.youtube.com/watch?v=VeXumi5HL_Q) | [`1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz`](https://drive.google.com/drive/folders/1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz) |
 
 ---
 
@@ -60,6 +61,7 @@
 | 10 | *The 132 A.D. Bronze Vessel That Detected Earthquakes 300 Miles Away (Zhang Heng)* | `41s` | **Scheduled** (`2026-11-21T15:00:00Z`) | [`_K7KMPsoJwU`](https://www.youtube.com/watch?v=_K7KMPsoJwU) | [`1_SuiMxxdvtm1wriEo3EjJWVAy_xJaYR1`](https://drive.google.com/drive/folders/1_SuiMxxdvtm1wriEo3EjJWVAy_xJaYR1) |
 | 11 | *The 1,600-Year-Old Roman Glass Cup That Shifts From Jade Green to Ruby Red (Lycurgus Cup)* | `42s` | **Scheduled** (`2026-11-22T15:00:00Z`) | [`mw-qCQpwH50`](https://www.youtube.com/watch?v=mw-qCQpwH50) | [`1l3FlE-diV-E99XzjCEji8QqpKpPsiUDz`](https://drive.google.com/drive/folders/1l3FlE-diV-E99XzjCEji8QqpKpPsiUDz) |
 | 12 | *What 4 Weeks of Slow Storytelling Did to Preschoolers' Patience #shorts* | `45s` | **Scheduled** (`2026-12-02T15:00:00Z`) | [`CpObupd_-Z8`](https://www.youtube.com/watch?v=CpObupd_-Z8) | [`1swZ9feS-n6NHKJJo1k-ltTISx1ttEqQl`](https://drive.google.com/drive/folders/1swZ9feS-n6NHKJJo1k-ltTISx1ttEqQl) |
+| 13 | *Where the Little River Otter Tucks Smooth Pebbles Before Sleep #shorts* | `42s` | **Scheduled** (`2026-12-03T15:00:00Z`) | [`GRb4t3not6Q`](https://www.youtube.com/watch?v=GRb4t3not6Q) | [`1veWExhRx_8A4JaLrLZpeCFCGLA6tnzAK`](https://drive.google.com/drive/folders/1veWExhRx_8A4JaLrLZpeCFCGLA6tnzAK) |
 
 ### 3.2 Published 20-Short History & Deep-Time Catalog Batch (`master_publish_queue.json`)
 

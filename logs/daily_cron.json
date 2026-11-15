@@ -1,0 +1,162 @@
+{
+  "status": "success",
+  "skill": "abr-daily-producer",
+  "mode": "auto",
+  "executed_at_utc": "2026-11-15T07:09:11Z",
+  "workspace": "/home/antigravity/ABR_Anti_Brain_Rot",
+  "studio_root": "/shared/user/.gemini/raw_video_studio",
+  "phase_1_audit": {
+    "all_7_apis_healthy": true,
+    "services_health": {
+      "youtube": true,
+      "elevenlabs": true,
+      "higgsfield": true,
+      "gemini": true,
+      "windsor_instagram": true,
+      "google_drive": true,
+      "github": true
+    },
+    "elevenlabs_quota_safeguard": {
+      "triggered_under_8000_floor": true,
+      "characters_remaining_before": 6633,
+      "planned_total_characters": 4217,
+      "credit_top_up_notice": true,
+      "gemini_tts_available": false,
+      "gemini_tts_error": "Gemini request failed across all 2 configured API key(s): HTTP 402 on POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent: {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment",
+      "failover_decision": "Single-timbre ElevenLabs Sarah (EXAVITQu4vr4xnSDxMaL) verified sufficient (4217 <= 6633 chars remaining; 0 mid-episode timbre switch).",
+      "characters_remaining_after": 4943,
+      "characters_consumed_live": 1690
+    },
+    "schedule_gap_resolution": {
+      "scanned_index_file": "/home/antigravity/ABR_Anti_Brain_Rot/ABR_Anti_Brain_Rot_Index.md",
+      "drive_root_folder_id": "1mlAlS_xpEn11gUGyKi_zuQiDZ0Co9Ay9",
+      "next_unscheduled_long_form_slot_utc": "2026-11-23T16:30:00Z",
+      "long_form_weekday_pillar": "Monday -> Pillar 1: Calm Kids Bedtime Story (10:00, 30 scenes x 20s, 16:30 UTC)",
+      "next_unscheduled_short_slot_utc": "2026-12-03T15:00:00Z",
+      "short_pillar_rotation": "Pillar 1: Calm Story Teaser (41.5s, 5 scenes + branded endcard, 15:00 UTC)",
+      "catalog_topic_overlap_pct": 0.0
+    }
+  },
+  "phase_2_productions": {
+    "long_form_16x9": {
+      "index_row": 17,
+      "slug": "Little_River_Otters_Cedar_Cove_10Min_Pillar1",
+      "title": "The Little River Otter's Cozy Cedar Cove | 10-Min Calm Bedtime Story for Kids (No Music)",
+      "pillar": "Pillar 1 (Kids Bedtime Story)",
+      "playlist_id": "PLEyZbMU0SV08",
+      "youtube_video_id": "VeXumi5HL_Q",
+      "youtube_watch_url": "https://www.youtube.com/watch?v=VeXumi5HL_Q",
+      "privacy_status": "private",
+      "publish_at_utc": "2026-11-23T16:30:00Z",
+      "thumbnail_set": true,
+      "google_drive_folder_id": "1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz",
+      "google_drive_folder_url": "https://drive.google.com/drive/folders/1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz",
+      "google_drive_files": {
+        "custom_thumb_1280x720.jpg": "1OqXgbLFUpfnDZSjPnsKTeHTHDGkD-72M",
+        "Foley_Stem_48kHz.wav": "1ljtRzVefR53EXSumbNoeNNgWXgHA6Ioe",
+        "Little_River_Otters_Cedar_Cove_10Min_Pillar1.mp4": "1Y0p9ZWn5xCp_lMOZT2cOoNsD6to0Qx_n",
+        "qc_and_publish_metadata.json": "1vC4QoHuGjlviXYotrOouoA-0KrQakxvf",
+        "Voice_Stem_48kHz.wav": "1GKWKiJem98T5eGNeBYEpfsnq0vlFdahm"
+      },
+      "qc_gate": {
+        "all_passed": true,
+        "duration_sec": 600.0,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.4,
+        "voice_lufs_minus_foley_mean_db": 38.9,
+        "voice_mean_minus_foley_mean_db": 32.0,
+        "foley_mean_volume_db": -52.9,
+        "zero_music_verified": true,
+        "video_stream": {
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "field_order": "progressive",
+          "color_space": "bt709",
+          "color_primaries": "bt709",
+          "color_transfer": "bt709",
+          "r_frame_rate": "24/1",
+          "bit_rate_bps": 1837451
+        },
+        "audio_stream": {
+          "codec_name": "aac",
+          "profile": "LC",
+          "sample_rate": "48000",
+          "channels": 2,
+          "bit_rate_bps": 341212,
+          "bit_rate_kbps": 341.2
+        },
+        "faststart_verified": true
+      }
+    },
+    "short_9x16": {
+      "index_row": 13,
+      "slug": "Little_River_Otter_Floating_Pebble_Teaser_Short",
+      "title": "Where the Little River Otter Tucks Smooth Pebbles Before Sleep #shorts",
+      "pillar": "Pillar 1 (Calm Story Teaser Short)",
+      "playlist_id": "PLEyZbMU0SV08",
+      "youtube_video_id": "GRb4t3not6Q",
+      "youtube_watch_url": "https://www.youtube.com/watch?v=GRb4t3not6Q",
+      "privacy_status": "private",
+      "publish_at_utc": "2026-12-03T15:00:00Z",
+      "funnel_target_video_id": "VeXumi5HL_Q",
+      "google_drive_folder_id": "1veWExhRx_8A4JaLrLZpeCFCGLA6tnzAK",
+      "google_drive_folder_url": "https://drive.google.com/drive/folders/1veWExhRx_8A4JaLrLZpeCFCGLA6tnzAK",
+      "google_drive_files": {
+        "custom_thumb_1280x720.jpg": "1uT5sEZ0CIELRuCFKK1wRchnSVaGLZjyT",
+        "Foley_Stem_48kHz.wav": "1df6wjFlcPxxes52uczx3DTgCkZB3LF8t",
+        "Little_River_Otter_Floating_Pebble_Teaser_Short.mp4": "1ioutf8ZmUKb4nJjhdf1bie7SW6vkHO8l",
+        "qc_and_publish_metadata.json": "1iQBamXTAZlq2ZPi78Agy2lSQlUwQSOfm",
+        "Voice_Stem_48kHz.wav": "1QmRV6dzlHgP3YPUYYshpEh6tcQc33nDi"
+      },
+      "qc_gate": {
+        "all_passed": true,
+        "duration_sec": 41.5,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.4,
+        "voice_lufs_minus_foley_mean_db": 35.4,
+        "voice_mean_minus_foley_mean_db": 32.0,
+        "foley_mean_volume_db": -49.5,
+        "zero_music_verified": true,
+        "video_stream": {
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1080,
+          "height": 1920,
+          "pix_fmt": "yuv420p",
+          "field_order": "progressive",
+          "color_space": "bt709",
+          "color_primaries": "bt709",
+          "color_transfer": "bt709",
+          "r_frame_rate": "30/1",
+          "bit_rate_bps": 1896527
+        },
+        "audio_stream": {
+          "codec_name": "aac",
+          "profile": "LC",
+          "sample_rate": "48000",
+          "channels": 2,
+          "bit_rate_bps": 373401,
+          "bit_rate_kbps": 373.4
+        },
+        "faststart_verified": true
+      }
+    }
+  },
+  "sweeper_registration": {
+    "script": "/shared/user/.gemini/raw_video_studio/autonomous_scheduled_sweeper.py",
+    "registered_metadata_files": [
+      "/shared/user/.gemini/raw_video_studio/Little_River_Otters_Cedar_Cove_10Min_Pillar1/youtube_publish_metadata.json",
+      "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/Little_River_Otter_Floating_Pebble_Teaser_Short/youtube_publish_metadata.json"
+    ],
+    "sweeper_run_output": "[Sweeper Summary] Publicly optimized: 0 | Natively scheduled in queue: 44 | Awaiting quota reset: 0"
+  },
+  "index_and_github_sync": {
+    "index_markdown_path": "/home/antigravity/ABR_Anti_Brain_Rot/ABR_Anti_Brain_Rot_Index.md",
+    "drive_index_file_id": "1h1ooQbmzyjdGZZh1JfbgMb5ySNj0KZUT",
+    "repository": "awkandari-source/ABR_Anti_Brain_Rot",
+    "branch": "main"
+  }
+}
