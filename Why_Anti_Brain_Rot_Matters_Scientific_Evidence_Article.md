@@ -38,7 +38,7 @@ Using Diffusion Tensor Imaging (DTI) brain MRI on 47 healthy preschoolers aged 3
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Many modern children's videos bury spoken narration beneath loud, fast-tempo background music and constant cartoon sound effects.
 • Research by Brianna McMillan and Jenny Saffran at the University of Wisconsin–Madison shows that young children have immature "auditory stream segregation." When background audio competes with speech, preschoolers struggle to isolate phonemes and learn new words.
-• Evidence-Based Solution: In anti-brain rot audio production, spoken narration is paced at 105–120 words per minute and mixed 18 to 20 decibels louder than the gentle acoustic background score.
+• Evidence-Based Solution: In ABR anti-brain rot audio production, background music is eliminated completely (0% melodies, synth pads, or chimes), and spoken narration is paced at 100–115 words per minute (-14.0 LUFS) mixed at least 30 decibels louder than whisper-soft real-world nature foley (<= -43.0 dB).
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 6. THE "MISTER ROGERS" BENCHMARK & ATTENTION RESTORATION (Friedrich & Stein, 1973; Kaplan, 1995)
