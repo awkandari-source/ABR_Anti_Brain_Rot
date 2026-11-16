@@ -279,9 +279,28 @@
 
 | Script File | Role in Autonomous Pipeline |
 | :--- | :--- |
-| [qc_gate.py](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/.agents/skills/abr-daily-producer/scripts/qc_gate.py) | Hard-fail broadcast QC & multi-offset autocorrelation zero-music spectral verifier (`-14.0 LUFS`, `>= +30.0 dB` separation, `0` music peaks). |
-| [linked_api_hub.py](file:///shared/user/.gemini/raw_video_studio/linked_api_hub.py) | Unified 7-API SDK with Pacific-Time `QuotaLedger` (`9,200` soft cap / `800` sweeper reserve) and live Gemini/YouTube Analytics readiness probes. |
+| [qc_gate.py](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/.agents/skills/abr-daily-producer/scripts/qc_gate.py) | Hard-fail broadcast QC, Gate `CHK-07` dead-air/duty-cycle verifier, & multi-offset autocorrelation zero-music spectral verifier (`-14.0 LUFS`, `>= +30.0 dB` separation, `0` music peaks). |
+| [verify_asset_gate.py](file:///shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/05_Verification_Scripts/verify_asset_gate.py) | Official `ABR-AG-SOP-v2.1` SOP-03 verification engine (`CHK-01` through `CHK-07`, enforcing dead-air & vocal duty-cycle quarantine). |
+| [mini_series_engine.py](file:///shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/05_Verification_Scripts/mini_series_engine.py) | Continuous master narration stem synthesis, pre-TTS script sanitizer, `-45dB` FFmpeg `silenceremove` clamping, and decoupled `1.0s` `xfade` assembly. |
+| [linked_api_hub.py](file:///shared/user/.gemini/raw_video_studio/linked_api_hub.py) | Unified 7-API SDK with Pacific-Time `QuotaLedger` (`9,200` soft cap / `800` sweeper reserve), `sanitize_tts_script()`, and `clamp_narration_silence()`. |
 | [autonomous_scheduled_sweeper.py](file:///shared/user/.gemini/raw_video_studio/autonomous_scheduled_sweeper.py) | Post-publish maintenance daemon: detects newly public scheduled videos, assigns playlists, posts bespoke comments, and runs Wave 3 queue passes. |
 | [wave3_post_reset_remediator.py](file:///shared/user/.gemini/raw_video_studio/wave3_post_reset_remediator.py) | Quota-governed post-reset executor draining `wave3_remediation_queue.json` (29 playlists, 34 storefront description funnels, 2 comments, 6 status flags). |
 | [generate_printable_pdfs.py](file:///shared/user/.gemini/raw_video_studio/generate_printable_pdfs.py) | Headless Chromium print-typesetting pipeline generating US Letter PDFs for the 14-Day Playbook, 30-Day Parent Kit, and 2026 Media Kit. |
 | [rebuild_master_index.py](file:///shared/user/.gemini/raw_video_studio/rebuild_master_index.py) | Deterministic 178-video index reconciler syncing `ABR_Anti_Brain_Rot_Index.md`, `INDEX_Tracker.json`, and `ABR_Anti_Brain_Rot_Videos_Index.csv`. |
+
+---
+
+## 7. `ABR-AG-SOP-v2.1` Continuous Narration & Gate `CHK-07` Remediated Assets (`QA_VERIFIED`)
+
+> [!IMPORTANT]
+> **Binding Governance Authority:** [ABR_AntiGravity_Master_Directive.md](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/ABR_AntiGravity_Master_Directive.md) (`ABR-AG-SOP-v2.1`, Google Drive Baseline Doc `1uwi8BgT_ub_tftZjZRV89xtbdBWaCDQCRoZ7kNLgnXA` / Markdown Mirror `12lZDDfWhLQUy2FN8arMIddUi8IBG2t20`). Enforces zero per-scene `apad` padding, continuous Stem 1 narration + post-TTS `silenceremove` clamping (`1.1s` Long-form / `0.75s` Shorts at `-45dB`), decoupled `1.0s` `xfade` visual holds, `0%` music, `-14.0 LUFS` centered-mono voice, `>= +30.0 dB` voice-over-foley separation, and Gate `CHK-07` (`max_narration_silence_sec <= 1.5s` & `vocal_duty_cycle_pct >= 88%` Long-form; `<= 0.9s` & `>= 90%` Shorts).
+
+| Asset ID | Title | Format & Duration | Words | Voice Sep (`0%` Music) | Max Silence (`CHK-07`) | Vocal Duty (`CHK-07`) | Status & Drive Archive Folder |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `ABR_SH_Washi_45s` | *Why Slow Craft Heals Tired Attention (45 Seconds of Japanese Washi)* | `9:16` Short (`45.0s`) | `101` | **`+32.9 dB`** | **`0.347s`** (`<= 0.9s`) | **`90.95%`** (`>= 90%`) | **QA_VERIFIED (Drive-Only)** — [`1lsikXtbn4xi4KRboW86VpQefEwMqsfs5`](https://drive.google.com/drive/folders/1lsikXtbn4xi4KRboW86VpQefEwMqsfs5) |
+| `MS08_E01` | *The 100-Year Tar Hourglass: Inside the Pitch Drop Experiment* | `16:9` Ep. 1 (`900.0s`) | `1,768` | **`+33.0 dB`** | **`0.562s`** (`<= 1.5s`) | **`89.15%`** (`>= 88%`) | **QA_VERIFIED (Staged)** — [`1Vafcb_Qa-eGCDziqBcmBkz4cCizFoc6m`](https://drive.google.com/drive/folders/1Vafcb_Qa-eGCDziqBcmBkz4cCizFoc6m) |
+| `MS08_E02` | *Giant Selenite Beams of Naica: The 500,000-Year Crystal Clock* | `16:9` Ep. 2 (`900.0s`) | `1,791` | **`+33.2 dB`** | **`0.459s`** (`<= 1.5s`) | **`93.21%`** (`>= 88%`) | **QA_VERIFIED (Staged)** — [`1Vafcb_Qa-eGCDziqBcmBkz4cCizFoc6m`](https://drive.google.com/drive/folders/1Vafcb_Qa-eGCDziqBcmBkz4cCizFoc6m) |
+| `MS03_S03_E01` | *Cognitive Offloading & Working Memory Atrophy (Season 3 Ch. 1)* | `16:9` Ch. 1 (`900.0s`) | `1,740` | **`+32.7 dB`** | **`0.461s`** (`<= 1.5s`) | **`92.09%`** (`>= 88%`) | **QA_VERIFIED (Staged)** — [`1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6`](https://drive.google.com/drive/folders/1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6) |
+| `MS03_S03_E02` | *Acoustic Ecology, Classroom Noise & The Developing Hippocampus (Ch. 2)* | `16:9` Ch. 2 (`900.0s`) | `1,720` | **`+33.1 dB`** | **`0.454s`** (`<= 1.5s`) | **`92.19%`** (`>= 88%`) | **QA_VERIFIED (Staged)** — [`1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6`](https://drive.google.com/drive/folders/1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6) |
+| `MS03_S03_E03` | *Intrinsic Curiosity vs. Gamified Streaks & Badges (Season 3 Ch. 3)* | `16:9` Ch. 3 (`900.0s`) | `1,700` | **`+32.8 dB`** | **`0.461s`** (`<= 1.5s`) | **`92.07%`** (`>= 88%`) | **QA_VERIFIED (Staged)** — [`1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6`](https://drive.google.com/drive/folders/1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6) |
+| `MS03_S03_E04` | *Handwritten Note-Taking, Drawing & Generative Encoding (Season 3 Ch. 4)* | `16:9` Ch. 4 (`900.0s`) | `1,697` | **`+32.8 dB`** | **`0.455s`** (`<= 1.5s`) | **`91.77%`** (`>= 88%`) | **QA_VERIFIED (Staged)** — [`1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6`](https://drive.google.com/drive/folders/1_7Ro0KVFCeVN7G6s9IST0j3r4b5xN4l6) |

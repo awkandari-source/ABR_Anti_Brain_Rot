@@ -50,15 +50,16 @@ Never synthesize paid media or upload files until **Phase 1 (Read-Only Pre-Fligh
    - Non-looped acoustic progression (`0.1 Hz` natural surf/wind entrainment or exponential rain/drip decay).
    - Sub-2000K warm amber luminance (`B <= R + 1.5`, mean luma `<= 55`) with `< 1%` true-black floor.
    - Mandatory **`50 dBA at 2-meter speaker distance`** pediatric hearing safety protocol in YouTube description.
-3. **Two-Layer Zero-Music Audio Law (NON-NEGOTIABLE):**
-   - **Layer 1 (Voice):** Centered-mono human-cadence narration (`100–115 WPM`, `1.5–3.0s` pauses) mastered to **`-14.0 LUFS`** (`+/- 0.5 LUFS`).
-   - **Layer 2 (Foley):** Pure organic environmental foley via ElevenLabs `/v1/sound-generation`, low-passed (`highpass=70Hz, lowpass=920Hz, acompressor`) and 5:1 sidechain-ducked to **`<= -43.0 dB`** (never run single-pass `loudnorm` on foley).
-   - **Strict Prohibition:** `0%` musical instruments, melodies, ambient synth pads, drones, chimes, bells, or rhythmic beats.
+3. **Two-Layer Zero-Music & Continuous Narration Audio Law (`ABR-AG-SOP-v2.1` — NON-NEGOTIABLE):**
+   - **Layer 1 (Continuous Master Voice Track):** Synthesize Stem 1 as a continuous master voice stream across the full timeline (NEVER pad individual TTS clips to `15–20s` or `6–10s` visual scene holds). Sanitize input text before synthesis (strip `...`, double blank lines, and `[PAUSE >= 1.5s]` tags; use single periods and `[BREATH 0.6s]` / `[BEAT 1.0s]` spacing), then enforce FFmpeg post-TTS silence clamping (`silenceremove=stop_periods=-1:stop_duration=1.1:stop_threshold=-45dB` for Long-form; `stop_duration=0.75` for Shorts). Word budgets: `1,650–1,850` words at `110–120 WPM` (`<= 1.5s` max silence, `>= 88%` vocal duty cycle) for 15-min episodes; `75–145` words at `115–125 WPM` (`<= 0.5s` entry, `<= 0.9s` max silence, `>= 90%` vocal duty cycle) for `30–75s` Shorts. Master centered-mono voice to **`-14.0 LUFS`** (`+/- 0.5 LUFS`). Lay visual scenes over Stem 1 independently with `1.0s` cross-dissolves.
+   - **Layer 2 (Foley):** Pure organic environmental foley via ElevenLabs `/v1/sound-generation` or `/03_Verified_Foley_Library/`, low-passed (`highpass=70Hz, lowpass=920Hz, acompressor`) and 5:1 sidechain-ducked to **`<= -43.0 dB`** (never run single-pass `loudnorm` on foley).
+   - **Strict Prohibition:** `0%` musical instruments, melodies, ambient synth pads, drones, chimes, bells, or rhythmic beats, and `0` narrator dead-air gaps (`> 1.5s` Long-form / `> 0.9s` Shorts).
 
 ---
 
-## 4. Automated FFmpeg & Spectral Zero-Music QC Gate (`scripts/qc_gate.py`)
-Every master MP4 MUST pass `/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/.agents/skills/abr-daily-producer/scripts/qc_gate.py` before Drive upload or YouTube scheduling:
+## 4. Automated FFmpeg, Dead-Air (`CHK-07`) & Spectral Zero-Music QC Gate (`scripts/qc_gate.py`)
+Every master MP4 MUST pass `/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/.agents/skills/abr-daily-producer/scripts/qc_gate.py` (and `verify_asset_gate.py` `CHK-01..CHK-07`) before Drive upload or YouTube scheduling:
+- **Gate CHK-07 (Dead-Air & Vocal Duty Cycle):** `ffmpeg -i <voice.wav> -af silencedetect=noise=-45dB:d=1.5 -f null -` (`d=0.9` for Shorts) -> hard-fail (`QUARANTINED_REBUILD`) if `max_narration_silence_sec > 1.5s` (Long-form) or `> 0.9s` (Shorts), `vocal_duty_cycle_pct < 88%` (Long-form) or `< 90%` (Shorts), or Shorts vocal entry `> 0.5s`.
 - **Voice-to-Foley Separation:** `min(sep_lufs, sep_active_mean, sep_raw_mean) >= +30.0 dB` AND standalone foley `<= -43.0 dB` on all narrated assets, plus muxed-master speech-pause zero-music check (`<= -38.0 dB` during pauses, `0` periodic harmonic peaks).
 - **Multi-Offset Spectral Zero-Music Audit:** Autocorrelation periodicity check across Chime (`1.33–4 kHz`), Melodic (`220–1333 Hz`), and Drone/Pad (`50–220 Hz`) bands (`0` musical hits).
 - **Integrated Loudness:** `-14.0 LUFS` (`+/- 0.5 LUFS`, i.e. `[-14.5, -13.5] LUFS`) for narrated videos; safe low-SPL continuous profile for 3-hour sleep soundscapes.
@@ -75,3 +76,4 @@ Every master MP4 MUST pass `/home/antigravity/awkandari-source/ABR_Anti_Brain_Ro
 1. Upload final MP4, custom `16:9` thumbnail (`1280x720`), WAV stems (`Voice` & `Foley`), and metadata JSON to a new episode folder under Google Drive root `1mlAlS_xpEn11gUGyKi_zuQiDZ0Co9Ay9`.
 2. Schedule both MP4s on YouTube (`privacyStatus="private"`, `publishAt="<ISO-8601 UTC>"`, `embeddable=True`, `publicStatsViewable=True`), set custom `16:9` thumbnail, include `https://awkandari-source.github.io/ABR_Anti_Brain_Rot/` in the description funnel, and write `youtube_publish_metadata.json` so `/shared/user/.gemini/raw_video_studio/autonomous_scheduled_sweeper.py` automatically assigns playlists and posts top funnel comments once public (never include `drive.google.com` links in YouTube text).
 3. Append new rows to `/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/ABR_Anti_Brain_Rot_Index.md`, sync to Google Drive & GitHub, and emit the Release & QC Verification Artifact.
+

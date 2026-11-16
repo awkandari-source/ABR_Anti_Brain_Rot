@@ -92,10 +92,73 @@ def measure_volumedetect(path: Path, ss: float = 0.0, dur: float | None = None, 
 
 
 def measure_active_speech_mean_db(voice_path: Path) -> float:
-    """Measures active speech mean volume (excluding intentional 1.5-3.0s silent pauses)."""
+    """Measures active speech mean volume (excluding natural 0.4-1.1s breath pauses)."""
     af = "silenceremove=start_periods=1:start_threshold=-42dB:stop_periods=-1:stop_duration=0.35:stop_threshold=-42dB"
     res = measure_volumedetect(voice_path, extra_af=af)
     return res["mean_volume_db"]
+
+
+def check_dead_air_and_vocal_duty_chk07(voice_wav: Path, *, is_short: bool = False) -> dict[str, Any]:
+    """
+    SOP-03 Gate CHK-07 (ABR-AG-SOP-v2.1 Continuous Narration & Dead-Air Elimination):
+    - Runs `ffmpeg -i <voice.wav> -af silencedetect=noise=-45dB:d=1.5 -f null -` (d=0.9 for Shorts)
+    - Hard-fails any asset with max_narration_silence_sec > 1.5s (Long) / > 0.9s (Shorts),
+      vocal_duty_cycle_pct < 88.0% (Long) / < 90.0% (Shorts), or Shorts vocal entry > 0.5s.
+    """
+    dur = get_media_duration(voice_wav)
+    max_limit = 0.9 if is_short else 1.5
+    min_duty = 90.0 if is_short else 88.0
+
+    p_gate = subprocess.run(
+        ["ffmpeg", "-nostats", "-vn", "-i", str(voice_wav), "-af", f"silencedetect=noise=-45dB:d={max_limit}", "-f", "null", "-"],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    g_starts = [float(x) for x in re.findall(r"silence_start:\s*([-\d.]+)", p_gate.stderr)]
+    g_ends = [float(x) for x in re.findall(r"silence_end:\s*([-\d.]+)", p_gate.stderr)]
+    exceeding = []
+    for idx, s_raw in enumerate(g_starts):
+        s = max(0.0, s_raw)
+        e = min(dur, g_ends[idx]) if idx < len(g_ends) else dur
+        if (e - s) > max_limit + 1e-6:
+            exceeding.append(round(e - s, 3))
+
+    p_fine = subprocess.run(
+        ["ffmpeg", "-nostats", "-vn", "-i", str(voice_wav), "-af", "silencedetect=noise=-45dB:d=0.15", "-f", "null", "-"],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    f_starts = [float(x) for x in re.findall(r"silence_start:\s*([-\d.]+)", p_fine.stderr)]
+    f_ends = [float(x) for x in re.findall(r"silence_end:\s*([-\d.]+)", p_fine.stderr)]
+    intervals: list[tuple[float, float, float]] = []
+    for idx, s_raw in enumerate(f_starts):
+        s = max(0.0, s_raw)
+        e = min(dur, f_ends[idx]) if idx < len(f_ends) else dur
+        if e > s:
+            intervals.append((s, e, e - s))
+
+    max_sil = round(max((iv[2] for iv in intervals), default=0.0), 3)
+    if exceeding:
+        max_sil = max(max_sil, max(exceeding))
+    tot_sil = round(sum(iv[2] for iv in intervals), 3)
+    duty_pct = round(100.0 * max(0.0, dur - tot_sil) / max(0.001, dur), 2)
+    vocal_entry_sec = round(intervals[0][1], 3) if (intervals and intervals[0][0] <= 0.05) else 0.0
+    entry_ok = (vocal_entry_sec <= 0.5) if is_short else True
+
+    passed = (len(exceeding) == 0) and (max_sil <= max_limit) and (duty_pct >= min_duty) and entry_ok
+    return {
+        "passed": passed,
+        "max_silence_ceiling_sec": max_limit,
+        "min_vocal_duty_floor_pct": min_duty,
+        "max_narration_silence_sec": max_sil,
+        "total_narration_silence_sec": tot_sil,
+        "vocal_duty_cycle_pct": duty_pct,
+        "vocal_entry_sec": vocal_entry_sec,
+        "vocal_entry_ok": entry_ok,
+        "exceeding_intervals_count": len(exceeding),
+    }
 
 
 def _analyze_pcm_window_for_music(samples: list[int] | tuple[int, ...], sr: int = 8000) -> dict[str, Any]:
@@ -473,6 +536,8 @@ def run_qc_gate(
         fol_vol = measure_volumedetect(foley_wav)
         spectral = check_zero_music_spectral_audit(foley_wav)
         master_pause_audit = check_master_pause_zero_music(mp4_path, voice_wav)
+        is_short_asset = (expected_width == 1080 and expected_height == 1920) or (max_duration_sec <= 75.5)
+        chk07_audit = check_dead_air_and_vocal_duty_chk07(voice_wav, is_short=is_short_asset)
 
         # Strict separation enforcement across ALL three voice metrics vs foley mean dB:
         sep_lufs_vs_foley_db = round(vo_ebur["integrated_lufs"] - fol_vol["mean_volume_db"], 2)
@@ -501,12 +566,14 @@ def run_qc_gate(
             "voice_active_mean_minus_foley_mean_db": sep_active_mean_vs_foley_db,
             "voice_mean_minus_foley_mean_db": sep_raw_mean_vs_foley_db,
             "effective_separation_db": effective_sep_db,
+            "dead_air_and_vocal_duty_chk07": chk07_audit,
             "zero_music_spectral": spectral,
             "master_pause_zero_music": master_pause_audit,
         }
         result["gates"]["integrated_loudness_minus14_lufs"] = lufs_ok
         result["gates"]["voice_to_foley_separation_gte_30db"] = sep_ok
         result["gates"]["zero_music_spectral_audit"] = zero_music_ok
+        result["gates"]["dead_air_and_vocal_duty_chk07"] = chk07_audit["passed"]
     else:
         # 3-Hour Sleep Soundscape safe continuous low-SPL profile + Zero-Music + Sub-2000K visual check
         lufs_ok = -32.0 <= master_ebur["integrated_lufs"] <= -18.0
