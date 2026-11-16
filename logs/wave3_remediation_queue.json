@@ -1,0 +1,821 @@
+{
+  "schema_version": "1.0",
+  "channel_id": "UCf2NyjoPIzR9j7Vt3C6Sqcw",
+  "channel_handle": "@ABR-AntiBrainRot",
+  "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+  "created_at_utc": "2026-11-16T20:34:07Z",
+  "updated_at_utc": "2026-11-16T20:34:07Z",
+  "scheduled_after_reset_utc": "2026-11-17T08:00:05Z",
+  "quota_plan": {
+    "missing_bespoke_comments_count": 2,
+    "missing_bespoke_comments_units": 102,
+    "orphaned_playlist_videos_count": 29,
+    "orphaned_playlist_insertions_count": 30,
+    "orphaned_playlist_units": 1503,
+    "description_funnel_videos_count": 34,
+    "description_funnel_units": 1701,
+    "status_flag_videos_count": 6,
+    "status_flag_units": 301,
+    "total_estimated_units": 3607,
+    "production_soft_cap": 9200,
+    "sweeper_reserved_units": 800,
+    "fits_single_daily_window": true
+  },
+  "queues": {
+    "missing_bespoke_comments": [
+      {
+        "video_id": "kWnXbaY5Dx0",
+        "title": "The Misty Celadon Kilns of Song Dynasty Jingdezhen: 11th-Century Quiet Workshops | Calm History",
+        "comment_text": "Visiting eleventh-century Song Dynasty Jingdezhen—from river-driven wooden trip-hammers pulverizing Baidunzi porcelain stone (00:00) and quiet kaolin levigation vats beside hand-turned wheels (02:00) to pine-stoked hillside dragon kilns firing translucent sky-blue qingbai glaze (05:00)—this 8-minute documentary holds each watercolor plate over gentle waterwheel and clay foley without background music or fast cuts.\n\nBetween washing raw mountain stone in settling pools for months and tending a climbing pine kiln by eye and sound alone, which stage of Song ceramic craftsmanship feels most meditative to you?",
+        "estimated_units": 51,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null,
+        "comment_id": null
+      },
+      {
+        "video_id": "NUXv1-HSSbA",
+        "title": "How Villages in India Grow Living Bridges That Last 500 Years #shorts",
+        "comment_text": "In the monsoon-drenched gorges of Meghalaya where wooden spans rot within seasons, Khasi elders guide aerial roots of Ficus elastica through hollowed betel-nut trunks across swift rivers until natural inosculation fuses them into living suspension bridges capable of holding dozens of travelers for centuries. Narrated calmly over mountain stream and leaf foley, this Short uses zero background music.\n\nTap the Related Video link above the title to continue into 'Earth's Slowest Clocks Ep. 1: The 5,000-Year-Old Bristlecone Pines.' What changes in community thinking when one generation plants and trains a bridge knowing only their grandchildren will walk across its strongest form?",
+        "estimated_units": 51,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null,
+        "comment_id": null
+      }
+    ],
+    "orphaned_playlist_assignments": [
+      {
+        "video_id": "kWnXbaY5Dx0",
+        "title": "The Misty Celadon Kilns of Song Dynasty Jingdezhen: 11th-Century Quiet Workshops | Calm History",
+        "target_playlists": [
+          "PLeHDZfHy-UxM",
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 100,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "OgBlUBl8k6k",
+        "title": "How a Sleeping Pond Frog Breathes Under Winter Ice #shorts",
+        "target_playlists": [
+          "PLUt7V0-ta200"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "krOIETicwUY",
+        "title": "The Ancient Chinese Dragon Machine That Detected Earthquakes #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "6ZPCKjLOLqc",
+        "title": "How 5,000 Elite Roman Soldiers Vanished from History #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "_qFetLd3nh4",
+        "title": "Why Ancient Damascus Steel Contained Carbon Nanotubes #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "fuVKU07v73w",
+        "title": "How an Ancient Island Built a Floating City of Basalt Megaliths #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "XgMjsI-2Yco",
+        "title": "The Day the Desert Blew Black Gold",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "Rtatw8XWWi0",
+        "title": "The 3,700-Year-Old Stamped Clay Code Nobody Can Read #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "bit0tu-ZOqw",
+        "title": "Why Ancient Peruvians Carved Giant Figures Only Visible from the Sky #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "0dDM-sRnIlo",
+        "title": "The Ghost Ship That Baffled the World: Mary Celeste",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "Aw32KZsNAiw",
+        "title": "50,000 Soldiers Vanished in a Single Sandstorm: The Lost Army #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "tHoyXhQJ03Q",
+        "title": "How 3 Giant Strikes Unlocked Half the World's Energy #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "JKJM8tmYfCg",
+        "title": "Three Men Vanished From a Locked Lighthouse",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "2OKHSXG8zw8",
+        "title": "The 18-Story Underground City Built for 20,000 People: Derinkuyu #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "2Fb9MICIfcM",
+        "title": "How a 6-Ton Room of Solid Gold and Amber Vanished in WWII #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "yTI7jFcJqk4",
+        "title": "129 Men Vanished in the Arctic Ice: The Terror & Erebus Mystery #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "S5JYLbR1qoM",
+        "title": "Did Ancient Mesopotamia Invent Electricity 2,000 Years Ago? #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "pzjMZaBVVmE",
+        "title": "The Solid-Looking Tar Drop That Falls Once Every 10 Years #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "5pzWNkLnMoU",
+        "title": "The 400,000-Year-Old Ice Bubbles That Release Ancient Wind #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "4JrgiINkrsU",
+        "title": "The Ancient Superweapon That Burned on Water: Greek Fire #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "i6VcIzULEOs",
+        "title": "The 600-Year-Old Book No Codebreaker Can Read #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "ccWu9c_wJ54",
+        "title": "Patra Secret Water Empire",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "q3ILJ18a3pc",
+        "title": "The 2,500-Year-Old Mountain Tunnel Dug From Both Sides at Once #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "-wF9a3xEFTU",
+        "title": "The 2,000-Year-Old Computer Found in a Roman Shipwreck #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "fGbLKSGycgM",
+        "title": "Why 2,000-Year-Old Roman Concrete Never Crumbles #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "zNcdSbQ7-ok",
+        "title": "The Ghost Ship Carroll A. Deering (1921): An Entire Crew Vanished #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "LYfwSllZFQU",
+        "title": "How Ancient Romans Heated Stone Floors Without Smoke #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "3QWbA1vQlw8",
+        "title": "How Ancient Persians Froze Ice in the Desert Without Power #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "RzxhkSRX6IE",
+        "title": "The 132 AD Bronze Dragon Jar That Sensed Distant Earthquakes #shorts",
+        "target_playlists": [
+          "PLfO4Y6xIR8iU"
+        ],
+        "inserted_playlists": [],
+        "estimated_units": 50,
+        "purpose": "remediation_critical",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      }
+    ],
+    "description_funnel_fixes": [
+      {
+        "video_id": "-wF9a3xEFTU",
+        "title": "The 2,000-Year-Old Computer Found in a Roman Shipwreck #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "0Ly62XF4EAo",
+        "title": "Why Scientists Are Afraid to Open China's First Emperor's Tomb #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "0dDM-sRnIlo",
+        "title": "The Ghost Ship That Baffled the World: Mary Celeste",
+        "kind": "mary_celeste_66s",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "2Fb9MICIfcM",
+        "title": "How a 6-Ton Room of Solid Gold and Amber Vanished in WWII #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "2OKHSXG8zw8",
+        "title": "The 18-Story Underground City Built for 20,000 People: Derinkuyu #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "3W-tlP8npvU",
+        "title": "The Sunken Megalithic Pyramid Beneath Japan's Ocean: Yonaguni #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "4JrgiINkrsU",
+        "title": "The Ancient Superweapon That Burned on Water: Greek Fire #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "6ZPCKjLOLqc",
+        "title": "How 5,000 Elite Roman Soldiers Vanished from History #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "9Vt7ddcbsAI",
+        "title": "130 Mysterious Roman Bronze Objects With No Known Purpose #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "AA8Eq9wbnhU",
+        "title": "The 11,500-Year-Old Temple Built Before Civilizations Existed #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "Aw32KZsNAiw",
+        "title": "50,000 Soldiers Vanished in a Single Sandstorm: The Lost Army #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "JKJM8tmYfCg",
+        "title": "Three Men Vanished From a Locked Lighthouse",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "Rtatw8XWWi0",
+        "title": "The 3,700-Year-Old Stamped Clay Code Nobody Can Read #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "S5JYLbR1qoM",
+        "title": "Did Ancient Mesopotamia Invent Electricity 2,000 Years Ago? #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "UG0Yz5v-14w",
+        "title": "The Ghost Ship Whose Crew Died With Eyes Wide Open #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "U_rtbI1yV5Q",
+        "title": "How the Inca Fit 125-Ton Stones Without Mortar: Sacsayhuamán #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "XgMjsI-2Yco",
+        "title": "The Day the Desert Blew Black Gold",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "_qFetLd3nh4",
+        "title": "Why Ancient Damascus Steel Contained Carbon Nanotubes #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "bit0tu-ZOqw",
+        "title": "Why Ancient Peruvians Carved Giant Figures Only Visible from the Sky #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "ccWu9c_wJ54",
+        "title": "Patra Secret Water Empire",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "cuEEJ6NH-tE",
+        "title": "3 Hours Non-Looped Clearing Dusk Rain | Sub-2000K Evening Wind-Down & Sleep (Pure Water, No Thunder)",
+        "kind": "sleep_3h",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "fGbLKSGycgM",
+        "title": "Why 2,000-Year-Old Roman Concrete Never Crumbles #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "fuVKU07v73w",
+        "title": "How an Ancient Island Built a Floating City of Basalt Megaliths #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "hAYkePJhNwQ",
+        "title": "What Really Happened to the Lost Library of Alexandria? #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "i6VcIzULEOs",
+        "title": "The 600-Year-Old Book No Codebreaker Can Read #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "iLX9zmr9VEU",
+        "title": "3 Hours Non-Looped Ebbing Tide Pool | Sub-2000K Evening Wind-Down & Deep Sleep (Pure Water No Music)",
+        "kind": "sleep_3h",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "krOIETicwUY",
+        "title": "The Ancient Chinese Dragon Machine That Detected Earthquakes #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "mQ8_RfvH4OM",
+        "title": "Why Ancient Mexicans Carved 20-Ton Stone Heads in the Jungle #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "nixFIZuyGZ0",
+        "title": "The 4,500-Year-Old Written Language Nobody Can Read #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "tCSuiHt-ZGs",
+        "title": "The 1,600-Year-Old Iron Pillar That Defies Modern Science #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "tHoyXhQJ03Q",
+        "title": "How 3 Giant Strikes Unlocked Half the World's Energy #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "wG8jgaS1CS0",
+        "title": "The Siberian Explosion That Flattened 80 Million Trees With No Crater #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "yTI7jFcJqk4",
+        "title": "129 Men Vanished in the Arctic Ice: The Terror & Erebus Mystery #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "zNcdSbQ7-ok",
+        "title": "The Ghost Ship Carroll A. Deering (1921): An Entire Crew Vanished #shorts",
+        "kind": "history_short",
+        "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      }
+    ],
+    "status_flag_fixes": [
+      {
+        "video_id": "7PsdJWf85Yc",
+        "title": "How 2,400-Year-Old Desert Domes Made Ice in Summer #shorts",
+        "desired_flags": {
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "selfDeclaredMadeForKids": false
+        },
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "8qT1F5PlY4Y",
+        "title": "Reading 2,000-Year-Old Charred Scrolls Without Opening Them #shorts",
+        "desired_flags": {
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "selfDeclaredMadeForKids": false
+        },
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "PPLPpmOd1_I",
+        "title": "The 2,200-Year-Old Granite Caves Polished Like Dark Glass #shorts",
+        "desired_flags": {
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "selfDeclaredMadeForKids": false
+        },
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "ZxkATZGWo4U",
+        "title": "The 3,600-Year-Old Bronze Disc That Mapped the Night Sky #shorts",
+        "desired_flags": {
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "selfDeclaredMadeForKids": false
+        },
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "mEapAMD8PLM",
+        "title": "The 2-Billion-Year-Old Nuclear Reactor Found Under Africa #shorts",
+        "desired_flags": {
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "selfDeclaredMadeForKids": false
+        },
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      },
+      {
+        "video_id": "x3m3PFg4yjA",
+        "title": "How Ancient Korean Homes Heated Entire Stone Floors With One Cooking Fire #shorts",
+        "desired_flags": {
+          "embeddable": true,
+          "publicStatsViewable": true,
+          "selfDeclaredMadeForKids": false
+        },
+        "estimated_units": 50,
+        "purpose": "production",
+        "status": "PENDING_QUOTA_RESET",
+        "completed_at_utc": null
+      }
+    ]
+  }
+}
