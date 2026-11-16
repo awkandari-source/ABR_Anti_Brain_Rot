@@ -40,6 +40,8 @@
 | 15 | *The Gentle Journey of a Tiny Seed (5-Min Anti-Brain Rot for Kids)* | Pillar 1 (Story) | `05:00` (`300s`) | Zero-Music Foley | **Public Live** | [`nn9BToeGuRs`](https://www.youtube.com/watch?v=nn9BToeGuRs) | [`19M1Vcz3g-eZEGG4m5LqkMFBFaVqh4WMx`](https://drive.google.com/drive/folders/19M1Vcz3g-eZEGG4m5LqkMFBFaVqh4WMx) |
 | 16 | *The House of Wisdom & Baghdad's Paper Mills: Inside 9th-Century Quiet Study Halls \| Calm History* | Pillar 2B (History) | `08:00` (`480s`) | **`+31.4 dB`** (`0%` Music) | **Scheduled** (`2026-11-20T15:00:00Z`) | [`brHB17d8UIA`](https://www.youtube.com/watch?v=brHB17d8UIA) | [`1ewDXOyrhZM7kkCRP6ncEQwsXiLy9KQGd`](https://drive.google.com/drive/folders/1ewDXOyrhZM7kkCRP6ncEQwsXiLy9KQGd) |
 | 17 | *The Little River Otter's Cozy Cedar Cove \| 10-Min Calm Bedtime Story for Kids (No Music)* | Pillar 1 (Story) | `10:00` (`600s`) | **`+38.9 dB`** (`0%` Music) | **Scheduled** (`2026-11-23T16:30:00Z`) | [`VeXumi5HL_Q`](https://www.youtube.com/watch?v=VeXumi5HL_Q) | [`1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz`](https://drive.google.com/drive/folders/1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz) |
+| 18 | *Gentle Mountain Creek Over River Stones (3 Hours) \| Sub-2000K Dark Screen for Sleep, No Music* | Pillar 1B (Sleep) | `03:00:00` (`10,800s`) | Pure Creek Foley (`0%` Music) | **Scheduled** (`2026-11-24T16:30:00Z`) | [`BgpIR-lvpZw`](https://www.youtube.com/watch?v=BgpIR-lvpZw) | [`17xpSM7S9gRHGLldy7dZR45lDz-pLUDqV`](https://drive.google.com/drive/folders/17xpSM7S9gRHGLldy7dZR45lDz-pLUDqV) |
+| 19 | *The Misty Celadon Kilns of Song Dynasty Jingdezhen: 11th-Century Quiet Workshops \| Calm History* | Pillar 2B (History) | `08:00` (`480s`) | **`+34.0 dB`** (`0%` Music) | **Scheduled** (`2026-11-27T15:00:00Z`) | [`kWnXbaY5Dx0`](https://www.youtube.com/watch?v=kWnXbaY5Dx0) | [`1KE1jkOpOy9gLtHo3d661IdZ5Y0SknFns`](https://drive.google.com/drive/folders/1KE1jkOpOy9gLtHo3d661IdZ5Y0SknFns) |
 
 ---
 
@@ -82,6 +84,7 @@
 | 31 | *The 100,000-Year-Old Underwater Meadow Still Growing Today #shorts* | `41s` | **Scheduled** (`2026-12-21T15:00:00Z`) | [`bcdflxV523M`](https://www.youtube.com/watch?v=bcdflxV523M) | [`1ubICABZstS9uZrvFlG6yaFyibHDkRLkh`](https://drive.google.com/drive/folders/1ubICABZstS9uZrvFlG6yaFyibHDkRLkh) |
 | 32 | *The Quiet Lake Floor With 70,000 Yearly Pages of Mud #shorts* | `41s` | **Scheduled** (`2026-12-22T15:00:00Z`) | [`a9HKtU7HqCs`](https://www.youtube.com/watch?v=a9HKtU7HqCs) | [`1ubICABZstS9uZrvFlG6yaFyibHDkRLkh`](https://drive.google.com/drive/folders/1ubICABZstS9uZrvFlG6yaFyibHDkRLkh) |
 | 33 | *How Tiny Chickadees Remember 10,000 Hidden Autumn Seeds #shorts* | `41s` | **Scheduled** (`2026-12-23T15:00:00Z`) | [`LMvpae500i4`](https://www.youtube.com/watch?v=LMvpae500i4) | [`1ubICABZstS9uZrvFlG6yaFyibHDkRLkh`](https://drive.google.com/drive/folders/1ubICABZstS9uZrvFlG6yaFyibHDkRLkh) |
+| 34 | *How Ancient Korean Homes Heated Entire Stone Floors With One Cooking Fire #shorts* | `41.5s` | **Scheduled** (`2026-12-24T15:00:00Z`) | [`x3m3PFg4yjA`](https://www.youtube.com/watch?v=x3m3PFg4yjA) | [`1T1x7EMhjh11nq9nGeKiDtcx3VePv69Ar`](https://drive.google.com/drive/folders/1T1x7EMhjh11nq9nGeKiDtcx3VePv69Ar) |
 
 ### 3.2 Published 20-Short History & Deep-Time Catalog Batch (`master_publish_queue.json`)
 
@@ -166,4 +169,5 @@
 | [produce_week2_7_daily_shorts.py](file:///shared/user/.gemini/raw_video_studio/produce_week2_7_daily_shorts.py) | Produces and schedules Week 2 daily zero-music curiosity Shorts (`Nov 12–18`). |
 | [produce_week3_7_daily_shorts.py](file:///shared/user/.gemini/raw_video_studio/produce_week3_7_daily_shorts.py) | Produces and schedules Week 3 daily zero-music curiosity Shorts (`Nov 19–22`). |
 | [produce_3hour_sleep_videos.py](file:///shared/user/.gemini/raw_video_studio/produce_3hour_sleep_videos.py) | Renders and publishes 3-hour 1080p dark-screen sleep soundscapes (`xcAo79qLcLc` & `OwMTPuornpo`). |
+| [produce_nov16_3video_slate.py](file:///shared/user/.gemini/raw_video_studio/produce_nov16_3video_slate.py) | Autonomous Nov 16 3-video production, hard-fail QC, Drive archive & scheduling (`BgpIR-lvpZw`, `kWnXbaY5Dx0`, `x3m3PFg4yjA`). |
 | [generate_sponsor_outreach_kit.py](file:///shared/user/.gemini/raw_video_studio/generate_sponsor_outreach_kit.py) | Generates the Executive Media Kit and 10 brand-specific pitch & 60s mid-roll script files and syncs to Google Drive. |

@@ -2,8 +2,8 @@
   "status": "success",
   "skill": "abr-daily-producer",
   "mode": "auto",
-  "executed_at_utc": "2026-11-15T07:09:11Z",
-  "workspace": "/home/antigravity/ABR_Anti_Brain_Rot",
+  "executed_at_utc": "2026-11-16T12:54:24Z",
+  "workspace": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot",
   "studio_root": "/shared/user/.gemini/raw_video_studio",
   "phase_1_audit": {
     "all_7_apis_healthy": true,
@@ -18,54 +18,58 @@
     },
     "elevenlabs_quota_safeguard": {
       "triggered_under_8000_floor": true,
-      "characters_remaining_before": 6633,
-      "planned_total_characters": 4217,
+      "characters_remaining_before": 2267,
+      "planned_total_characters": 3927,
       "credit_top_up_notice": true,
       "gemini_tts_available": false,
-      "gemini_tts_error": "Gemini request failed across all 2 configured API key(s): HTTP 402 on POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent: {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment",
-      "failover_decision": "Single-timbre ElevenLabs Sarah (EXAVITQu4vr4xnSDxMaL) verified sufficient (4217 <= 6633 chars remaining; 0 mid-episode timbre switch).",
-      "characters_remaining_after": 4943,
-      "characters_consumed_live": 1690
+      "gemini_tts_error": "Gemini request failed across all 2 configured API key(s): HTTP 402 on POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent: Your prepayment credits are depleted.",
+      "failover_decision": "Single-timbre ElevenLabs George (JBFqnCBsd6RMkjVDRZzb, eleven_turbo_v2_5 @ 0.5 credits/char) verified sufficient (786 credits consumed <= 2267 credits remaining; 0 mid-episode timbre switch). Video 1 uses 0 TTS credits.",
+      "characters_remaining_after": 1481,
+      "characters_consumed_live": 786
     },
     "schedule_gap_resolution": {
-      "scanned_index_file": "/home/antigravity/ABR_Anti_Brain_Rot/ABR_Anti_Brain_Rot_Index.md",
+      "scanned_index_file": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/ABR_Anti_Brain_Rot_Index.md",
       "drive_root_folder_id": "1mlAlS_xpEn11gUGyKi_zuQiDZ0Co9Ay9",
-      "next_unscheduled_long_form_slot_utc": "2026-11-23T16:30:00Z",
-      "long_form_weekday_pillar": "Monday -> Pillar 1: Calm Kids Bedtime Story (10:00, 30 scenes x 20s, 16:30 UTC)",
-      "next_unscheduled_short_slot_utc": "2026-12-03T15:00:00Z",
-      "short_pillar_rotation": "Pillar 1: Calm Story Teaser (41.5s, 5 scenes + branded endcard, 15:00 UTC)",
+      "next_unscheduled_long_form_slots_utc": [
+        "2026-11-24T16:30:00Z",
+        "2026-11-27T15:00:00Z"
+      ],
+      "long_form_weekday_pillars": [
+        "Tuesday -> Pillar 1B: Non-Looped Dark-Screen Sleep Soundscape (03:00:00, 0 TTS credits, 16:30 UTC)",
+        "Friday -> Pillar 2B: Calm Ancient History Documentary (08:00, 24 scenes x 20s, 15:00 UTC)"
+      ],
+      "next_unscheduled_short_slot_utc": "2026-12-24T15:00:00Z",
+      "short_pillar_rotation": "Pillar 3: Ancient Engineering Short (41.5s, 5 scenes + branded endcard, 15:00 UTC)",
       "catalog_topic_overlap_pct": 0.0
     }
   },
   "phase_2_productions": {
-    "long_form_16x9": {
-      "index_row": 17,
-      "slug": "Little_River_Otters_Cedar_Cove_10Min_Pillar1",
-      "title": "The Little River Otter's Cozy Cedar Cove | 10-Min Calm Bedtime Story for Kids (No Music)",
-      "pillar": "Pillar 1 (Kids Bedtime Story)",
-      "playlist_id": "PLEyZbMU0SV08",
-      "youtube_video_id": "VeXumi5HL_Q",
-      "youtube_watch_url": "https://www.youtube.com/watch?v=VeXumi5HL_Q",
+    "long_form_sleep_16x9": {
+      "index_row": 18,
+      "slug": "Gentle_Mountain_Creek_River_Stones_3Hours_Sleep",
+      "title": "Gentle Mountain Creek Over River Stones (3 Hours) | Sub-2000K Dark Screen for Sleep, No Music",
+      "pillar": "Pillar 1B (3-Hr Sleep Soundscape)",
+      "playlist_id": "PLO3jEEgHm_Iw",
+      "youtube_video_id": "BgpIR-lvpZw",
+      "youtube_watch_url": "https://www.youtube.com/watch?v=BgpIR-lvpZw",
       "privacy_status": "private",
-      "publish_at_utc": "2026-11-23T16:30:00Z",
+      "publish_at_utc": "2026-11-24T16:30:00Z",
       "thumbnail_set": true,
-      "google_drive_folder_id": "1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz",
-      "google_drive_folder_url": "https://drive.google.com/drive/folders/1PCTotKWQwcK9FaI43nVRSpYhWNI9iLOz",
+      "google_drive_folder_id": "17xpSM7S9gRHGLldy7dZR45lDz-pLUDqV",
+      "google_drive_folder_url": "https://drive.google.com/drive/folders/17xpSM7S9gRHGLldy7dZR45lDz-pLUDqV",
       "google_drive_files": {
-        "custom_thumb_1280x720.jpg": "1OqXgbLFUpfnDZSjPnsKTeHTHDGkD-72M",
-        "Foley_Stem_48kHz.wav": "1ljtRzVefR53EXSumbNoeNNgWXgHA6Ioe",
-        "Little_River_Otters_Cedar_Cove_10Min_Pillar1.mp4": "1Y0p9ZWn5xCp_lMOZT2cOoNsD6to0Qx_n",
-        "qc_and_publish_metadata.json": "1vC4QoHuGjlviXYotrOouoA-0KrQakxvf",
-        "Voice_Stem_48kHz.wav": "1GKWKiJem98T5eGNeBYEpfsnq0vlFdahm"
+        "Gentle_Mountain_Creek_River_Stones_3Hours_Sleep_16x9_ZeroMusic.mp4": "1clFoCp-KomztHVT3SscI0mUFMJoqW0HO",
+        "custom_thumb_1280x720.jpg": "1lHZIiRxdWBcttAMyHFTXdgTUZ_U_-NoZ",
+        "Foley_Stem_48kHz.wav": "1ETqRnWM3C9tG3SEo6YM8V1MBf4NxTvnm",
+        "creek_dark_plate_1_1794831118949.jpg": "1peThTxz9ayvsyBLRuqWkC9RezrAt6-pL",
+        "creek_dark_plate_2_1794831109508.jpg": "1pakE5yw2Te9hyWrfDTn7t1-GS4jKPc58",
+        "qc_and_publish_metadata.json": "1GHOlA89445Mj33iUa6EWZpWVzYodOFzI"
       },
       "qc_gate": {
         "all_passed": true,
-        "duration_sec": 600.0,
-        "integrated_lufs": -14.0,
-        "true_peak_dbfs": -1.4,
-        "voice_lufs_minus_foley_mean_db": 38.9,
-        "voice_mean_minus_foley_mean_db": 32.0,
-        "foley_mean_volume_db": -52.9,
+        "duration_sec": 10800.011,
+        "integrated_lufs": -25.6,
+        "true_peak_dbfs": -5.2,
         "zero_music_verified": true,
         "video_stream": {
           "codec_name": "h264",
@@ -78,47 +82,110 @@
           "color_primaries": "bt709",
           "color_transfer": "bt709",
           "r_frame_rate": "24/1",
-          "bit_rate_bps": 1837451
+          "bit_rate_bps": 573990
         },
         "audio_stream": {
           "codec_name": "aac",
           "profile": "LC",
           "sample_rate": "48000",
           "channels": 2,
-          "bit_rate_bps": 341212,
-          "bit_rate_kbps": 341.2
+          "bit_rate_bps": 384399,
+          "bit_rate_kbps": 384.4
+        },
+        "faststart_verified": true
+      }
+    },
+    "long_form_16x9": {
+      "index_row": 19,
+      "slug": "Song_Dynasty_Jingdezhen_Celadon_Kilns_8Min_Pillar2B",
+      "title": "The Misty Celadon Kilns of Song Dynasty Jingdezhen: 11th-Century Quiet Workshops | Calm History",
+      "pillar": "Pillar 2B (Calm Ancient History Documentary)",
+      "playlist_id": "PLfO4Y6xIR8iU",
+      "youtube_video_id": "kWnXbaY5Dx0",
+      "youtube_watch_url": "https://www.youtube.com/watch?v=kWnXbaY5Dx0",
+      "privacy_status": "private",
+      "publish_at_utc": "2026-11-27T15:00:00Z",
+      "thumbnail_set": true,
+      "google_drive_folder_id": "1KE1jkOpOy9gLtHo3d661IdZ5Y0SknFns",
+      "google_drive_folder_url": "https://drive.google.com/drive/folders/1KE1jkOpOy9gLtHo3d661IdZ5Y0SknFns",
+      "google_drive_files": {
+        "Song_Dynasty_Jingdezhen_Celadon_Kilns_8Min_Pillar2B_16x9_ZeroMusic.mp4": "107TxDD8VidffpjNogt90EmIkWAfls-NQ",
+        "custom_thumb_1280x720.jpg": "1pAqjAAwB5KJ2yTWqkU5nrYkeGHgqSPEW",
+        "Voice_Stem_48kHz.wav": "1MWz87UbLU_nPLQKBR2bP1G42qZIbsaHN",
+        "Foley_Stem_48kHz.wav": "1w9Jk_AwJYfr2UTEaFXTSb9rZ2dXxUNFY",
+        "qc_and_publish_metadata.json": "19qOsF6v8IdStbFQeWRxGb4xfZ2YxkMsD",
+        "jingdezhen_plate_1_1794831175413.jpg": "1eCLewnHZ97hFXhgC6WgB_o5Fy5MFO-AC",
+        "jingdezhen_plate_2_1794831115446.jpg": "1zIaKKcTfEuAxNfa3IrvouYOM0U_pZciK",
+        "jingdezhen_plate_3_1794831209510.jpg": "1QxnE9CjRS8cVlsniIcqeUeyPvKrrGkBo",
+        "jingdezhen_plate_4_1794831212919.jpg": "12_J3EDMwyfuzvKyHiJ54YN41gWXN9TfC",
+        "jingdezhen_plate_5_1794831214855.jpg": "1bTLbcfcnA6Zk8yGFsQyt2ULpcRdyowz3",
+        "jingdezhen_plate_6_1794831216312.jpg": "1VkHei4sja4zPlAaVB6A_JHwvMtMGdjyj"
+      },
+      "qc_gate": {
+        "all_passed": true,
+        "duration_sec": 480.0,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -2.1,
+        "voice_lufs_minus_foley_mean_db": 34.0,
+        "voice_mean_minus_foley_mean_db": 28.4,
+        "foley_mean_volume_db": -48.0,
+        "zero_music_verified": true,
+        "video_stream": {
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "field_order": "progressive",
+          "color_space": "bt709",
+          "color_primaries": "bt709",
+          "color_transfer": "bt709",
+          "r_frame_rate": "24/1",
+          "bit_rate_bps": 496312
+        },
+        "audio_stream": {
+          "codec_name": "aac",
+          "profile": "LC",
+          "sample_rate": "48000",
+          "channels": 2,
+          "bit_rate_bps": 380296,
+          "bit_rate_kbps": 380.3
         },
         "faststart_verified": true
       }
     },
     "short_9x16": {
-      "index_row": 13,
-      "slug": "Little_River_Otter_Floating_Pebble_Teaser_Short",
-      "title": "Where the Little River Otter Tucks Smooth Pebbles Before Sleep #shorts",
-      "pillar": "Pillar 1 (Calm Story Teaser Short)",
-      "playlist_id": "PLEyZbMU0SV08",
-      "youtube_video_id": "GRb4t3not6Q",
-      "youtube_watch_url": "https://www.youtube.com/watch?v=GRb4t3not6Q",
+      "index_row": 34,
+      "slug": "Korean_Ondol_Heated_Stone_Floors_Short",
+      "title": "How Ancient Korean Homes Heated Entire Stone Floors With One Cooking Fire #shorts",
+      "pillar": "Pillar 3 (Ancient Engineering Short)",
+      "playlist_id": "PLfO4Y6xIR8iU",
+      "youtube_video_id": "x3m3PFg4yjA",
+      "youtube_watch_url": "https://www.youtube.com/watch?v=x3m3PFg4yjA",
       "privacy_status": "private",
-      "publish_at_utc": "2026-12-03T15:00:00Z",
-      "funnel_target_video_id": "VeXumi5HL_Q",
-      "google_drive_folder_id": "1veWExhRx_8A4JaLrLZpeCFCGLA6tnzAK",
-      "google_drive_folder_url": "https://drive.google.com/drive/folders/1veWExhRx_8A4JaLrLZpeCFCGLA6tnzAK",
+      "publish_at_utc": "2026-12-24T15:00:00Z",
+      "funnel_target_video_id": "kWnXbaY5Dx0",
+      "google_drive_folder_id": "1T1x7EMhjh11nq9nGeKiDtcx3VePv69Ar",
+      "google_drive_folder_url": "https://drive.google.com/drive/folders/1T1x7EMhjh11nq9nGeKiDtcx3VePv69Ar",
       "google_drive_files": {
-        "custom_thumb_1280x720.jpg": "1uT5sEZ0CIELRuCFKK1wRchnSVaGLZjyT",
-        "Foley_Stem_48kHz.wav": "1df6wjFlcPxxes52uczx3DTgCkZB3LF8t",
-        "Little_River_Otter_Floating_Pebble_Teaser_Short.mp4": "1ioutf8ZmUKb4nJjhdf1bie7SW6vkHO8l",
-        "qc_and_publish_metadata.json": "1iQBamXTAZlq2ZPi78Agy2lSQlUwQSOfm",
-        "Voice_Stem_48kHz.wav": "1QmRV6dzlHgP3YPUYYshpEh6tcQc33nDi"
+        "Korean_Ondol_Heated_Stone_Floors_Short.mp4": "1eW04sjINp7txsdDdt9sLAmGoOBuwS5PC",
+        "custom_thumb_1280x720.jpg": "1XqyfLoe16oAGQA_vaF58k_tyVXDF1ysB",
+        "Voice_Stem_48kHz.wav": "1ct67OfoeJbn5WXTlUV8Be0lMKw7jqnVw",
+        "Foley_Stem_48kHz.wav": "1Q1vHkbXeinoYqlphfMHEkF4OXLD6D7zt",
+        "qc_and_publish_metadata.json": "1kHxZ9ct3OHX4T1kTjhpFJbEyIC8l2849",
+        "ondol_short_1_1794831219142.jpg": "119XuCHxAIHgGB9kXGhnKf5E1M4PrG4HP",
+        "ondol_short_2_1794831219583.jpg": "1W891rtL1f0jN3jIAcB2aLXLvbStpjg8T",
+        "ondol_short_3_1794831225182.jpg": "1ZkcgplM313rt3zZBQ1yv2N8FImtgq0p6",
+        "ondol_short_4_1794831220363.jpg": "1AkpkSnzWDYOvVG1NUwCsD-VOI31glnYM"
       },
       "qc_gate": {
         "all_passed": true,
         "duration_sec": 41.5,
         "integrated_lufs": -14.0,
-        "true_peak_dbfs": -1.4,
-        "voice_lufs_minus_foley_mean_db": 35.4,
-        "voice_mean_minus_foley_mean_db": 32.0,
-        "foley_mean_volume_db": -49.5,
+        "true_peak_dbfs": -2.3,
+        "voice_lufs_minus_foley_mean_db": 35.0,
+        "voice_mean_minus_foley_mean_db": 31.3,
+        "foley_mean_volume_db": -49.0,
         "zero_music_verified": true,
         "video_stream": {
           "codec_name": "h264",
@@ -131,15 +198,15 @@
           "color_primaries": "bt709",
           "color_transfer": "bt709",
           "r_frame_rate": "30/1",
-          "bit_rate_bps": 1896527
+          "bit_rate_bps": 841901
         },
         "audio_stream": {
           "codec_name": "aac",
           "profile": "LC",
           "sample_rate": "48000",
           "channels": 2,
-          "bit_rate_bps": 373401,
-          "bit_rate_kbps": 373.4
+          "bit_rate_bps": 368212,
+          "bit_rate_kbps": 368.2
         },
         "faststart_verified": true
       }
@@ -148,16 +215,17 @@
   "sweeper_registration": {
     "script": "/shared/user/.gemini/raw_video_studio/autonomous_scheduled_sweeper.py",
     "registered_metadata_files": [
-      "/shared/user/.gemini/raw_video_studio/Little_River_Otters_Cedar_Cove_10Min_Pillar1/youtube_publish_metadata.json",
-      "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/Little_River_Otter_Floating_Pebble_Teaser_Short/youtube_publish_metadata.json"
+      "/shared/user/.gemini/raw_video_studio/Gentle_Mountain_Creek_River_Stones_3Hours_Sleep/youtube_publish_metadata.json",
+      "/shared/user/.gemini/raw_video_studio/Song_Dynasty_Jingdezhen_Celadon_Kilns_8Min_Pillar2B/youtube_publish_metadata.json",
+      "/shared/user/.gemini/raw_video_studio/Korean_Ondol_Heated_Stone_Floors_Short/youtube_publish_metadata.json"
     ],
-    "sweeper_run_output": "[Sweeper Summary] Publicly optimized: 0 | Natively scheduled in queue: 44 | Awaiting quota reset: 0"
+    "sweeper_run_output": "[Sweeper Summary] Publicly optimized: 0 | Natively scheduled in queue: 65 | Awaiting quota reset: 0"
   },
   "index_and_github_sync": {
-    "index_markdown_path": "/home/antigravity/ABR_Anti_Brain_Rot/ABR_Anti_Brain_Rot_Index.md",
+    "index_markdown_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/ABR_Anti_Brain_Rot_Index.md",
     "drive_index_file_id": "1h1ooQbmzyjdGZZh1JfbgMb5ySNj0KZUT",
+    "drive_csv_index_file_id": "1oW7pcWZeFF9Y2DKUzazDlftBadIOyL3R",
     "repository": "awkandari-source/ABR_Anti_Brain_Rot",
-    "branch": "main",
-    "commit_sha": "c00f35424fcfe5a21244ecc3a8427d29c679e9ff"
+    "branch": "main"
   }
 }
