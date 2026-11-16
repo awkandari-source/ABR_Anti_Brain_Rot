@@ -42,14 +42,14 @@ Because your complete audio + PDF bundle ([ABR_Calm_Minds_Bedtime_Bundle_2026.zi
 ```text
 🌿 FOUNDING PARENT EARLY-BIRD ($12 INSTANT DOWNLOAD — RISES TO $17 ON DEC 1):
 Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airplane-Mode phones & Yoto Make-Your-Own cards — 100% Human Voice + Nature SFX, Strictly Zero Music) + our 5-Page Printable 30-Day Calm Minds Parent Reset Kit:
-👉 [GUMROAD_URL]
-☕ Support Independent Zero-Music Children's Media on Ko-fi: [KOFI_URL]
+👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
+☕ Support Independent Zero-Music Children's Media on Quiet Woodland Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 2. **Paste this Pre-Launch Pinned Comment Block** onto those same Nov 17–30 Long-Form & Short uploads (`QI6JTQCIjq8` through `F2ncByN-TB4`):
 
 ```text
-🌿 Parents: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Our new Calm Evening Sanctuary Bundle is now live for instant download—featuring 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our 5-Page Printable 30-Day Calm Minds Screen Reset Guide. Lock in the $12 Founding Parent Early-Bird price through Nov 30 (rises to $17 on December 1) 👉 [GUMROAD_URL] | ☕ Tip Jar & Monthly Club: [KOFI_URL]
+🌿 Parents: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Our new Calm Evening Sanctuary Bundle is now live for instant download—featuring 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our 5-Page Printable 30-Day Calm Minds Screen Reset Guide. Lock in the $12 Founding Parent Early-Bird price through Nov 30 (rises to $17 on December 1) 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle | ☕ Tip Jar & Monthly Club: https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 ---
@@ -58,7 +58,7 @@ Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airp
 
 | Phase & Dates | Track 1: Immediate Cash Flow Milestones | Track 2: Channel Scale & YPP Watch-Time Milestones |
 | :--- | :--- | :--- |
-| **Week 1: Instant Early-Bird Live Launch**<br/>*(Nov 16 – Nov 22, 2026)* | • **Nov 16–17:** Open Gumroad + Ko-fi (\$5 Tips + \$5/mo *Quiet Woodland Club*).<br/>• **Nov 17:** Upload [ABR_Calm_Minds_Bedtime_Bundle_2026.zip](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/December_2026_Launch_Pack/ABR_Calm_Minds_Bedtime_Bundle_2026.zip) (`65.67 MB`) as the instant digital download + attach [ABR_Ep1_90s_Sample.mp3](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/December_2026_Launch_Pack/ABR_Ep1_90s_Sample.mp3) (`90.02s`) on the checkout page at **\$12 Founding Parent Early-Bird** (compare-at \$17).<br/>• **Nov 17–18:** Inject the `[GUMROAD_URL]` / `[KOFI_URL]` Pre-Launch Block into all scheduled Nov 17–30 descriptions & pinned comments.<br/>• **Nov 20:** Add Amazon Associates / Bookshop.org / Yoto Affiliate links for the 5 tactile gift picks. | • Verify [autonomous_scheduled_sweeper.py](file:///shared/user/.gemini/raw_video_studio/autonomous_scheduled_sweeper.py) routes Nov 17–22 releases (`TDP8imQZiQI`, `_H5X8Wmprds`, `brHB17d8UIA`, `WyiTNqSpkuY`, `MFM5CvWbE3I`) into the 4 official playlists.<br/>• Add End-Screen elements on every 10–15 min video pointing directly to the 3-Hour Sleep Sanctuary playlist (`PLO3jEEgHm_Iw`) to compound session watch hours. |
+| **Week 1: Instant Early-Bird Live Launch**<br/>*(Nov 16 – Nov 22, 2026)* | • **Nov 16–17:** Open Gumroad + Ko-fi (\$5 Tips + \$5/mo *Quiet Woodland Club*).<br/>• **Nov 17:** Upload [ABR_Calm_Minds_Bedtime_Bundle_2026.zip](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/December_2026_Launch_Pack/ABR_Calm_Minds_Bedtime_Bundle_2026.zip) (`65.67 MB`) as the instant digital download + attach [ABR_Ep1_90s_Sample.mp3](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/December_2026_Launch_Pack/ABR_Ep1_90s_Sample.mp3) (`90.02s`) on the checkout page at **\$12 Founding Parent Early-Bird** (compare-at \$17).<br/>• **Nov 17–18:** Inject the `https://chronicle60.gumroad.com/l/calm-evening-bundle` / `https://chronicle60.gumroad.com/l/quiet-woodland-club` Pre-Launch Block into all scheduled Nov 17–30 descriptions & pinned comments.<br/>• **Nov 20:** Add Amazon Associates / Bookshop.org / Yoto Affiliate links for the 5 tactile gift picks. | • Verify [autonomous_scheduled_sweeper.py](file:///shared/user/.gemini/raw_video_studio/autonomous_scheduled_sweeper.py) routes Nov 17–22 releases (`TDP8imQZiQI`, `_H5X8Wmprds`, `brHB17d8UIA`, `WyiTNqSpkuY`, `MFM5CvWbE3I`) into the 4 official playlists.<br/>• Add End-Screen elements on every 10–15 min video pointing directly to the 3-Hour Sleep Sanctuary playlist (`PLO3jEEgHm_Iw`) to compound session watch hours. |
 | **Week 2: Early-Bird Urgency & Sponsor Outreach**<br/>*(Nov 23 – Nov 29, 2026)* | • **Nov 24:** Configure **+\$7 Gumroad Checkout Order Bump** ([14_Day_Anti_Brain_Rot_Family_Reset_Playbook.md](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/14_Day_Anti_Brain_Rot_Family_Reset_Playbook.md)).<br/>• **Nov 27–28:** Send 10 tailored sponsor emails from `/shared/user/.gemini/raw_video_studio/sponsor_outreach_kit/` (`Yoto`, `Lovevery`, `Woolino`, `Sarah's Silks`, `BlockBlueLight`) with [00_ABR_Official_Executive_Media_Kit_2026.md](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/00_ABR_Official_Executive_Media_Kit_2026.md).<br/>• **Nov 29–30:** Post "Final 48 Hours at \$12 Founding Parent Price Before \$17 Dec 1 Step-Up" pinned comment on the `75-min` documentary (`63o6DjnNOVU`). | • **Nov 29 (`16:00 UTC`):** Flagship `75-minute` documentary *Raising Intentional Minds* (`63o6DjnNOVU`) goes public.<br/>• Produce & QC-verify **LF-01** (Dec 2), **SH-DEC-01** (Dec 1), and **SH-DEC-02** (Dec 4) under the automated FFmpeg QC gate (`h264 High`, `bt709`, `48kHz/384k AAC`). |
 | **Week 3: December \$17 Price Step-Up & Science Push**<br/>*(Nov 30 – Dec 6, 2026)* | • **Dec 1 (`00:00 UTC`):** Step Gumroad price from \$12 Early-Bird to **\$17 Official Launch Price** (compare-at \$27).<br/>• **Dec 1:** Update top 10 evergreen videos (`xcAo79qLcLc`, `OwMTPuornpo`, `DwDrUox9uF8`, `pt-gLfkmOjA`, `63o6DjnNOVU`) + scheduled Dec 1–7 Shorts to the December \$17 CTA.<br/>• **Dec 5:** Post 1st monthly bonus coloring/activity sheet for \$5/mo Ko-fi *Quiet Woodland Club* members. | • **Dec 1 (`20:00 UTC`):** Publish **SH-DEC-01** (*Electronic Toys Cut Toddler Speech Turns by 80%*).<br/>• **Dec 2 (`15:00 UTC`):** Publish **LF-01** (*Why Background Music Blocks Early Speech — 12-Min Science*).<br/>• **Dec 4 (`20:00 UTC`):** Publish **SH-DEC-02** (*Snowshoe Hare Cedar Teaser*).<br/>• **Dec 6 (`16:30 UTC`):** Publish **LF-02** (*Little Pine Marten's Snowy Spruce Hollow — 10-Min Story*). |
 | **Week 4: Peak Holiday Gift & Affiliate Surge**<br/>*(Dec 7 – Dec 13, 2026)* | • **Dec 8–13:** Highlight the **"Screen-Free Stocking Stuffer"** angle: buy a \$9.99 blank Yoto Make-Your-Own card (affiliate link) + load our \$17 5-Story Pack onto it in 90 seconds for a physical, screen-free Christmas gift.<br/>• **Dec 11:** Follow up once on the Nov 28 sponsor outreach emails to lock a late-December or January \$350 mid-roll slot. | • **Dec 10 (`20:00 UTC`):** Publish **SH-DEC-03** (*9th-Century Acoustic Clay Jars*).<br/>• **Dec 13 (`15:00 UTC`):** Publish **LF-03** (*The Flashing Plastic Toy Trap — 12-Min Holiday Gift Science*)—highest affiliate + bundle conversion video of Q4.<br/>• Update pinned comments on scheduled morning Shorts (`CpObupd_-Z8` through `mkLjbuz94-0`) to route parent science viewers into **LF-01** and **LF-03**. |
@@ -80,7 +80,7 @@ Rather than inventing a disconnected lead magnet, this flagship bundle packages 
   - **Nov 17 – Nov 30, 2026 (Founding Parent Early-Bird — Instant Download):** **\$12** *(Compare-at: `\$17`)*
   - **Dec 1 – Dec 31, 2026 (Official December Launch Price):** **\$17** *(Compare-at: `\$27`)*
   - **Gumroad 1-Click Order Bump (+\$7):** Add [14_Day_Anti_Brain_Rot_Family_Reset_Playbook.md](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/14_Day_Anti_Brain_Rot_Family_Reset_Playbook.md) (*The 14-Day Intensive Family Reset Calendar + 12 "I'm Bored!" Invitation Cards*) at checkout.
-  - **Ko-fi (Secondary Tip Jar & Recurring Support):** Linked via `[KOFI_URL]` (*\$5 One-Time Tip* or *\$5/mo "Quiet Woodland Club"* delivering 1 bonus screen-free MP3 story per month).
+  - **Ko-fi (Secondary Tip Jar & Recurring Support):** Linked via `https://chronicle60.gumroad.com/l/quiet-woodland-club` (*\$5 One-Time Tip* or *\$5/mo "Quiet Woodland Club"* delivering 1 bonus screen-free MP3 story per month).
 
 ### 2. Component A — Clean 5-Page Printable PDF Deliverable (Generated & Verified)
 - **Upgraded Source Markdown:** [Calm_Minds_30_Day_Anti_Brain_Rot_Parent_Kit.md](file:///home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/Calm_Minds_30_Day_Anti_Brain_Rot_Parent_Kit.md) *(Legacy Line 6 upgraded to strictly enforce **100% Zero Background Music + `+30 dB` Voice-Over-Foley Separation**, with all 15 tactile activities spanning Days 1–30).*
@@ -168,7 +168,7 @@ All templates strictly obey your `< 4,900 UTF-8 byte` YouTube description limit,
 
 🌿 GET THE CALM EVENING SANCTUARY BUNDLE ($17 INSTANT DOWNLOAD):
 Download 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airplane-Mode phones & Yoto Make-Your-Own cards — 100% Voice + Nature SFX, Zero Music) + our 5-Page Printable 30-Day Anti-Brain Rot Parent Reset Kit:
-👉 [GUMROAD_URL]
+👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
 
 🎬 WATCH & LISTEN NEXT ON @ABR-AntiBrainRot:
 • Slow-Paced Kids Bedtime Stories (0% Music): https://www.youtube.com/playlist?list=PLEyZbMU0SV08
@@ -180,7 +180,7 @@ Download 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Air
 • Yoto Mini Screen-Free Kids Audio Player: [AFFILIATE_LINK_2]
 • Stockmar Natural Beeswax Block Crayons (Used in Days 5–6 of our Guide): [AFFILIATE_LINK_3]
 • Open-Ended Wooden Building Blocks & Montessori Trays: [AFFILIATE_LINK_4]
-☕ Tip Jar & Quiet Woodland Monthly Club on Ko-fi: [KOFI_URL]
+☕ Tip Jar & Quiet Woodland Monthly Club on Quiet Woodland Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
 (Disclosure: As an affiliate partner, @ABR-AntiBrainRot may earn a small commission from qualifying screen-free purchases at zero extra cost to your family.)
 
 🔊 CLINICAL AUDIO & PEDIATRIC SLEEP SAFETY STANDARD:
@@ -202,7 +202,7 @@ Mastered at -14.0 LUFS unhurried human voice (95–110 WPM) over -43.5 dB low-pa
 
 📘 DOWNLOAD THE 30-DAY CALM MINDS PARENT KIT + 5 SCREEN-FREE AUDIO STORIES ($17):
 Get our 5-Page Printable Screen Reset & 15 Nature Activity Guide + 5 downloadable Winter Woodland Bedtime MP3s (100% Human Voice + Organic Nature SFX, Strictly Zero Music — Airplane-Mode & Yoto MYO Ready):
-👉 [GUMROAD_URL]
+👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
 
 🔬 EXPLORE OUR OFFICIAL SERIES:
 • Pediatric Brain Science & Parent Guides: https://www.youtube.com/playlist?list=PLSpo6LDB5RsE
@@ -214,7 +214,7 @@ Get our 5-Page Printable Screen Reset & 15 Nature Activity Guide + 5 downloadabl
 • Stage-Based Wooden Montessori Play Materials: [AFFILIATE_LINK_2]
 • Natural Beeswax Crayons & Classic Watercolor Picture Books: [AFFILIATE_LINK_3]
 • Warm Sub-2000K Amber Bedside Sleep Bulb: [AFFILIATE_LINK_4]
-☕ Support Independent Zero-Music Research on Ko-fi: [KOFI_URL]
+☕ Support Independent Zero-Music Research on Quiet Woodland Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
 (Affiliate Disclosure: Qualifying purchases through partner links support @ABR-AntiBrainRot at no extra cost to you.)
 
 📚 KEY PEER-REVIEWED CITATIONS IN THIS EPISODE:
@@ -237,23 +237,23 @@ Get our 5-Page Printable Screen Reset & 15 Nature Activity Guide + 5 downloadabl
 ### 4.3 Pinned Comment Conversion Templates (5 High-Intent Variants)
 
 0. **Nov 17–30 Founding Parent Early-Bird Pinned Comment (\$12 $\rightarrow$ \$17 Urgency):**
-   > 🌿 **Parents:** Want peaceful bedtimes tonight with **ZERO glowing screens** and **ZERO background music**? Our new **Calm Evening Sanctuary Bundle** is live for instant download—featuring **5 Screen-Free Winter Woodland Bedtime Stories** (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our **5-Page Printable 30-Day Calm Minds Screen Reset Guide**. Lock in the **\$12 Founding Parent Early-Bird price** through Nov 30 (rises to **\$17 on December 1**) 👉 `[GUMROAD_URL]` | ☕ Tip Jar & Monthly Club: `[KOFI_URL]`
+   > 🌿 **Parents:** Want peaceful bedtimes tonight with **ZERO glowing screens** and **ZERO background music**? Our new **Calm Evening Sanctuary Bundle** is live for instant download—featuring **5 Screen-Free Winter Woodland Bedtime Stories** (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our **5-Page Printable 30-Day Calm Minds Screen Reset Guide**. Lock in the **\$12 Founding Parent Early-Bird price** through Nov 30 (rises to **\$17 on December 1**) 👉 `https://chronicle60.gumroad.com/l/calm-evening-bundle` | ☕ Tip Jar & Monthly Club: `https://chronicle60.gumroad.com/l/quiet-woodland-club`
 
 1. **December Official Launch Pinned Comment (Use Dec 1–10 on All Uploads — \$17):**
-   > 🌿 **NEW FOR DECEMBER:** Want peaceful bedtimes with **zero glowing screens** and **zero background music**? Download our **Calm Evening Sanctuary Bundle**—includes **5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards)** + our **5-Page Printable 30-Day Calm Minds Reset & Nature Activity Guide** (fridge checklists included!) for **\$17**: 👉 `[GUMROAD_URL]`
+   > 🌿 **NEW FOR DECEMBER:** Want peaceful bedtimes with **zero glowing screens** and **zero background music**? Download our **Calm Evening Sanctuary Bundle**—includes **5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards)** + our **5-Page Printable 30-Day Calm Minds Reset & Nature Activity Guide** (fridge checklists included!) for **\$17**: 👉 `https://chronicle60.gumroad.com/l/calm-evening-bundle`
 
 2. **Holiday Stocking-Stuffer / Affiliate Combo Pinned Comment (Use Dec 11–22 on Science & Toy Videos):**
-   > 🎁 **90-Second Screen-Free Gift Idea for Ages 3–7:** Pair a blank **Yoto Make-Your-Own Card** (`[YOTO_MYO_AFFILIATE_LINK]`) with our **5-Episode Zero-Music Winter Woodland Audio Story Pack + Printable 30-Day Parent Guide (\$17)**: `[GUMROAD_URL]`. Zero flashing plastic, zero ads, and calm human storytelling + real woodland nature sounds.
+   > 🎁 **90-Second Screen-Free Gift Idea for Ages 3–7:** Pair a blank **Yoto Make-Your-Own Card** (`[YOTO_MYO_AFFILIATE_LINK]`) with our **5-Episode Zero-Music Winter Woodland Audio Story Pack + Printable 30-Day Parent Guide (\$17)**: `https://chronicle60.gumroad.com/l/calm-evening-bundle`. Zero flashing plastic, zero ads, and calm human storytelling + real woodland nature sounds.
 
 3. **Curiosity / History Short Bridge Pinned Comment (Use on Pillar 3 History & Deep-Time Shorts):**
    > 🏛️ Every video on **@ABR-AntiBrainRot** is crafted with **100% zero background music** so families and curious minds can think deeply without sensory clutter.
    > • Watch our full Calm History & Brain Science Deep Dives: `https://www.youtube.com/playlist?list=PLeHDZfHy-UxM`
-   > • Parents of ages 3–7 — get our **5 Screen-Free Bedtime Audio Stories + Printable 30-Day Screen Reset Kit (\$17)**: `[GUMROAD_URL]`
+   > • Parents of ages 3–7 — get our **5 Screen-Free Bedtime Audio Stories + Printable 30-Day Screen Reset Kit (\$17)**: `https://chronicle60.gumroad.com/l/calm-evening-bundle`
 
 4. **3-Hour Dark-Screen Sleep Stream Pinned Comment (Bundle + Ko-fi Tip Jar):**
    > 🌙 Sleeping better with pure, non-looped nature acoustics and **0% music**?
-   > • For the `[ -30 min ]` wind-down right before lights-out, download our **5 Screen-Free Bedtime Audio Stories + Printable 30-Day Evening Sanctuary Kit (\$17)**: `[GUMROAD_URL]`
-   > • Want to help keep our 3-hour sleep streams independent and music-free? Leave a \$5 studio tea tip on Ko-fi: `[KOFI_URL]`
+   > • For the `[ -30 min ]` wind-down right before lights-out, download our **5 Screen-Free Bedtime Audio Stories + Printable 30-Day Evening Sanctuary Kit (\$17)**: `https://chronicle60.gumroad.com/l/calm-evening-bundle`
+   > • Want to help keep our 3-hour sleep streams independent and music-free? Leave a \$5 studio tea tip on Quiet Woodland Club ($5/mo): `https://chronicle60.gumroad.com/l/quiet-woodland-club`
 
 ---
 
@@ -311,7 +311,7 @@ Mastered to our strict **100% Zero-Music Clinical Standard**: warm, noticeably s
 
 ---
 
-### 4.5 Ko-fi Bio & \$5/mo *"Quiet Woodland Club"* Membership Copy (`[KOFI_URL]`)
+### 4.5 Ko-fi Bio & \$5/mo *"Quiet Woodland Club"* Membership Copy (`https://chronicle60.gumroad.com/l/quiet-woodland-club`)
 
 - **Ko-fi Headline:** `Keeping Children's Bedtimes & Curious Minds 100% Zero-Music and Brain-Rot Free.`
 - **About / Support Pitch:**

@@ -1,4 +1,4 @@
-# @ABR-AntiBrainRot — Pre-Launch & December Link Injection Blocks (`[GUMROAD_URL]` / `[KOFI_URL]`)
+# @ABR-AntiBrainRot — Pre-Launch & December Link Injection Blocks (`https://chronicle60.gumroad.com/l/calm-evening-bundle` / `https://chronicle60.gumroad.com/l/quiet-woodland-club`)
 
 > **Pricing Anchor Rule:**
 > - **Nov 17 – Nov 30, 2026:** **\$12 Founding Parent Early-Bird** (Instant Download of `ABR_Calm_Minds_Bedtime_Bundle_2026.zip`, compare-at \$17 — NOT a delayed pre-order)
@@ -11,8 +11,8 @@
 ```text
 🌿 FOUNDING PARENT EARLY-BIRD ($12 INSTANT DOWNLOAD — RISES TO $17 ON DEC 1):
 Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airplane-Mode phones & Yoto Make-Your-Own cards — 100% Human Voice + Nature SFX, Strictly Zero Music) + our 5-Page Printable 30-Day Calm Minds Parent Reset Kit:
-👉 [GUMROAD_URL]
-☕ Support Independent Zero-Music Children's Media on Ko-fi: [KOFI_URL]
+👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
+☕ Support Independent Zero-Music Children's Media on Quiet Woodland Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 ---
@@ -20,7 +20,7 @@ Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airp
 ## 2. Nov 17–30 Pre-Launch Pinned Comment Block
 
 ```text
-🌿 Parents: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Our new Calm Evening Sanctuary Bundle is now live for instant download—featuring 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our 5-Page Printable 30-Day Calm Minds Screen Reset Guide. Lock in the $12 Founding Parent Early-Bird price through Nov 30 (rises to $17 on December 1) 👉 [GUMROAD_URL] | ☕ Tip Jar & Monthly Club: [KOFI_URL]
+🌿 Parents: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Our new Calm Evening Sanctuary Bundle is now live for instant download—featuring 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our 5-Page Printable 30-Day Calm Minds Screen Reset Guide. Lock in the $12 Founding Parent Early-Bird price through Nov 30 (rises to $17 on December 1) 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle | ☕ Tip Jar & Monthly Club: https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 ---
@@ -31,13 +31,13 @@ Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airp
 ```text
 🌿 GET THE CALM EVENING SANCTUARY BUNDLE ($17 INSTANT DOWNLOAD):
 Download all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airplane-Mode phones & Yoto Make-Your-Own cards — 100% Human Voice + Nature SFX, Strictly Zero Music) + our 5-Page Printable 30-Day Calm Minds Parent Reset Kit:
-👉 [GUMROAD_URL]
-☕ Support Independent Zero-Music Children's Media on Ko-fi: [KOFI_URL]
+👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
+☕ Support Independent Zero-Music Children's Media on Quiet Woodland Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 ### Dec 1+ Pinned Comment Block
 ```text
-🌿 NEW FOR DECEMBER: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Download our Calm Evening Sanctuary Bundle—includes 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) + our 5-Page Printable 30-Day Calm Minds Reset & Nature Activity Guide ($17 instant download) 👉 [GUMROAD_URL] | ☕ Tip Jar & Monthly Club: [KOFI_URL]
+🌿 NEW FOR DECEMBER: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Download our Calm Evening Sanctuary Bundle—includes 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) + our 5-Page Printable 30-Day Calm Minds Reset & Nature Activity Guide ($17 instant download) 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle | ☕ Tip Jar & Monthly Club: https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 ---
