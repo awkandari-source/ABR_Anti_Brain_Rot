@@ -6,21 +6,21 @@
 
 ---
 
-## 1. Nov 17–30 Pre-Launch Description Block (Paste into Lines 3–6)
+## 1. Nov 16–30 Pre-Launch Description & Pinned Comment Block (Canonical Verbatim Copy)
 
 ```text
 🌿 FOUNDING PARENT EARLY-BIRD ($12 INSTANT DOWNLOAD — RISES TO $17 ON DEC 1):
 Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airplane-Mode phones & Yoto Make-Your-Own cards — 100% Human Voice + Nature SFX, Strictly Zero Music) + our 5-Page Printable 30-Day Calm Minds Parent Reset Kit:
 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
-☕ Support Independent Zero-Music Children's Media on Quiet Woodland Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
+☕ Join The Quiet Woodland Monthly Story Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 ---
 
-## 2. Nov 17–30 Pre-Launch Pinned Comment Block
+## 2. Alternate Single-Paragraph Pinned Comment Variant (Optional)
 
 ```text
-🌿 Parents: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Our new Calm Evening Sanctuary Bundle is now live for instant download—featuring 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our 5-Page Printable 30-Day Calm Minds Screen Reset Guide. Lock in the $12 Founding Parent Early-Bird price through Nov 30 (rises to $17 on December 1) 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle | ☕ Tip Jar & Monthly Club: https://chronicle60.gumroad.com/l/quiet-woodland-club
+🌿 Parents: Want peaceful bedtimes tonight with ZERO glowing screens and ZERO background music? Our new Calm Evening Sanctuary Bundle is now live for instant download—featuring 5 Screen-Free Winter Woodland Bedtime Stories (MP3s ready for Airplane Mode or blank Yoto cards + 90s free preview) and our 5-Page Printable 30-Day Calm Minds Screen Reset Guide. Lock in the $12 Founding Parent Early-Bird price through Nov 30 (rises to $17 on December 1) 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle | ☕ Join The Quiet Woodland Monthly Story Club ($5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
 ```
 
 ---

@@ -78,5 +78,13 @@ Play one `8-minute` audio story per night during the `[ -30 min ]` bedtime windo
 1. **Zero-Cost Phone Airplane-Mode Method:** Download the 5 `.mp3` files to your phone's local Files/Downloads folder -> switch on **Airplane Mode** -> set volume below 40% (`<= 50 dBA` at 2 meters from pillow) -> place phone **screen-down** on a high dresser across the bedroom.
 2. **Yoto Player "Make Your Own" (MYO) Card Method:** Open the free Yoto App -> tap *Create Playlist* -> name it *"ABR Calm Winter Woodland Stories (Zero Music)"* -> upload the 5 included `.mp3` tracks -> tap *Link to a Card* with any blank Yoto MYO card so your child can insert the physical card independently with zero glowing screens.
 
+---
+
+### 🌿 FOUNDING PARENT EARLY-BIRD (\$12 INSTANT DOWNLOAD — RISES TO \$17 ON DEC 1)
+Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airplane-Mode phones & Yoto Make-Your-Own cards — 100% Human Voice + Nature SFX, Strictly Zero Music) + our 5-Page Printable 30-Day Calm Minds Parent Reset Kit:
+- 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
+- ☕ Join The Quiet Woodland Monthly Story Club (\$5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
+
 *© 2026 ABR Anti-Brain Rot (`@ABR-AntiBrainRot`) — Protecting Developing Minds Through Slow, Zero-Music Storytelling & Evidence-Based Pediatric Science.*
+
 

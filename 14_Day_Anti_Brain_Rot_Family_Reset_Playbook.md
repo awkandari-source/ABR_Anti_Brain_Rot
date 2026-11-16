@@ -87,4 +87,13 @@ Starting 60 minutes before lights-out:
 
 ---
 
+## 🌿 FOUNDING PARENT EARLY-BIRD (\$12 INSTANT DOWNLOAD — RISES TO \$17 ON DEC 1)
+
+Get all 5 Screen-Free Winter Woodland Bedtime Audio Stories (MP3s ready for Airplane-Mode phones & Yoto Make-Your-Own cards — 100% Human Voice + Nature SFX, Strictly Zero Music) + our 5-Page Printable 30-Day Calm Minds Parent Reset Kit:
+- 👉 https://chronicle60.gumroad.com/l/calm-evening-bundle
+- ☕ Join The Quiet Woodland Monthly Story Club (\$5/mo): https://chronicle60.gumroad.com/l/quiet-woodland-club
+
+---
+
 *© ABR Anti-Brain Rot (`@ABR-AntiBrainRot`) — Protecting Developing Minds Through Calm, Zero-Music Storytelling & Evidence-Based Pediatric Science.*
+
