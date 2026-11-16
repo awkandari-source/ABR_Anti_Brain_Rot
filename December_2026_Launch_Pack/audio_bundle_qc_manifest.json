@@ -1,0 +1,137 @@
+{
+  "bundle_name": "ABR_Calm_Minds_Bedtime_Bundle_2026.zip",
+  "strict_zero_music": true,
+  "target_voice_lufs": -14.0,
+  "target_foley_mean_db": -43.5,
+  "sidechain_ducking_ratio": "5:1",
+  "episodes": [
+    {
+      "episode": 1,
+      "title": "The Little Snowshoe Hare's Cedar Hollow",
+      "mp3_file": "01_The_Little_Snowshoe_Hares_Cedar_Hollow_ZeroMusic.mp3",
+      "duration_s": 386.35,
+      "duration_mmss": "06:26",
+      "words": 546,
+      "active_spoken_wpm": 131.6,
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -1.5,
+      "active_voice_mean_db": -16.62,
+      "standalone_foley_mean_db": -43.5,
+      "ducked_foley_mean_db": -49.5,
+      "voice_to_ducked_foley_separation_db": 32.88,
+      "size_mb": 14.79,
+      "sample_90s": {
+        "file": "ABR_Ep1_90s_Sample.mp3",
+        "duration_s": 90.02,
+        "integrated_lufs": -14.0,
+        "true_peak_dbtp": -1.5,
+        "size_mb": 3.49
+      }
+    },
+    {
+      "episode": 2,
+      "title": "The Sleepy Badger's Warm Earth Den",
+      "mp3_file": "02_The_Sleepy_Badgers_Warm_Earth_Den_ZeroMusic.mp3",
+      "duration_s": 351.43,
+      "duration_mmss": "05:51",
+      "words": 474,
+      "active_spoken_wpm": 125.8,
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -1.7,
+      "active_voice_mean_db": -16.73,
+      "standalone_foley_mean_db": -43.6,
+      "ducked_foley_mean_db": -49.5,
+      "voice_to_ducked_foley_separation_db": 32.77,
+      "size_mb": 13.46,
+      "sample_90s": null
+    },
+    {
+      "episode": 3,
+      "title": "The Winter Wren's Mossy Stone Wall",
+      "mp3_file": "03_The_Winter_Wrens_Mossy_Stone_Wall_ZeroMusic.mp3",
+      "duration_s": 329.78,
+      "duration_mmss": "05:30",
+      "words": 484,
+      "active_spoken_wpm": 133.3,
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -1.7,
+      "active_voice_mean_db": -16.82,
+      "standalone_foley_mean_db": -43.8,
+      "ducked_foley_mean_db": -49.7,
+      "voice_to_ducked_foley_separation_db": 32.88,
+      "size_mb": 12.64,
+      "sample_90s": null
+    },
+    {
+      "episode": 4,
+      "title": "The Quiet Mountain Beaver's Willow Lodge",
+      "mp3_file": "04_The_Quiet_Mountain_Beavers_Willow_Lodge_ZeroMusic.mp3",
+      "duration_s": 319.42,
+      "duration_mmss": "05:19",
+      "words": 473,
+      "active_spoken_wpm": 130.2,
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -1.5,
+      "active_voice_mean_db": -16.82,
+      "standalone_foley_mean_db": -43.5,
+      "ducked_foley_mean_db": -49.6,
+      "voice_to_ducked_foley_separation_db": 32.78,
+      "size_mb": 12.24,
+      "sample_90s": null
+    },
+    {
+      "episode": 5,
+      "title": "The Starlight Dormouse's Hazelnut Loft",
+      "mp3_file": "05_The_Starlight_Dormouses_Hazelnut_Loft_ZeroMusic.mp3",
+      "duration_s": 306.22,
+      "duration_mmss": "05:06",
+      "words": 434,
+      "active_spoken_wpm": 128.0,
+      "integrated_lufs": -14.0,
+      "true_peak_dbtp": -1.4,
+      "active_voice_mean_db": -16.85,
+      "standalone_foley_mean_db": -43.7,
+      "ducked_foley_mean_db": -50.4,
+      "voice_to_ducked_foley_separation_db": 33.55,
+      "size_mb": 11.74,
+      "sample_90s": null
+    }
+  ],
+  "preview_90s_mp3": {
+    "file": "ABR_Ep1_90s_Sample.mp3",
+    "duration_s": 90.02,
+    "integrated_lufs": -14.0,
+    "true_peak_dbtp": -1.5,
+    "size_mb": 3.49
+  },
+  "gumroad_zip": {
+    "zip_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/December_2026_Launch_Pack/ABR_Calm_Minds_Bedtime_Bundle_2026.zip",
+    "zip_size_mb": 65.67,
+    "entries": [
+      {
+        "filename": "Calm_Minds_30_Day_Anti_Brain_Rot_Parent_Kit_Printable.pdf",
+        "size_mb": 1.38
+      },
+      {
+        "filename": "Audio_Stories_MP3_ZeroMusic/01_The_Little_Snowshoe_Hares_Cedar_Hollow_ZeroMusic.mp3",
+        "size_mb": 14.79
+      },
+      {
+        "filename": "Audio_Stories_MP3_ZeroMusic/02_The_Sleepy_Badgers_Warm_Earth_Den_ZeroMusic.mp3",
+        "size_mb": 13.46
+      },
+      {
+        "filename": "Audio_Stories_MP3_ZeroMusic/03_The_Winter_Wrens_Mossy_Stone_Wall_ZeroMusic.mp3",
+        "size_mb": 12.64
+      },
+      {
+        "filename": "Audio_Stories_MP3_ZeroMusic/04_The_Quiet_Mountain_Beavers_Willow_Lodge_ZeroMusic.mp3",
+        "size_mb": 12.24
+      },
+      {
+        "filename": "Audio_Stories_MP3_ZeroMusic/05_The_Starlight_Dormouses_Hazelnut_Loft_ZeroMusic.mp3",
+        "size_mb": 11.74
+      }
+    ]
+  }
+}
