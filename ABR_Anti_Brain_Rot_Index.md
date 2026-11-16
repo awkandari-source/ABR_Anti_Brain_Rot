@@ -8,14 +8,16 @@
 
 ---
 
-## 1. Official YouTube Playlists Index (4 Core Shelves)
+## 1. Official YouTube Homepage Shelves & Playlists Index
 
-| Playlist ID | Official Playlist Title | Pillar | Direct YouTube URL |
-| :--- | :--- | :--- | :--- |
-| `PLEyZbMU0SV08` | **Calm Anti-Brain Rot Bedtime Stories for Kids (100% Zero Music)** | Pillar 1 (Kids Stories) | https://www.youtube.com/playlist?list=PLEyZbMU0SV08 |
-| `PLSpo6LDB5RsE` | **Why Anti-Brain Rot Matters: Pediatric Brain Science & Parent Guides** | Pillar 2 (Brain Science) | https://www.youtube.com/playlist?list=PLSpo6LDB5RsE |
-| `PLO3jEEgHm_Iw` | **3-Hour Zero-Music Sleep Soundscapes & Night Nature Ambience** | Pillar 1B (3-Hr Sleep) | https://www.youtube.com/playlist?list=PLO3jEEgHm_Iw |
-| `PLfO4Y6xIR8iU` | **Ancient History Mysteries, Lost Civilizations & Empire Wealth** | Pillar 2B / Pillar 3 (History) | https://www.youtube.com/playlist?list=PLfO4Y6xIR8iU |
+| Shelf Pos | Playlist ID | Official Playlist Title | Pillar / Role | Direct YouTube URL |
+| :--- | :--- | :--- | :--- | :--- |
+| **Shelf 0 (Top)** | `PLO3jEEgHm_Iw` | **180-Minute Neuro-Acoustic Sleep Sanctuaries** | Flagship 3-Hr Non-Looped Sleep Sanctuaries | https://www.youtube.com/playlist?list=PLO3jEEgHm_Iw |
+| **Shelf 1 (a)** | `PLUt7V0-ta200` | **Evidence-Based Media & Sleep Shorts** | Media Consumption, Attention & Sleep Science Shorts | https://www.youtube.com/playlist?list=PLUt7V0-ta200 |
+| **Shelf 2 (b)** | `PLEyZbMU0SV08` | **Slow-Paced Children's Storytelling** | Low-Stimulation Zero-Music Kids Bedtime Stories | https://www.youtube.com/playlist?list=PLEyZbMU0SV08 |
+| **Shelf 3 (c)** | `PLeHDZfHy-UxM` | **Historical & Scientific Deep Dives** | Long-Form Neuroscience, Deep-Time & History Documentaries | https://www.youtube.com/playlist?list=PLeHDZfHy-UxM |
+| *Catalog* | `PLSpo6LDB5RsE` | **Why Anti-Brain Rot Matters: Pediatric Brain Science & Parent Guides** | Pillar 2 Complete Science Catalog | https://www.youtube.com/playlist?list=PLSpo6LDB5RsE |
+| *Catalog* | `PLfO4Y6xIR8iU` | **Ancient History Mysteries, Lost Civilizations & Empire Wealth** | Pillar 2B / Pillar 3 History Catalog | https://www.youtube.com/playlist?list=PLfO4Y6xIR8iU |
 
 ---
 
