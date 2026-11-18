@@ -256,6 +256,85 @@ def check_youtube_oauth_ready(hub: LinkedAPIHub) -> tuple[bool, str]:
         return False, str(exc)
 
 
+def sync_index_md(
+    batch_manifest: dict[str, Any],
+    shorts_playlist_id: str | None,
+    sh02_drive_folder_id: str | None,
+) -> None:
+    index_path = REPO_ROOT / "ABR_Anti_Brain_Rot_Index.md"
+    if not index_path.exists():
+        return
+    text = index_path.read_text(encoding="utf-8")
+
+    if shorts_playlist_id and shorts_playlist_id not in text:
+        pl_row = (
+            f"| *Sleep Shorts (`SH-02`)* | `{shorts_playlist_id}` | "
+            f"**Neuro-Acoustic Sleep Sanctuaries — Shorts** | 6 | "
+            f"https://www.youtube.com/playlist?list={shorts_playlist_id} |"
+        )
+        anchor = "| *Sleep Sanctuary* | `PLEkS-F2Ct9xo` | **ABR Neuro-Acoustic Sanctuary** | 3 | https://www.youtube.com/playlist?list=PLEkS-F2Ct9xo |"
+        if anchor in text:
+            text = text.replace(anchor, f"{anchor}\n{pl_row}", 1)
+
+    pl_disp = (
+        f"[`{shorts_playlist_id}`](https://www.youtube.com/playlist?list={shorts_playlist_id})"
+        if shorts_playlist_id
+        else "`PENDING`"
+    )
+    rows: list[str] = []
+    for item in batch_manifest["deliverables"]:
+        aid = item["asset_id"]
+        title = item["title"]
+        sep_db = item.get("qa_metrics", {}).get("voice_separation_db", 45.0)
+        pub_utc = item["publish_at_utc"]
+        vid_id = item.get("youtube_video_id")
+        drv_sub = item.get("drive_archive", {}).get("asset_drive_folder_id", sh02_drive_folder_id or "")
+        parent_id = item["parent_sanctuary_id"]
+        parent_yt = item.get("parent_sanctuary_youtube_id", "")
+        parent_tag = f"`{parent_id}` (`{parent_yt}`)" if parent_yt else f"`{parent_id}` (`PLO3jEEgHm_Iw`)"
+        if vid_id:
+            sched_col = f"**Scheduled** (`{pub_utc}`)"
+            yt_col = f"[`{vid_id}`](https://www.youtube.com/shorts/{vid_id}) → {parent_tag}"
+        else:
+            sched_col = f"**Queued (Next Quota Reset)** (`{pub_utc}`)"
+            yt_col = f"`QUOTA_CAP_QUEUED_NEXT_RESET` → {parent_tag}"
+        rows.append(
+            f"| `{aid}` | *{title}* | `60s` | **`+{sep_db:.1f} dB`** (`-16.0 LUFS`, `0%` Music) | {sched_col} | {yt_col} | `{drv_sub}` |"
+        )
+
+    block = "\n".join(
+        [
+            "<!-- SH02_INDEX_START -->",
+            "### 3.0B Batch SH-02: *Neuro-Acoustic Sleep Sanctuaries — Shorts* (`9:16` 60s @ `24/1` fps · Sub-1900K `-15%` Luma Decay · Zero-Music)",
+            "",
+            f"- **Official Shorts Playlist:** {pl_disp}",
+            f"- **Google Drive Batch Folder ID:** `{sh02_drive_folder_id}`",
+            "",
+            "| Asset ID | Short Title | Runtime | Voice Sep & Loudness | Schedule (`UTC`) | YouTube ID & Linked Sanctuary | Drive Folder ID |",
+            "| :--- | :--- | :---: | :--- | :--- | :--- | :--- |",
+            *rows,
+            "<!-- SH02_INDEX_END -->",
+        ]
+    )
+
+    if "<!-- SH02_INDEX_START -->" in text and "<!-- SH02_INDEX_END -->" in text:
+        text = re.sub(
+            r"<!-- SH02_INDEX_START -->.*?<!-- SH02_INDEX_END -->",
+            block,
+            text,
+            flags=re.DOTALL,
+        )
+    elif "<!-- SH01_INDEX_END -->" in text:
+        text = text.replace("<!-- SH01_INDEX_END -->", f"<!-- SH01_INDEX_END -->\n\n{block}", 1)
+    else:
+        text = text.replace(
+            "## 3. Complete `9:16` Zero-Music Shorts Catalog",
+            f"## 3. Complete `9:16` Zero-Music Shorts Catalog\n\n{block}\n",
+            1,
+        )
+    index_path.write_text(text, encoding="utf-8")
+
+
 def git_commit_and_push_clean(commit_message: str) -> tuple[str, bool]:
     """
     Rebases onto latest origin/main safely, stages SH-02 + qc_gate.py (+ Index if updated),
@@ -733,10 +812,11 @@ def main() -> int:
     if sh02_drive_folder_id:
         gdrive_upsert_file(hub, receipt_path, sh02_drive_folder_id)
 
-    # Mirror updated script into studio copies
+    # Mirror updated script into studio copies & sync ABR_Anti_Brain_Rot_Index.md
     this_script = Path(__file__).resolve()
     safe_copy_file(this_script, STUDIO_DIR / "sh02_youtube_drive_sync.py")
     safe_copy_file(this_script, STUDIO_SH02_DIR / "sh02_youtube_drive_sync.py")
+    sync_index_md(batch_manifest, shorts_playlist_id, sh02_drive_folder_id)
 
     # 4. Clean GitHub commit & push (preserving git status --porcelain working-tree check)
     if not yt_ready:

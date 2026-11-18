@@ -27,6 +27,7 @@
 | *Mini-Series (`MS07`)* | `PLTj2UbamX1hQ` | **Pediatric Brain Science & Attention Documentaries (2026 Research Edition)** | 8 | https://www.youtube.com/playlist?list=PLTj2UbamX1hQ |
 | *Sleep Science* | `PLAe5Tqk750cc` | **Architecture of the Sleeping Brain: Sleep Neurology & Deep Restoration** | 6 | https://www.youtube.com/playlist?list=PLAe5Tqk750cc |
 | *Sleep Sanctuary* | `PLEkS-F2Ct9xo` | **ABR Neuro-Acoustic Sanctuary** | 3 | https://www.youtube.com/playlist?list=PLEkS-F2Ct9xo |
+| *Sleep Shorts (`SH-02`)* | `PLWoNsolCeb2g` | **Neuro-Acoustic Sleep Sanctuaries — Shorts** | 6 | https://www.youtube.com/playlist?list=PLWoNsolCeb2g |
 
 ---
 
@@ -118,6 +119,22 @@
 | `SH01_S05` | *Medieval Candle Clocks: Telling Time by Melting Wax* | `60s` | **`+33.3 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-12-01T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1vrKIvdb5s0zshNV8gBIMOrSvFsptN7DN` |
 | `SH01_S06` | *Why Your Brain Needs 15 Minutes of Quiet Boredom* | `60s` | **`+33.0 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-12-02T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1uhFX1mkvfy06rX44cr4M9cQ7vALsHS2N` |
 <!-- SH01_INDEX_END -->
+
+<!-- SH02_INDEX_START -->
+### 3.0B Batch SH-02: *Neuro-Acoustic Sleep Sanctuaries — Shorts* (`9:16` 60s @ `24/1` fps · Sub-1900K `-15%` Luma Decay · Zero-Music)
+
+- **Official Shorts Playlist:** [`PLWoNsolCeb2g`](https://www.youtube.com/playlist?list=PLWoNsolCeb2g)
+- **Google Drive Batch Folder ID:** `1TwKGhwvkrprbVIvkfmU7gB4-BKsochkh`
+
+| Asset ID | Short Title | Runtime | Voice Sep & Loudness | Schedule (`UTC`) | YouTube ID & Linked Sanctuary | Drive Folder ID |
+| :--- | :--- | :---: | :--- | :--- | :--- | :--- |
+| `SH02_S01` | *Why Sub-1900K Hearth Light Helps Your Brain Release Melatonin #Shorts* | `60s` | **`+45.9 dB`** (`-16.0 LUFS`, `0%` Music) | **Queued (Next Quota Reset)** (`2026-12-25T02:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` → `ABR_NS03` (`psEs90dgdcU`) | `1rCfDSZxIqLc8g0lzU6bETYp2bA58LbYw` |
+| `SH02_S02` | *How Steady Rain on Cedar Masks Midnight Micro-Arousals #Shorts* | `60s` | **`+44.8 dB`** (`-16.0 LUFS`, `0%` Music) | **Queued (Next Quota Reset)** (`2026-12-26T02:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` → `ABR_NS01` (`PLO3jEEgHm_Iw`) | `1zNENPKq5QJAJL5MRx0ZO6sdOJx885SuG` |
+| `SH02_S03` | *Why Slow Ocean Swells Pace Your Breathing Before Sleep #Shorts* | `60s` | **`+45.2 dB`** (`-16.0 LUFS`, `0%` Music) | **Queued (Next Quota Reset)** (`2026-12-27T02:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` → `ABR_NS02` (`PLO3jEEgHm_Iw`) | `1ZmNWR7TG4VHqNnu6CN7_xpYKpl-AsZyN` |
+| `SH02_S04` | *Why 180 Minutes Covers Two Full 90-Minute Sleep Cycles #Shorts* | `60s` | **`+45.7 dB`** (`-16.0 LUFS`, `0%` Music) | **Queued (Next Quota Reset)** (`2026-12-28T02:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` → `ABR_NS03` (`psEs90dgdcU`) | `1soPHA-Ie_ifLctbqds15OdjZ79Zk53hn` |
+| `SH02_S05` | *Acoustic Dampening: How Falling Snow Quiets an Alert Brain #Shorts* | `60s` | **`+45.3 dB`** (`-16.0 LUFS`, `0%` Music) | **Queued (Next Quota Reset)** (`2026-12-29T02:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` → `ABR_NS04` (`PLO3jEEgHm_Iw`) | `1omTYvtCx4vtSYF94klRHYfafF29EblCk` |
+| `SH02_S06` | *Cooling Basalt & Desert Night Air: Temperature Cues for Deep Sleep #Shorts* | `60s` | **`+44.6 dB`** (`-16.0 LUFS`, `0%` Music) | **Queued (Next Quota Reset)** (`2026-12-30T02:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` → `ABR_NS05` (`PLO3jEEgHm_Iw`) | `1RSIEOrSsqoC4uwSV2io0MaFmZRjScUA3` |
+<!-- SH02_INDEX_END -->
 
 ### 3.1 Natively Scheduled Upcoming Shorts (37 Scheduled through Dec 30, 2026)
 
