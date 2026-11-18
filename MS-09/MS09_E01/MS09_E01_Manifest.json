@@ -44,8 +44,8 @@
     "watch_url": "https://www.youtube.com/watch?v=6D3fuN7So_c",
     "studio_url": "https://studio.youtube.com/video/6D3fuN7So_c/edit",
     "playlist_bound_series": true,
-    "playlist_bound_history_shelf": false,
-    "custom_thumbnail_applied": false
+    "playlist_bound_history_shelf": true,
+    "custom_thumbnail_applied": true
   },
   "sop03_verification": {
     "CHK-01": {

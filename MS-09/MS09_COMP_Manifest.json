@@ -11,7 +11,7 @@
   "narrator_name": "George-Daniel Baritone",
   "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
   "narrator_gender": "male",
-  "state": "QA_VERIFIED",
+  "state": "API_SCHEDULED",
   "sha256": "bd97472a69daa89539652e044ec8a2d4c58863b0022a7e618242e92eb98989a6",
   "stream_metrics": {
     "width": 1920,
@@ -40,15 +40,15 @@
     "made_for_kids": false,
     "ad_policy": "PRE_MID_POST",
     "core_shelf_playlist_id": "PLfO4Y6xIR8iU",
-    "youtube_video_id": null,
-    "watch_url": null,
-    "studio_url": null,
-    "quota_deferred": true,
-    "quota_next_reset_utc": "2026-11-19T08:00:05Z",
+    "youtube_video_id": "1oxDLc1Gcos",
+    "watch_url": "https://www.youtube.com/watch?v=1oxDLc1Gcos",
+    "studio_url": "https://studio.youtube.com/video/1oxDLc1Gcos/edit",
+    "quota_deferred": false,
+    "quota_next_reset_utc": null,
     "quota_deferral_reason": "QuotaLedger ceiling reached for purpose='remediation_critical' (9965 + 1600 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert",
-    "playlist_bound_series": false,
-    "playlist_bound_history_shelf": false,
-    "custom_thumbnail_applied": false
+    "playlist_bound_series": true,
+    "playlist_bound_history_shelf": true,
+    "custom_thumbnail_applied": true
   },
   "sop03_verification": {
     "CHK-01": {

@@ -80,7 +80,7 @@
         "playlist_title": "Earth's Slowest Clocks \u2014 Volume II",
         "playlist_position": 0,
         "playlist_bound": true,
-        "custom_thumbnail_applied": false,
+        "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
       }
     },
@@ -140,8 +140,8 @@
         "playlist_id": "PLSkJwyyRdKug",
         "playlist_title": "Earth's Slowest Clocks \u2014 Volume II",
         "playlist_position": 1,
-        "playlist_bound": false,
-        "custom_thumbnail_applied": false,
+        "playlist_bound": true,
+        "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
       }
     },
@@ -201,8 +201,8 @@
         "playlist_id": "PLSkJwyyRdKug",
         "playlist_title": "Earth's Slowest Clocks \u2014 Volume II",
         "playlist_position": 2,
-        "playlist_bound": false,
-        "custom_thumbnail_applied": false,
+        "playlist_bound": true,
+        "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
       }
     },
@@ -262,8 +262,8 @@
         "playlist_id": "PLSkJwyyRdKug",
         "playlist_title": "Earth's Slowest Clocks \u2014 Volume II",
         "playlist_position": 3,
-        "playlist_bound": false,
-        "custom_thumbnail_applied": false,
+        "playlist_bound": true,
+        "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
       }
     },
@@ -323,8 +323,8 @@
         "playlist_id": "PLSkJwyyRdKug",
         "playlist_title": "Earth's Slowest Clocks \u2014 Volume II",
         "playlist_position": 4,
-        "playlist_bound": false,
-        "custom_thumbnail_applied": false,
+        "playlist_bound": true,
+        "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
       }
     },
@@ -371,7 +371,7 @@
       ],
       "publish_at_utc": "2026-12-18T15:00:00Z",
       "master_file": "MS09_COMP_75m_FullSeries.mp4",
-      "status": "QA_VERIFIED_QUOTA_QUEUED",
+      "status": "API_SCHEDULED",
       "file_size_bytes": 1830611485,
       "file_size_mb": 1745.81,
       "sha256": "bd97472a69daa89539652e044ec8a2d4c58863b0022a7e618242e92eb98989a6",
@@ -404,15 +404,15 @@
         "dual_gate_audit_file_id": "1TZJ6gqH6CPCCgrukU4ZWrNOEvPOBgPGj"
       },
       "youtube": {
-        "video_id": null,
-        "watch_url": null,
+        "video_id": "1oxDLc1Gcos",
+        "watch_url": "https://www.youtube.com/watch?v=1oxDLc1Gcos",
         "publish_at_utc": "2026-12-18T15:00:00Z",
         "playlist_id": "PLSkJwyyRdKug",
         "playlist_title": "Earth's Slowest Clocks \u2014 Volume II",
         "playlist_position": 5,
-        "playlist_bound": false,
-        "custom_thumbnail_applied": false,
-        "quota_next_reset_utc": "2026-11-19T08:00:05Z"
+        "playlist_bound": true,
+        "custom_thumbnail_applied": true,
+        "quota_next_reset_utc": null
       }
     }
   ],
@@ -436,5 +436,5 @@
     "title": "Earth's Slowest Clocks \u2014 Volume II",
     "url": "https://www.youtube.com/playlist?list=PLSkJwyyRdKug"
   },
-  "series_status": "PARTIAL_API_SCHEDULED_QUOTA_QUEUED_AND_ARCHIVED"
+  "series_status": "API_SCHEDULED_AND_ARCHIVED"
 }

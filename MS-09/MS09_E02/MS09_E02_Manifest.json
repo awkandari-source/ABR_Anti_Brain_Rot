@@ -43,10 +43,9 @@
     "youtube_video_id": "iecByY0b2BM",
     "watch_url": "https://www.youtube.com/watch?v=iecByY0b2BM",
     "studio_url": "https://studio.youtube.com/video/iecByY0b2BM/edit",
-    "playlist_bound_series": false,
-    "playlist_bound_history_shelf": false,
-    "custom_thumbnail_applied": false,
-    "playlist_deferral_note": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
+    "playlist_bound_series": true,
+    "playlist_bound_history_shelf": true,
+    "custom_thumbnail_applied": true
   },
   "sop03_verification": {
     "CHK-01": {

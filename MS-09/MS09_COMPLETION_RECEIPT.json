@@ -12,9 +12,9 @@
     "hard_daily_cap": 10000,
     "production_soft_cap": 9200,
     "sweeper_reserved_units": 800,
-    "units_used": 9965,
-    "production_units_remaining": 0,
-    "total_units_remaining": 35,
+    "units_used": 1915,
+    "production_units_remaining": 7285,
+    "total_units_remaining": 8085,
     "quota_exhausted": false,
     "exhausted_reason": null,
     "operations": {
@@ -22,61 +22,16 @@
       "probe:GET:playlistItems": 3,
       "probe:GET:playlists": 6,
       "production:POST:playlists": 150,
-      "production:POST:videos.insert": 8000,
+      "production:POST:videos.insert": 600,
       "production:POST:thumbnails.set": 50,
-      "sweeper:POST:playlistItems": 100,
+      "sweeper:POST:playlistItems": 650,
       "sweeper:PUT:videos": 50,
-      "remediation_critical:POST:videos.insert": 1600
+      "remediation_critical:POST:videos.insert": 100,
+      "sweeper:POST:thumbnails.set": 300
     }
   },
-  "post_reset_tasks": [
-    {
-      "asset_id": "MS09_COMP",
-      "action": "upload_and_bind_playlist",
-      "publish_at_utc": "2026-12-18T15:00:00Z",
-      "playlist_id": "PLSkJwyyRdKug",
-      "position": 5,
-      "next_reset_utc": "2026-11-19T08:00:05Z",
-      "reason": "QuotaLedger ceiling reached for purpose='remediation_critical' (9965 + 1600 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert"
-    },
-    {
-      "asset_id": "MS09_E02",
-      "video_id": "iecByY0b2BM",
-      "action": "bind_series_playlist",
-      "playlist_id": "PLSkJwyyRdKug",
-      "position": 1,
-      "next_reset_utc": "2026-11-19T08:00:05Z",
-      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
-    },
-    {
-      "asset_id": "MS09_E03",
-      "video_id": "dCVlCjG6ig8",
-      "action": "bind_series_playlist",
-      "playlist_id": "PLSkJwyyRdKug",
-      "position": 2,
-      "next_reset_utc": "2026-11-19T08:00:05Z",
-      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
-    },
-    {
-      "asset_id": "MS09_E04",
-      "video_id": "hCNSy0-Pu2Q",
-      "action": "bind_series_playlist",
-      "playlist_id": "PLSkJwyyRdKug",
-      "position": 3,
-      "next_reset_utc": "2026-11-19T08:00:05Z",
-      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
-    },
-    {
-      "asset_id": "MS09_E05",
-      "video_id": "E_IttW6ODNo",
-      "action": "bind_series_playlist",
-      "playlist_id": "PLSkJwyyRdKug",
-      "position": 4,
-      "next_reset_utc": "2026-11-19T08:00:05Z",
-      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
-    }
-  ],
-  "completed_at_utc": "2026-11-18T13:44:55Z",
+  "post_reset_tasks": [],
+  "completed_at_utc": "2026-11-18T17:41:21Z",
   "assets": [
     {
       "asset_id": "MS09_E01",
@@ -117,7 +72,7 @@
       "youtube_id": "iecByY0b2BM",
       "watch_url": "https://www.youtube.com/watch?v=iecByY0b2BM",
       "playlist_id": "PLSkJwyyRdKug",
-      "playlist_bound": false,
+      "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "1OAH1HD64PhjajghisGh_xAEfx9O4ZCDW",
       "drive_url": "https://drive.google.com/drive/folders/1OAH1HD64PhjajghisGh_xAEfx9O4ZCDW"
@@ -139,7 +94,7 @@
       "youtube_id": "dCVlCjG6ig8",
       "watch_url": "https://www.youtube.com/watch?v=dCVlCjG6ig8",
       "playlist_id": "PLSkJwyyRdKug",
-      "playlist_bound": false,
+      "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "13MufZKMeewGjpNfxAhvShCBKgXcQULVt",
       "drive_url": "https://drive.google.com/drive/folders/13MufZKMeewGjpNfxAhvShCBKgXcQULVt"
@@ -161,7 +116,7 @@
       "youtube_id": "hCNSy0-Pu2Q",
       "watch_url": "https://www.youtube.com/watch?v=hCNSy0-Pu2Q",
       "playlist_id": "PLSkJwyyRdKug",
-      "playlist_bound": false,
+      "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "1m_Fi1ifY0R1BEqTS4dFwM8O1oNUOH-A-",
       "drive_url": "https://drive.google.com/drive/folders/1m_Fi1ifY0R1BEqTS4dFwM8O1oNUOH-A-"
@@ -183,7 +138,7 @@
       "youtube_id": "E_IttW6ODNo",
       "watch_url": "https://www.youtube.com/watch?v=E_IttW6ODNo",
       "playlist_id": "PLSkJwyyRdKug",
-      "playlist_bound": false,
+      "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "1UVkgMsDoP4BqGPYmREXjy4NA7wa4LgWW",
       "drive_url": "https://drive.google.com/drive/folders/1UVkgMsDoP4BqGPYmREXjy4NA7wa4LgWW"
@@ -201,12 +156,12 @@
       "voice_sep_db": 33.0,
       "music_detected": false,
       "publish_at": "2026-12-18T15:00:00Z",
-      "status": "QA_VERIFIED_QUOTA_QUEUED",
-      "youtube_id": null,
-      "watch_url": null,
+      "status": "API_SCHEDULED",
+      "youtube_id": "1oxDLc1Gcos",
+      "watch_url": "https://www.youtube.com/watch?v=1oxDLc1Gcos",
       "playlist_id": "PLSkJwyyRdKug",
-      "playlist_bound": false,
-      "quota_next_reset_utc": "2026-11-19T08:00:05Z",
+      "playlist_bound": true,
+      "quota_next_reset_utc": null,
       "drive_folder_id": "15BVSEbdBEuz_GZbzaQX3yhuzeZbnFy_j",
       "drive_url": "https://drive.google.com/drive/folders/15BVSEbdBEuz_GZbzaQX3yhuzeZbnFy_j"
     }

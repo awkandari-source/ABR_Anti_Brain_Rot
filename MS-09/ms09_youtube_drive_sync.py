@@ -670,9 +670,10 @@ def main() -> int:
             print(f"[{aid}] Already uploaded to YouTube: {existing_vid}", flush=True)
             continue
 
+        upload_cost = hub.youtube.quota.estimate_cost("POST", "videos")
         upload_purpose = (
             "production"
-            if hub.youtube.quota.can_spend(1600, purpose="production")
+            if hub.youtube.quota.can_spend(upload_cost, purpose="production")
             else "remediation_critical"
         )
         try:
