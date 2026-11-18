@@ -97,6 +97,7 @@
 | 61 | `MS03_E05` | *Attention Restoration Theory & The 14-Day Screen Reset: Rebuilding Deep Voluntary Focus* | Pillar 2 (Science · MS03) | `15:00` | **`+32.1 dB`** (`0%` Music) | **Scheduled** (`2026-12-26T15:00:00Z`) | [`9qYUSlrcmYA`](https://www.youtube.com/watch?v=9qYUSlrcmYA) | `1-giORU5YeiIgdvV8ZpC5AHf-2JTjSvzK` |
 | 62 | `MS02_E04` | *The Old Watermill's Mossy Wheel at Dusk \| 15-Min Low-Stimulation Bedtime Story (No Music)* | Pillar 1 (Story · MS02) | `15:00` | **`+32.9 dB`** (`0%` Music) | **Scheduled** (`2026-12-27T15:00:00Z`) | [`Qy92xcPHTtc`](https://www.youtube.com/watch?v=Qy92xcPHTtc) | `14s-1kZ7FLuaeh9823rfaJ1pb5-vcgZFR` |
 | 63 | `MS02_E05` | *Tucking the Wooden Rowboats Under Canvas Covers \| 15-Min Harbor Rain Story (No Music)* | Pillar 1 (Story · MS02) | `15:00` | **`+32.2 dB`** (`0%` Music) | **Scheduled** (`2026-12-30T15:00:00Z`) | [`QS5xI6s4WEE`](https://www.youtube.com/watch?v=QS5xI6s4WEE) | `16ZTPG_v49Q_tjiVet00WkAoPG7H-XkzO` |
+| 64 | `ABR_NS03` | *3 Hours Non-Looped Settling Stone Hearth & Dusk Pine Breeze \| Sub-2000K Sleep (No Pops, No Music)* | Pillar 1B (3-Hr Sleep) | `03:00:00` | Pure Nature Foley (`0%` Music, `-4.7 dBTP`) | **Staged Unlisted** (`2026-11-18`) | [`psEs90dgdcU`](https://www.youtube.com/watch?v=psEs90dgdcU) | `1zPl_JW_fMUvRpDkogh3w0txbP5kOO0mv` |
 
 ---
 
