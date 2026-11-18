@@ -98,15 +98,24 @@ def measure_active_speech_mean_db(voice_path: Path) -> float:
     return res["mean_volume_db"]
 
 
-def check_dead_air_and_vocal_duty_chk07(voice_wav: Path, *, is_short: bool = False) -> dict[str, Any]:
+def check_dead_air_and_vocal_duty_chk07(
+    voice_wav: Path,
+    *,
+    is_short: bool = False,
+    max_silence_override_sec: float | None = None,
+) -> dict[str, Any]:
     """
     SOP-03 Gate CHK-07 (ABR-AG-SOP-v2.1 Continuous Narration & Dead-Air Elimination):
-    - Runs `ffmpeg -i <voice.wav> -af silencedetect=noise=-45dB:d=1.5 -f null -` (d=0.9 for Shorts)
-    - Hard-fails any asset with max_narration_silence_sec > 1.5s (Long) / > 0.9s (Shorts),
+    - Runs `ffmpeg -i <voice.wav> -af silencedetect=noise=-45dB:d=1.5 -f null -` (d=0.9 for Shorts; d=0.8 for Sleep Shorts)
+    - Hard-fails any asset with max_narration_silence_sec > ceiling,
       vocal_duty_cycle_pct < 88.0% (Long) / < 90.0% (Shorts), or Shorts vocal entry > 0.5s.
     """
     dur = get_media_duration(voice_wav)
-    max_limit = 0.9 if is_short else 1.5
+    max_limit = (
+        max_silence_override_sec
+        if max_silence_override_sec is not None
+        else (0.9 if is_short else 1.5)
+    )
     min_duty = 90.0 if is_short else 88.0
 
     p_gate = subprocess.run(
@@ -406,6 +415,108 @@ def check_sleep_visual_amber_guardrail(mp4_path: Path) -> dict[str, Any]:
     }
 
 
+def check_sub1900k_luminance_decay(mp4_path: Path) -> dict[str, Any]:
+    """
+    Verifies SH-02 Sub-1900K warm amber/ember curve & -15% linear luminance decay (0:00 -> 0:60):
+    - Estimates Correlated Color Temperature (McCamy CIE 1931 xy) strictly < 1900K across timeline
+    - Confirms R > G > B warm ember chromaticity (zero cool glare)
+    - Confirms linear luminance decay from start to end within [-18.0%, -12.0%] around -15.0%
+    - Confirms 0 rapid scene cuts (select='gt(scene,0.35)')
+    """
+    dur = get_media_duration(mp4_path)
+    sample_times = [0.25, dur * 0.25, dur * 0.50, dur * 0.75, max(0.5, dur - 0.25)]
+    lumas: list[float] = []
+    ccts: list[float] = []
+    rgbs: list[list[float]] = []
+
+    for ss in sample_times:
+        p = subprocess.run(
+            [
+                "ffmpeg", "-v", "error", "-ss", f"{ss:.2f}", "-i", str(mp4_path),
+                "-vf", "scale=90:160,format=rgb24", "-frames:v", "1", "-f", "rawvideo", "-",
+            ],
+            capture_output=True,
+            check=True,
+        )
+        raw = p.stdout
+        if not raw or len(raw) < 3:
+            return {"passed": False, "error": f"Failed decoding frame at {ss:.2f}s"}
+        px_count = len(raw) // 3
+        rm = sum(raw[0::3]) / px_count
+        gm = sum(raw[1::3]) / px_count
+        bm = sum(raw[2::3]) / px_count
+        rgbs.append([round(rm, 2), round(gm, 2), round(bm, 2)])
+        luma = 0.2126 * rm + 0.7152 * gm + 0.0722 * bm
+        lumas.append(luma)
+
+        # Approximate linear sRGB from channel means for CIE 1931 xy -> McCamy CCT
+        def _lin(c255: float) -> float:
+            u = max(0.0, min(1.0, c255 / 255.0))
+            return u / 12.92 if u <= 0.04045 else ((u + 0.055) / 1.055) ** 2.4
+
+        rl, gl, bl = _lin(rm), _lin(gm), _lin(bm)
+        X = 0.4124564 * rl + 0.3575761 * gl + 0.1804375 * bl
+        Y = 0.2126729 * rl + 0.7151522 * gl + 0.0721750 * bl
+        Z = 0.0193339 * rl + 0.1191920 * gl + 0.9503041 * bl
+        denom = max(1e-9, X + Y + Z)
+        x_chr, y_chr = X / denom, Y / denom
+
+        # Project CIE 1960 UCS (u, v) onto exact Planckian blackbody locus (1200K..5000K, Kang et al. 2002)
+        uv_den = max(1e-9, -2.0 * x_chr + 12.0 * y_chr + 3.0)
+        u_obs, v_obs = (4.0 * x_chr) / uv_den, (6.0 * y_chr) / uv_den
+        best_t = 5000.0
+        best_d2 = 1e18
+        for t_cand in range(1200, 5005, 5):
+            tc = float(t_cand)
+            if tc >= 1667.0:
+                xp = -0.2661239e9 / (tc ** 3) - 0.2343580e6 / (tc ** 2) + 0.8776956e3 / tc + 0.179910
+                yp = -1.1063814 * (xp ** 3) - 1.34811020 * (xp ** 2) + 2.18555832 * xp - 0.20219683
+            else:
+                xp = 0.565 + (1667.0 - tc) * 0.00014
+                yp = 0.402 - (1667.0 - tc) * 0.00008
+            p_den = max(1e-9, -2.0 * xp + 12.0 * yp + 3.0)
+            up, vp = (4.0 * xp) / p_den, (6.0 * yp) / p_den
+            d2 = (u_obs - up) ** 2 + (v_obs - vp) ** 2
+            if d2 < best_d2:
+                best_d2 = d2
+                best_t = tc
+        ccts.append(round(best_t, 1))
+
+    p_cuts = subprocess.run(
+        [
+            "ffmpeg", "-nostats", "-an", "-i", str(mp4_path),
+            "-vf", "scale=90:160,select='gt(scene,0.35)',showinfo", "-f", "null", "-",
+        ],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    rapid_cuts = len(re.findall(r"pts_time:([\d.]+)", p_cuts.stderr))
+
+    luma_start = lumas[0]
+    luma_end = lumas[-1]
+    decay_pct = ((luma_end - luma_start) / max(1e-6, luma_start)) * 100.0
+    max_cct = max(ccts)
+    mean_cct = sum(ccts) / len(ccts)
+    warm_channels_ok = all((rgb[0] > rgb[1] >= rgb[2]) and (rgb[2] <= 4.0) for rgb in rgbs)
+    cct_ok = max_cct < 1900.0
+    decay_ok = (-18.0 <= decay_pct <= -12.0) and (luma_end < luma_start) and (max(lumas) <= 55.0)
+    passed = cct_ok and warm_channels_ok and decay_ok and (rapid_cuts == 0)
+    return {
+        "passed": passed,
+        "estimated_cct_kelvin_samples": ccts,
+        "mean_cct_kelvin": round(mean_cct, 1),
+        "max_cct_kelvin": round(max_cct, 1),
+        "sub_1900k_verified": cct_ok,
+        "luma_samples_0_255": [round(v, 2) for v in lumas],
+        "luma_start_0_255": round(luma_start, 2),
+        "luma_end_0_255": round(luma_end, 2),
+        "luminance_decay_pct": round(decay_pct, 2),
+        "rgb_samples_0_255": rgbs,
+        "rapid_cuts_detected": rapid_cuts,
+    }
+
+
 def inspect_mp4_atoms(mp4_path: Path) -> dict[str, Any]:
     """Parses top-level ISO BMFF atoms to verify `moov` precedes `mdat`."""
     offsets: dict[str, int] = {}
@@ -450,6 +561,10 @@ def run_qc_gate(
     voice_wav: Path | None = None,
     foley_wav: Path | None = None,
     narrated: bool = True,
+    target_lufs: float = -14.0,
+    max_true_peak_dbfs: float | None = None,
+    max_silence_override_sec: float | None = None,
+    verify_sub1900k_luma_decay: bool = False,
 ) -> dict[str, Any]:
     probe_proc = subprocess.run(
         ["ffprobe", "-v", "error", "-show_streams", "-show_format", "-of", "json", str(mp4_path)],
@@ -537,7 +652,11 @@ def run_qc_gate(
         spectral = check_zero_music_spectral_audit(foley_wav)
         master_pause_audit = check_master_pause_zero_music(mp4_path, voice_wav)
         is_short_asset = (expected_width == 1080 and expected_height == 1920) or (max_duration_sec <= 75.5)
-        chk07_audit = check_dead_air_and_vocal_duty_chk07(voice_wav, is_short=is_short_asset)
+        chk07_audit = check_dead_air_and_vocal_duty_chk07(
+            voice_wav,
+            is_short=is_short_asset,
+            max_silence_override_sec=max_silence_override_sec,
+        )
 
         # Strict separation enforcement across ALL three voice metrics vs foley mean dB:
         sep_lufs_vs_foley_db = round(vo_ebur["integrated_lufs"] - fol_vol["mean_volume_db"], 2)
@@ -549,7 +668,7 @@ def run_qc_gate(
             sep_raw_mean_vs_foley_db,
         )
 
-        lufs_ok = -14.5 <= master_ebur["integrated_lufs"] <= -13.5
+        lufs_ok = (target_lufs - 0.5) <= master_ebur["integrated_lufs"] <= (target_lufs + 0.5)
         sep_ok = (
             effective_sep_db >= 30.0
             and sep_lufs_vs_foley_db >= 30.0
@@ -570,10 +689,21 @@ def run_qc_gate(
             "zero_music_spectral": spectral,
             "master_pause_zero_music": master_pause_audit,
         }
-        result["gates"]["integrated_loudness_minus14_lufs"] = lufs_ok
+        lufs_gate_key = (
+            "integrated_loudness_minus14_lufs"
+            if abs(target_lufs - (-14.0)) < 1e-6
+            else f"integrated_loudness_{str(target_lufs).replace('-', 'minus').replace('.', 'p')}_lufs"
+        )
+        result["gates"][lufs_gate_key] = lufs_ok
         result["gates"]["voice_to_foley_separation_gte_30db"] = sep_ok
         result["gates"]["zero_music_spectral_audit"] = zero_music_ok
         result["gates"]["dead_air_and_vocal_duty_chk07"] = chk07_audit["passed"]
+        if max_true_peak_dbfs is not None:
+            result["gates"]["true_peak_strictly_below_ceiling"] = master_ebur["true_peak_dbfs"] < max_true_peak_dbfs
+        if verify_sub1900k_luma_decay:
+            sub1900k_res = check_sub1900k_luminance_decay(mp4_path)
+            result["stems_audit"]["sub1900k_luminance_decay"] = sub1900k_res
+            result["gates"]["sub1900k_and_minus15pct_luma_decay"] = sub1900k_res["passed"]
     else:
         # 3-Hour Sleep Soundscape safe continuous low-SPL profile + Zero-Music + Sub-2000K visual check
         lufs_ok = -32.0 <= master_ebur["integrated_lufs"] <= -18.0
@@ -593,16 +723,20 @@ def run_qc_gate(
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 6:
-        print("Usage: qc_gate.py <mp4> <width> <height> <min_dur> <max_dur> [voice.wav foley.wav]")
+    raw_args = list(sys.argv[1:])
+    sleep_short_mode = "--sleep-short" in raw_args
+    if sleep_short_mode:
+        raw_args = [a for a in raw_args if a != "--sleep-short"]
+    if len(raw_args) < 5:
+        print("Usage: qc_gate.py [--sleep-short] <mp4> <width> <height> <min_dur> <max_dur> [voice.wav foley.wav]")
         sys.exit(2)
-    mp4 = Path(sys.argv[1])
-    w = int(sys.argv[2])
-    h = int(sys.argv[3])
-    mn = float(sys.argv[4])
-    mx = float(sys.argv[5])
-    vw = Path(sys.argv[6]) if len(sys.argv) >= 8 else None
-    fw = Path(sys.argv[7]) if len(sys.argv) >= 8 else None
+    mp4 = Path(raw_args[0])
+    w = int(raw_args[1])
+    h = int(raw_args[2])
+    mn = float(raw_args[3])
+    mx = float(raw_args[4])
+    vw = Path(raw_args[5]) if len(raw_args) >= 7 else None
+    fw = Path(raw_args[6]) if len(raw_args) >= 7 else None
     res = run_qc_gate(
         mp4,
         expected_width=w,
@@ -612,6 +746,10 @@ if __name__ == "__main__":
         voice_wav=vw,
         foley_wav=fw,
         narrated=(vw is not None),
+        target_lufs=(-16.0 if sleep_short_mode else -14.0),
+        max_true_peak_dbfs=(-2.0 if sleep_short_mode else None),
+        max_silence_override_sec=(0.8 if sleep_short_mode else None),
+        verify_sub1900k_luma_decay=sleep_short_mode,
     )
     print(json.dumps(res, indent=2))
     sys.exit(0 if res["all_passed"] else 1)

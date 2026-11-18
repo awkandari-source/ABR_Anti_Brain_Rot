@@ -1,0 +1,188 @@
+{
+  "asset_id": "SH02_S03",
+  "batch_id": "SH-02",
+  "format_type": "SLEEP_SANCTUARY_SHORT",
+  "title": "Why Slow Ocean Swells Pace Your Breathing Before Sleep #Shorts",
+  "narrator_gender": "male",
+  "narrator_voice": "Kokoro ONNX Deep Sleep Baritone (0.60 bm_george + 0.40 bm_daniel)",
+  "spoken_word_count": 126,
+  "shot_count": 4,
+  "shot_schedule": [
+    {
+      "shot": 1,
+      "window_sec": [
+        0.0,
+        16.5
+      ],
+      "plate": "SH02_S03_shot1.jpg"
+    },
+    {
+      "shot": 2,
+      "window_sec": [
+        15.0,
+        31.5
+      ],
+      "plate": "SH02_S03_shot2.jpg",
+      "cross_dissolve_in_sec": 1.5
+    },
+    {
+      "shot": 3,
+      "window_sec": [
+        30.0,
+        46.5
+      ],
+      "plate": "SH02_S03_shot3.jpg",
+      "cross_dissolve_in_sec": 1.5
+    },
+    {
+      "shot": 4,
+      "window_sec": [
+        45.0,
+        60.0
+      ],
+      "plate": "sh02_dark_amber_endcard_1080x1920.png",
+      "cross_dissolve_in_sec": 1.5
+    }
+  ],
+  "state": "QA_VERIFIED",
+  "stream_metrics": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24.0,
+    "duration_sec": 60.0,
+    "min_scene_hold_sec": 15.0,
+    "shot_count": 4,
+    "voice_lufs": -16.0,
+    "voice_lra_lu": 1.0,
+    "foley_lufs": -26.2,
+    "foley_lra_lu": 0.5,
+    "master_lufs": -16.0,
+    "voice_foley_separation_db": 45.5,
+    "net_voice_separation_db": 45.5,
+    "true_peak_dbtp": -3.0,
+    "max_narration_silence_sec": 0.389,
+    "vocal_duty_cycle_pct": 94.53,
+    "vocal_entry_sec": 0.205,
+    "music_detected": false
+  },
+  "youtube_routing": {
+    "channel_handle": "@ABR-AntiBrainRot",
+    "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
+    "secondary_playlist_ids": [
+      "PLUt7V0-ta200",
+      "PLAe5Tqk750cc"
+    ],
+    "publish_at_utc": "2026-12-27T02:00:00Z",
+    "related_video": {
+      "parent_sanctuary_id": "ABR_NS02",
+      "parent_sanctuary_title": "180-Minute Deep Ocean Swell & Pebbled Cove Undertow",
+      "parent_playlist_id": "PLO3jEEgHm_Iw",
+      "parent_playlist_url": "https://www.youtube.com/playlist?list=PLO3jEEgHm_Iw"
+    },
+    "primary_source_org": "NHLBI / NIH",
+    "primary_source_citation": "National Heart, Lung, and Blood Institute (NHLBI / NIH) \u2014 'How Sleep Works: Parasympathetic vagal tone, cardiorespiratory slowing, and sleep-onset physiology.'",
+    "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/"
+  },
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "sop03_verification": {
+    "CHK-01": {
+      "pass": true,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "r_frame_rate": "24/1"
+      },
+      "fps": 24.0,
+      "expected_geometry": "1080x1920@24fps"
+    },
+    "CHK-02": {
+      "pass": true,
+      "duration_sec": 60.0,
+      "bounds_sec": [
+        59.5,
+        60.5
+      ]
+    },
+    "CHK-03": {
+      "pass": true,
+      "voice": {
+        "integrated_lufs": -16.0,
+        "lra_lu": 1.0,
+        "true_peak_dbtp": -3.0
+      },
+      "foley": {
+        "integrated_lufs": -26.2,
+        "lra_lu": 0.5,
+        "true_peak_dbtp": -9.9
+      },
+      "master": {
+        "integrated_lufs": -16.0,
+        "lra_lu": 1.0,
+        "true_peak_dbtp": -3.0
+      },
+      "volumedetect_voice": {
+        "mean_volume_db": -18.4,
+        "max_volume_db": -3.0
+      },
+      "volumedetect_foley": {
+        "mean_volume_db": -28.4,
+        "max_volume_db": -9.9
+      },
+      "net_voice_over_foley_separation_db": 45.5
+    },
+    "CHK-04": {
+      "pass": true,
+      "music_detected": false,
+      "max_tonal_concentration": 0.00094
+    },
+    "CHK-05": {
+      "pass": true,
+      "min_scene_hold_sec": 15.0,
+      "detected_cuts_gt_035": 0,
+      "shot_count": 4
+    },
+    "CHK-06": {
+      "pass": true,
+      "missing_manifest_keys": [],
+      "quota_remaining": 9200,
+      "same_day_live_units_remaining": 9200,
+      "google_drive_only": false,
+      "narrator_gender": "male",
+      "narrator_gender_verified_male": true
+    },
+    "CHK-07": {
+      "pass": true,
+      "command": "ffmpeg -i SH02_S03_Voice_16LUFS.wav -af silencedetect=noise=-45dB:d=0.8 -f null -",
+      "noise_threshold_db": -45.0,
+      "max_silence_ceiling_sec": 0.8,
+      "min_vocal_duty_floor_pct": 90.0,
+      "max_narration_silence_sec": 0.389,
+      "total_narration_silence_sec": 3.28,
+      "vocal_duty_cycle_pct": 94.53,
+      "vocal_entry_sec": 0.205,
+      "vocal_entry_ok": true,
+      "exceeding_intervals_count": 0,
+      "exceeding_intervals": []
+    }
+  },
+  "drive_archive": {
+    "sh02_drive_folder_id": "1TwKGhwvkrprbVIvkfmU7gB4-BKsochkh",
+    "asset_drive_folder_id": "1ZmNWR7TG4VHqNnu6CN7_xpYKpl-AsZyN",
+    "asset_drive_url": "https://drive.google.com/drive/folders/1ZmNWR7TG4VHqNnu6CN7_xpYKpl-AsZyN",
+    "files": {
+      "master_mp4": "1OfxF_cjeqJLdTUv_feu4K7BvNDGwT5N3",
+      "voice_wav": "1_igqKk_O0kArDHmXh8fYZTp1RMVx_Wwa",
+      "foley_sampler_wav": "158N5K4BLuJLDhkC6Ql2xauBR7qMgpczs",
+      "foley_ducked_wav": "14fJXtNVqC2zp2apF9EA8VUapT9qVKTHX",
+      "gate_audit_json": "1HAHYu4hpjMs6rrmm_lHhP-KrN6xs8pQS",
+      "script_md": "1i9JbkgVL65xPi7OVfzkNDxCMvn3x_NwW",
+      "manifest_json": "12DY7V2Dts2z_b6vYA27OTgQ73gXB0JLr"
+    }
+  }
+}

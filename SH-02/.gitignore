@@ -1,0 +1,16 @@
+# Binary media & intermediate renders are mirrored to Google Drive (SH-02 archive)
+# and /shared/user/.gemini/raw_video_studio/SH-02/ to keep GitHub lean & clean.
+masters/
+stems/
+plates/
+build/
+quarantine/
+__pycache__/
+*.mp4
+*.wav
+*.m4a
+*.jpg
+*.jpeg
+*.png
+*.npy
+*.pyc

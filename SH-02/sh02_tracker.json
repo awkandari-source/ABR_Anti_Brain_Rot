@@ -1,0 +1,47 @@
+{
+  "batch_id": "SH-02",
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "quota_controller": {
+    "daily_soft_limit_units": 9200,
+    "sweeper_reserve_units": 800,
+    "ledger_file": "/shared/user/.gemini/raw_video_studio/youtube_quota_ledger.json"
+  },
+  "assets": {
+    "SH02_S01": {
+      "state": "QA_VERIFIED",
+      "parent_sanctuary_id": "ABR_NS03",
+      "max_narration_silence_sec": 0.373,
+      "vocal_duty_cycle_pct": 94.93
+    },
+    "SH02_S02": {
+      "state": "QA_VERIFIED",
+      "parent_sanctuary_id": "ABR_NS01",
+      "max_narration_silence_sec": 0.355,
+      "vocal_duty_cycle_pct": 94.42
+    },
+    "SH02_S03": {
+      "state": "QA_VERIFIED",
+      "parent_sanctuary_id": "ABR_NS02",
+      "max_narration_silence_sec": 0.389,
+      "vocal_duty_cycle_pct": 94.53
+    },
+    "SH02_S04": {
+      "state": "QA_VERIFIED",
+      "parent_sanctuary_id": "ABR_NS03",
+      "max_narration_silence_sec": 0.346,
+      "vocal_duty_cycle_pct": 94.55
+    },
+    "SH02_S05": {
+      "state": "QA_VERIFIED",
+      "parent_sanctuary_id": "ABR_NS04",
+      "max_narration_silence_sec": 0.349,
+      "vocal_duty_cycle_pct": 93.19
+    },
+    "SH02_S06": {
+      "state": "QA_VERIFIED",
+      "parent_sanctuary_id": "ABR_NS05",
+      "max_narration_silence_sec": 0.406,
+      "vocal_duty_cycle_pct": 95.12
+    }
+  }
+}
