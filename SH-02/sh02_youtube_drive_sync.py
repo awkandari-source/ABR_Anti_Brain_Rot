@@ -28,7 +28,7 @@ from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, "/shared/user/.gemini/raw_video_studio")
-from linked_api_hub import LinkedAPIError, LinkedAPIHub
+from linked_api_hub import LinkedAPIError, LinkedAPIHub, YouTubeQuotaExhaustedError
 
 REPO_ROOT = Path("/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot")
 SH02_DIR = REPO_ROOT / "SH-02"
@@ -116,38 +116,43 @@ def gdrive_upsert_file(hub: LinkedAPIHub, local_path: Path, parent_id: str) -> s
 
 def resolve_parent_sanctuary_links() -> dict[str, dict[str, str]]:
     """
-    Dynamically checks INDEX_Tracker.json for any live YouTube IDs assigned to ABR_NS01..ABR_NS05,
-    binding each Short to its exact parent 180-minute sanctuary + official 180-Min Sanctuary playlist.
+    Dynamically resolves live YouTube IDs for ABR_NS01..ABR_NS05 (including verified live
+    ABR_NS03 `psEs90dgdcU` on @ABR-AntiBrainRot) + companion 180-minute sanctuaries in `PLO3jEEgHm_Iw`.
     """
     parent_map: dict[str, dict[str, str]] = {
         "ABR_NS01": {
             "id": "ABR_NS01",
             "title": "180-Minute Midnight Cedar Rain & Mossy Cave Drip",
             "youtube_id": "",
+            "companion_sanctuary_youtube_id": "q9woVuJb9X0",
             "playlist_url": f"https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}",
         },
         "ABR_NS02": {
             "id": "ABR_NS02",
             "title": "180-Minute Deep Ocean Swell & Pebbled Cove Undertow",
             "youtube_id": "",
+            "companion_sanctuary_youtube_id": "xcAo79qLcLc",
             "playlist_url": f"https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}",
         },
         "ABR_NS03": {
             "id": "ABR_NS03",
             "title": "The 180-Minute Settling Stone Hearth & Dusk Pine Breeze",
-            "youtube_id": "",
+            "youtube_id": "psEs90dgdcU",
+            "companion_sanctuary_youtube_id": "psEs90dgdcU",
             "playlist_url": f"https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}",
         },
         "ABR_NS04": {
             "id": "ABR_NS04",
             "title": "180-Minute Alpine Snowfall & Quiet Cabin Timber",
             "youtube_id": "",
+            "companion_sanctuary_youtube_id": "OwMTPuornpo",
             "playlist_url": f"https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}",
         },
         "ABR_NS05": {
             "id": "ABR_NS05",
             "title": "180-Minute Desert Night Wind & Cooling Basalt Stone",
             "youtube_id": "",
+            "companion_sanctuary_youtube_id": "BgpIR-lvpZw",
             "playlist_url": f"https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}",
         },
     }
@@ -172,11 +177,23 @@ def build_sleep_short_description(
     parent_id = item["parent_sanctuary_id"]
     parent_title = item["parent_sanctuary_title"]
     parent_yt = parent_info.get("youtube_id", "")
-    parent_watch_line = (
-        f"Enter Parent Sanctuary ({parent_id} — {parent_title}): https://www.youtube.com/watch?v={parent_yt}"
-        if parent_yt
-        else f"Enter Parent Sanctuary ({parent_id} — {parent_title}) in our 180-Minute Sleep Sanctuaries Playlist: https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}"
-    )
+    comp_yt = parent_info.get("companion_sanctuary_youtube_id", "")
+    if parent_yt:
+        parent_watch_line = (
+            f"Enter Parent Sanctuary ({parent_id} — {parent_title}): https://www.youtube.com/watch?v={parent_yt} "
+            f"| Full 180-Min Sanctuaries: https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}"
+        )
+    elif comp_yt:
+        parent_watch_line = (
+            f"Enter Parent Sanctuary ({parent_id} — {parent_title}) in 180-Min Sleep Sanctuaries: "
+            f"https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID} "
+            f"| Companion 3-Hr Sanctuary: https://www.youtube.com/watch?v={comp_yt}"
+        )
+    else:
+        parent_watch_line = (
+            f"Enter Parent Sanctuary ({parent_id} — {parent_title}) in our 180-Minute Sleep Sanctuaries Playlist: "
+            f"https://www.youtube.com/playlist?list={PARENT_SANCTUARIES_PLAYLIST_ID}"
+        )
     pl_line = (
         f"Neuro-Acoustic Sleep Sanctuaries — Shorts Playlist: https://www.youtube.com/playlist?list={shorts_playlist_id}"
         if shorts_playlist_id
@@ -233,7 +250,7 @@ def ensure_shorts_playlist(hub: LinkedAPIHub) -> str:
 
 def check_youtube_oauth_ready(hub: LinkedAPIHub) -> tuple[bool, str]:
     try:
-        hub.youtube.list_playlists(max_results=5)
+        hub.youtube.get_access_token()
         return True, "READY"
     except Exception as exc:
         return False, str(exc)
@@ -242,18 +259,14 @@ def check_youtube_oauth_ready(hub: LinkedAPIHub) -> tuple[bool, str]:
 def git_commit_and_push_clean(commit_message: str) -> tuple[str, bool]:
     """
     Rebases onto latest origin/main safely, stages SH-02 + qc_gate.py (+ Index if updated),
-    checks `git status --porcelain` before committing, pushes to origin, and verifies a clean tree.
+    checks `git status --porcelain` before committing, pushes to origin with rebase retry,
+    and verifies a 100% clean working tree.
     """
     import shutil as _shutil
 
     for pycache_dir in (REPO_ROOT / ".agents").rglob("__pycache__"):
         _shutil.rmtree(pycache_dir, ignore_errors=True)
 
-    subprocess.run(
-        ["git", "pull", "--rebase", "--autostash", "origin", "main"],
-        cwd=str(REPO_ROOT),
-        check=True,
-    )
     paths_to_stage = [
         "SH-02",
         ".agents/skills/abr-daily-producer/scripts/qc_gate.py",
@@ -275,7 +288,24 @@ def git_commit_and_push_clean(commit_message: str) -> tuple[str, bool]:
             cwd=str(REPO_ROOT),
             check=True,
         )
-        subprocess.run(["git", "push", "origin", "HEAD"], cwd=str(REPO_ROOT), check=True)
+
+    for attempt in range(4):
+        subprocess.run(
+            ["git", "pull", "--rebase", "--autostash", "origin", "main"],
+            cwd=str(REPO_ROOT),
+            check=True,
+        )
+        push_p = subprocess.run(
+            ["git", "push", "origin", "HEAD:main"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+        )
+        if push_p.returncode == 0:
+            break
+        if attempt == 3:
+            raise RuntimeError(f"git push failed after 4 attempts: {push_p.stderr}")
+        time.sleep(2.0)
 
     for pycache_dir in (REPO_ROOT / ".agents").rglob("__pycache__"):
         _shutil.rmtree(pycache_dir, ignore_errors=True)
@@ -383,16 +413,26 @@ def main() -> int:
         if qa_sum.exists():
             gdrive_upsert_file(hub, qa_sum, sh02_drive_folder_id)
 
-    # 3. YouTube Scheduling & Playlist Binding (or clean sweeper staging if OAuth refresh required)
+    # 3. YouTube Scheduling & Playlist Binding (with strict QuotaLedger 9,200-unit soft-cap governance)
     yt_ready, yt_detail = check_youtube_oauth_ready(hub)
     shorts_playlist_id: str | None = batch_manifest.get("playlist", {}).get("playlist_id")
     yt_records: list[dict[str, Any]] = []
+    scheduled_count = 0
+    quota_deferred_count = 0
+
+    sh02_tracker = (
+        json.loads(SH02_TRACKER_PATH.read_text(encoding="utf-8"))
+        if SH02_TRACKER_PATH.exists()
+        else {"batch_id": "SH-02", "sop_version": "ABR-AG-SOP-v2.1", "assets": {}}
+    )
 
     if yt_ready:
         shorts_playlist_id = ensure_shorts_playlist(hub)
         batch_manifest["playlist"]["playlist_id"] = shorts_playlist_id
         batch_manifest["playlist"]["playlist_url"] = f"https://www.youtube.com/playlist?list={shorts_playlist_id}"
-        print(f"[SH-02 Sync] Playlist '{PLAYLIST_TITLE}' ready: {shorts_playlist_id}", flush=True)
+        sh02_tracker["playlist_id"] = shorts_playlist_id
+        sh02_tracker["playlist_title"] = PLAYLIST_TITLE
+        print(f"[SH-02 Sync] Official Playlist '{PLAYLIST_TITLE}' LIVE: {shorts_playlist_id}", flush=True)
 
         for idx, item in enumerate(deliverables):
             aid = item["asset_id"]
@@ -403,88 +443,200 @@ def main() -> int:
             desc = build_sleep_short_description(item, p_info, shorts_playlist_id)
             mp4_p = SH02_DIR / "masters" / f"{aid}_Master_1080x1920_24p.mp4"
 
+            vid_id: str | None = None
+            watch_url: str | None = None
+            defer_reason: str | None = None
+
             if existing_vid:
                 vid_id = str(existing_vid)
                 watch_url = f"https://www.youtube.com/shorts/{vid_id}"
                 print(f"[{aid}] Already scheduled on YouTube: {vid_id}", flush=True)
             else:
-                q_snap = hub.quota.snapshot()
-                if int(q_snap["production_units_remaining"]) < 1650:
-                    raise RuntimeError(f"Quota circuit breaker: production_units_remaining={q_snap['production_units_remaining']} < 1650")
-                up_res = hub.youtube.upload_video(
-                    mp4_p,
-                    title=item["title"],
-                    description=desc,
-                    tags=[
-                        "sleep science", "sub 1900k light", "zero music sleep",
-                        "neuro acoustic sleep sanctuary", "anti brain rot", "calm bedtime science",
-                        "melatonin sleep", "deep sleep sounds no music", "shorts",
-                    ],
-                    category_id="27",
-                    privacy_status="private",
-                    publish_at_iso=item["publish_at_utc"],
-                    made_for_kids=False,
-                )
-                vid_id = str(up_res["id"])
-                watch_url = f"https://www.youtube.com/shorts/{vid_id}"
-                hub.youtube.add_to_playlist(shorts_playlist_id, vid_id, position=idx)
-                hub.youtube.add_to_playlist(SHORTS_SHELF_PLAYLIST_ID, vid_id)
+                try:
+                    print(f"[{aid}] Uploading {mp4_p.name} -> {item['publish_at_utc']}...", flush=True)
+                    up_res = hub.youtube.upload_video(
+                        mp4_p,
+                        title=item["title"],
+                        description=desc,
+                        tags=[
+                            "sleep science", "sub 1900k light", "zero music sleep",
+                            "neuro acoustic sleep sanctuary", "anti brain rot", "calm bedtime science",
+                            "melatonin sleep", "deep sleep sounds no music", "shorts",
+                        ],
+                        category_id="27",
+                        privacy_status="private",
+                        publish_at_iso=item["publish_at_utc"],
+                        made_for_kids=False,
+                        purpose="production",
+                    )
+                    vid_id = str(up_res["id"])
+                    watch_url = f"https://www.youtube.com/shorts/{vid_id}"
+                    hub.youtube.add_to_playlist(shorts_playlist_id, vid_id, position=idx, purpose="sweeper")
+                    hub.youtube.add_to_playlist(SHORTS_SHELF_PLAYLIST_ID, vid_id, purpose="sweeper")
+                    print(f"[{aid}] Scheduled LIVE on YouTube: {vid_id} ({watch_url})", flush=True)
+                except YouTubeQuotaExhaustedError as q_exc:
+                    defer_reason = str(q_exc)
+                    print(f"[{aid}] Deferred by QuotaLedger: {defer_reason}", flush=True)
 
-            item_man["state"] = "API_SCHEDULED"
-            item_man["youtube_routing"].update(
-                {
-                    "youtube_video_id": vid_id,
-                    "shorts_url": watch_url,
-                    "watch_url": f"https://www.youtube.com/watch?v={vid_id}",
-                    "playlist_id": shorts_playlist_id,
-                    "privacy_status": "private",
-                    "publish_at_utc": item["publish_at_utc"],
-                }
-            )
-            man_p.write_text(json.dumps(item_man, indent=2) + "\n", encoding="utf-8")
-            safe_copy_file(man_p, STUDIO_SH02_DIR / "manifests" / man_p.name)
-
-            item["state"] = "API_SCHEDULED"
-            item["youtube_video_id"] = vid_id
-            item["youtube_url"] = watch_url
-
+            q_now = hub.youtube.quota.status()
             sweeper_dir = STUDIO_SH02_DIR / "sweeper_staging" / f"{aid}_{item['slug']}"
             sweeper_dir.mkdir(parents=True, exist_ok=True)
-            (sweeper_dir / "youtube_publish_metadata.json").write_text(
-                json.dumps(
+
+            if vid_id and watch_url:
+                scheduled_count += 1
+                item_man["state"] = "API_SCHEDULED"
+                item_man.setdefault("youtube_routing", {}).update(
                     {
-                        "slug": f"{aid}_{item['slug']}",
-                        "asset_id": aid,
-                        "title": item["title"],
-                        "format": "9:16_SLEEP_SANCTUARY_SHORT",
+                        "youtube_video_id": vid_id,
+                        "shorts_url": watch_url,
+                        "watch_url": f"https://www.youtube.com/watch?v={vid_id}",
+                        "playlist_id": shorts_playlist_id,
+                        "playlist_url": f"https://www.youtube.com/playlist?list={shorts_playlist_id}",
+                        "parent_sanctuary_id": item["parent_sanctuary_id"],
+                        "parent_sanctuary_youtube_id": p_info.get("youtube_id", ""),
+                        "companion_sanctuary_youtube_id": p_info.get("companion_sanctuary_youtube_id", ""),
+                        "privacy_status": "private",
+                        "publish_at_utc": item["publish_at_utc"],
+                        "upload_staging_state": "API_SCHEDULED",
+                    }
+                )
+                item["state"] = "API_SCHEDULED"
+                item["youtube_video_id"] = vid_id
+                item["youtube_url"] = watch_url
+                item["playlist_id"] = shorts_playlist_id
+                item["parent_sanctuary_youtube_id"] = p_info.get("youtube_id", "")
+
+                sh02_tracker.setdefault("assets", {}).setdefault(aid, {}).update(
+                    {
+                        "state": "API_SCHEDULED",
                         "youtube_video_id": vid_id,
                         "youtube_url": watch_url,
-                        "status": "API_SCHEDULED",
+                        "playlist_id": shorts_playlist_id,
+                        "publish_at_utc": item["publish_at_utc"],
+                    }
+                )
+                (sweeper_dir / "youtube_publish_metadata.json").write_text(
+                    json.dumps(
+                        {
+                            "slug": f"{aid}_{item['slug']}",
+                            "asset_id": aid,
+                            "title": item["title"],
+                            "description": desc,
+                            "format": "9:16_SLEEP_SANCTUARY_SHORT",
+                            "youtube_video_id": vid_id,
+                            "youtube_url": watch_url,
+                            "status": "API_SCHEDULED",
+                            "publish_at_utc": item["publish_at_utc"],
+                            "playlist_id": shorts_playlist_id,
+                            "assigned_playlists": [shorts_playlist_id, SHORTS_SHELF_PLAYLIST_ID, SLEEP_SCIENCE_PLAYLIST_ID],
+                            "related_parent_sanctuary_id": item["parent_sanctuary_id"],
+                            "related_parent_sanctuary_youtube_id": p_info.get("youtube_id", ""),
+                            "companion_sanctuary_youtube_id": p_info.get("companion_sanctuary_youtube_id", ""),
+                            "post_publish_swept": False,
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+                yt_records.append(
+                    {
+                        "asset_id": aid,
+                        "youtube_video_id": vid_id,
+                        "youtube_url": watch_url,
                         "publish_at_utc": item["publish_at_utc"],
                         "playlist_id": shorts_playlist_id,
-                        "assigned_playlists": [shorts_playlist_id, SHORTS_SHELF_PLAYLIST_ID, SLEEP_SCIENCE_PLAYLIST_ID],
-                        "related_parent_sanctuary_id": item["parent_sanctuary_id"],
-                        "related_parent_sanctuary_youtube_id": p_info.get("youtube_id", ""),
-                        "post_publish_swept": False,
-                    },
-                    indent=2,
+                        "parent_sanctuary_id": item["parent_sanctuary_id"],
+                        "parent_sanctuary_youtube_id": p_info.get("youtube_id", ""),
+                        "status": "API_SCHEDULED",
+                    }
                 )
-                + "\n",
-                encoding="utf-8",
+            else:
+                quota_deferred_count += 1
+                item_man["state"] = "QA_VERIFIED"
+                item_man["upload_staging_state"] = "STAGED_FOR_POST_QUOTA_RESET"
+                item_man.setdefault("youtube_routing", {}).update(
+                    {
+                        "youtube_video_id": None,
+                        "playlist_id": shorts_playlist_id,
+                        "playlist_url": f"https://www.youtube.com/playlist?list={shorts_playlist_id}",
+                        "parent_sanctuary_id": item["parent_sanctuary_id"],
+                        "parent_sanctuary_youtube_id": p_info.get("youtube_id", ""),
+                        "companion_sanctuary_youtube_id": p_info.get("companion_sanctuary_youtube_id", ""),
+                        "privacy_status": "private",
+                        "publish_at_utc": item["publish_at_utc"],
+                        "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+                        "next_quota_reset_utc": q_now["next_reset_utc"],
+                        "quota_defer_reason": defer_reason,
+                    }
+                )
+                item["upload_staging_state"] = "STAGED_FOR_POST_QUOTA_RESET"
+                item["playlist_id"] = shorts_playlist_id
+                item["parent_sanctuary_youtube_id"] = p_info.get("youtube_id", "")
+                item["next_quota_reset_utc"] = q_now["next_reset_utc"]
+
+                sh02_tracker.setdefault("assets", {}).setdefault(aid, {}).update(
+                    {
+                        "state": "QA_VERIFIED",
+                        "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+                        "playlist_id": shorts_playlist_id,
+                        "publish_at_utc": item["publish_at_utc"],
+                        "next_quota_reset_utc": q_now["next_reset_utc"],
+                    }
+                )
+                (sweeper_dir / "youtube_publish_metadata.json").write_text(
+                    json.dumps(
+                        {
+                            "slug": f"{aid}_{item['slug']}",
+                            "asset_id": aid,
+                            "title": item["title"],
+                            "description": desc,
+                            "format": "9:16_SLEEP_SANCTUARY_SHORT",
+                            "youtube_video_id": None,
+                            "status": "STAGED_FOR_POST_QUOTA_RESET",
+                            "publish_at_utc": item["publish_at_utc"],
+                            "playlist_id": shorts_playlist_id,
+                            "target_playlist_title": PLAYLIST_TITLE,
+                            "assigned_playlists": [shorts_playlist_id, SHORTS_SHELF_PLAYLIST_ID, SLEEP_SCIENCE_PLAYLIST_ID],
+                            "related_parent_sanctuary_id": item["parent_sanctuary_id"],
+                            "related_parent_sanctuary_title": item["parent_sanctuary_title"],
+                            "related_parent_sanctuary_youtube_id": p_info.get("youtube_id", ""),
+                            "companion_sanctuary_youtube_id": p_info.get("companion_sanctuary_youtube_id", ""),
+                            "next_quota_reset_utc": q_now["next_reset_utc"],
+                            "mp4_path": str(STUDIO_SH02_DIR / "masters" / f"{aid}_Master_1080x1920_24p.mp4"),
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+                yt_records.append(
+                    {
+                        "asset_id": aid,
+                        "youtube_video_id": None,
+                        "publish_at_utc": item["publish_at_utc"],
+                        "playlist_id": shorts_playlist_id,
+                        "parent_sanctuary_id": item["parent_sanctuary_id"],
+                        "parent_sanctuary_youtube_id": p_info.get("youtube_id", ""),
+                        "next_quota_reset_utc": q_now["next_reset_utc"],
+                        "status": "STAGED_FOR_POST_QUOTA_RESET",
+                    }
+                )
+
+            man_p.write_text(json.dumps(item_man, indent=2) + "\n", encoding="utf-8")
+            safe_copy_file(man_p, STUDIO_SH02_DIR / "manifests" / man_p.name)
+            sub_drv = item_man.get("drive_archive", {}).get("asset_drive_folder_id")
+            if sub_drv:
+                gdrive_upsert_file(hub, man_p, str(sub_drv))
+
+        if scheduled_count == len(deliverables):
+            batch_manifest["batch_state"] = "API_SCHEDULED"
+            batch_manifest["youtube_sync_status"] = "SCHEDULED_6_OF_6"
+        else:
+            batch_manifest["batch_state"] = "QA_VERIFIED_PLAYLIST_BOUND"
+            batch_manifest["youtube_sync_status"] = (
+                f"SCHEDULED_{scheduled_count}_OF_6_DEFERRED_{quota_deferred_count}_QUOTA_SOFT_CAP"
             )
-            yt_records.append(
-                {
-                    "asset_id": aid,
-                    "youtube_video_id": vid_id,
-                    "youtube_url": watch_url,
-                    "publish_at_utc": item["publish_at_utc"],
-                    "playlist_id": shorts_playlist_id,
-                    "parent_sanctuary_id": item["parent_sanctuary_id"],
-                    "status": "API_SCHEDULED",
-                }
-            )
-        batch_manifest["batch_state"] = "API_SCHEDULED"
-        batch_manifest["youtube_sync_status"] = "SCHEDULED_6_OF_6"
     else:
         print(f"[SH-02 Sync] YouTube OAuth token requires refresh ({yt_detail}). Staging ready-to-publish payloads...", flush=True)
         for item in deliverables:
@@ -528,6 +680,33 @@ def main() -> int:
             )
         batch_manifest["youtube_sync_status"] = "STAGED_AWAITING_OAUTH_REFRESH"
 
+    sh02_tracker["quota_ledger_snapshot"] = hub.youtube.quota.status()
+    SH02_TRACKER_PATH.write_text(json.dumps(sh02_tracker, indent=2) + "\n", encoding="utf-8")
+    safe_copy_file(SH02_TRACKER_PATH, STUDIO_SH02_DIR / "sh02_tracker.json")
+
+    if SHARED_TRACKER_PATH.exists():
+        try:
+            shared_tr = json.loads(SHARED_TRACKER_PATH.read_text(encoding="utf-8"))
+            if shorts_playlist_id:
+                shared_tr.setdefault("official_series_playlists", {})["SH02_SLEEP_SHORTS"] = shorts_playlist_id
+            for rec in yt_records:
+                aid = rec["asset_id"]
+                if aid in shared_tr.get("assets", {}):
+                    shared_tr["assets"][aid].update(
+                        {
+                            "playlist_id": shorts_playlist_id,
+                            "parent_sanctuary_youtube_id": rec.get("parent_sanctuary_youtube_id", ""),
+                            "upload_staging_state": rec["status"],
+                        }
+                    )
+                    if rec.get("youtube_video_id"):
+                        shared_tr["assets"][aid]["state"] = "API_SCHEDULED"
+                        shared_tr["assets"][aid]["youtube_video_id"] = rec["youtube_video_id"]
+                        shared_tr["assets"][aid]["youtube_url"] = rec["youtube_url"]
+            SHARED_TRACKER_PATH.write_text(json.dumps(shared_tr, indent=2) + "\n", encoding="utf-8")
+        except Exception as exc:
+            print(f"[SH-02 Sync] Note: shared INDEX_Tracker.json update skipped: {exc}", flush=True)
+
     MANIFEST_PATH.write_text(json.dumps(batch_manifest, indent=2) + "\n", encoding="utf-8")
     safe_copy_file(MANIFEST_PATH, STUDIO_SH02_DIR / "sh02_manifest.json")
     if sh02_drive_folder_id:
@@ -538,10 +717,14 @@ def main() -> int:
         "batch_id": "SH-02",
         "playlist_title": PLAYLIST_TITLE,
         "playlist_id": shorts_playlist_id,
+        "playlist_url": f"https://www.youtube.com/playlist?list={shorts_playlist_id}" if shorts_playlist_id else None,
         "drive_sh02_folder_id": sh02_drive_folder_id,
         "drive_sh02_folder_url": f"https://drive.google.com/drive/folders/{sh02_drive_folder_id}" if sh02_drive_folder_id else None,
         "youtube_oauth_ready": yt_ready,
         "youtube_oauth_detail": yt_detail,
+        "scheduled_count": scheduled_count,
+        "quota_deferred_count": quota_deferred_count,
+        "quota_ledger": hub.youtube.quota.status(),
         "synced_at_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "records": yt_records,
     }
@@ -550,12 +733,21 @@ def main() -> int:
     if sh02_drive_folder_id:
         gdrive_upsert_file(hub, receipt_path, sh02_drive_folder_id)
 
+    # Mirror updated script into studio copies
+    this_script = Path(__file__).resolve()
+    safe_copy_file(this_script, STUDIO_DIR / "sh02_youtube_drive_sync.py")
+    safe_copy_file(this_script, STUDIO_SH02_DIR / "sh02_youtube_drive_sync.py")
+
     # 4. Clean GitHub commit & push (preserving git status --porcelain working-tree check)
-    commit_msg = (
-        f"feat(sh-02): add SH-02 Neuro-Acoustic Sleep Sanctuaries Shorts pipeline, manifests, and 6/6 QA_VERIFIED audit logs"
-        if not yt_ready
-        else f"feat(sh-02): schedule 6/6 SH-02 Neuro-Acoustic Sleep Sanctuaries Shorts ({shorts_playlist_id}) & sync Drive/QA logs"
-    )
+    if not yt_ready:
+        commit_msg = "feat(sh-02): add SH-02 Neuro-Acoustic Sleep Sanctuaries Shorts pipeline, manifests, and 6/6 QA_VERIFIED audit logs"
+    elif scheduled_count == len(deliverables):
+        commit_msg = f"feat(sh-02): schedule 6/6 SH-02 Neuro-Acoustic Sleep Sanctuaries Shorts ({shorts_playlist_id}) & sync Drive/QA logs"
+    else:
+        commit_msg = (
+            f"feat(sh-02): bind live playlist {shorts_playlist_id} & ABR_NS03 (psEs90dgdcU), "
+            f"schedule {scheduled_count}/6 Shorts & stage {quota_deferred_count}/6 for PT quota reset"
+        )
     commit_hash, git_clean = git_commit_and_push_clean(commit_msg)
     print(f"[SH-02 Sync] GitHub Commit: {commit_hash} | Working tree clean: {git_clean}", flush=True)
     if not git_clean:

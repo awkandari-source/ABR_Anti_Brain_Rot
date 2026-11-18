@@ -1,60 +1,97 @@
 {
   "batch_id": "SH-02",
   "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
-  "playlist_id": null,
+  "playlist_id": "PLWoNsolCeb2g",
+  "playlist_url": "https://www.youtube.com/playlist?list=PLWoNsolCeb2g",
   "drive_sh02_folder_id": "1TwKGhwvkrprbVIvkfmU7gB4-BKsochkh",
   "drive_sh02_folder_url": "https://drive.google.com/drive/folders/1TwKGhwvkrprbVIvkfmU7gB4-BKsochkh",
-  "youtube_oauth_ready": false,
-  "youtube_oauth_detail": "HTTP 400 on POST https://oauth2.googleapis.com/token: {\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Token has been expired or revoked.\"\n}",
-  "synced_at_utc": "2026-11-18T09:11:39Z",
+  "youtube_oauth_ready": true,
+  "youtube_oauth_detail": "READY",
+  "scheduled_count": 0,
+  "quota_deferred_count": 6,
+  "quota_ledger": {
+    "pt_date": "2026-11-18",
+    "next_reset_utc": "2026-11-19T08:00:05Z",
+    "hard_daily_cap": 10000,
+    "production_soft_cap": 9200,
+    "sweeper_reserved_units": 800,
+    "units_used": 8315,
+    "production_units_remaining": 885,
+    "total_units_remaining": 1685,
+    "quota_exhausted": false,
+    "exhausted_reason": null,
+    "operations": {
+      "probe:GET:channels": 6,
+      "probe:GET:playlistItems": 3,
+      "probe:GET:playlists": 6,
+      "production:POST:playlists": 150,
+      "production:POST:videos.insert": 8000,
+      "production:POST:thumbnails.set": 50,
+      "sweeper:POST:playlistItems": 50,
+      "sweeper:PUT:videos": 50
+    }
+  },
+  "synced_at_utc": "2026-11-18T13:40:07Z",
   "records": [
     {
       "asset_id": "SH02_S01",
       "youtube_video_id": null,
       "publish_at_utc": "2026-12-25T02:00:00Z",
-      "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
+      "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS03",
-      "status": "STAGED_AWAITING_OAUTH_REFRESH"
+      "parent_sanctuary_youtube_id": "psEs90dgdcU",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "status": "STAGED_FOR_POST_QUOTA_RESET"
     },
     {
       "asset_id": "SH02_S02",
       "youtube_video_id": null,
       "publish_at_utc": "2026-12-26T02:00:00Z",
-      "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
+      "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS01",
-      "status": "STAGED_AWAITING_OAUTH_REFRESH"
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "status": "STAGED_FOR_POST_QUOTA_RESET"
     },
     {
       "asset_id": "SH02_S03",
       "youtube_video_id": null,
       "publish_at_utc": "2026-12-27T02:00:00Z",
-      "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
+      "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS02",
-      "status": "STAGED_AWAITING_OAUTH_REFRESH"
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "status": "STAGED_FOR_POST_QUOTA_RESET"
     },
     {
       "asset_id": "SH02_S04",
       "youtube_video_id": null,
       "publish_at_utc": "2026-12-28T02:00:00Z",
-      "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
+      "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS03",
-      "status": "STAGED_AWAITING_OAUTH_REFRESH"
+      "parent_sanctuary_youtube_id": "psEs90dgdcU",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "status": "STAGED_FOR_POST_QUOTA_RESET"
     },
     {
       "asset_id": "SH02_S05",
       "youtube_video_id": null,
       "publish_at_utc": "2026-12-29T02:00:00Z",
-      "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
+      "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS04",
-      "status": "STAGED_AWAITING_OAUTH_REFRESH"
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "status": "STAGED_FOR_POST_QUOTA_RESET"
     },
     {
       "asset_id": "SH02_S06",
       "youtube_video_id": null,
       "publish_at_utc": "2026-12-30T02:00:00Z",
-      "playlist_title": "Neuro-Acoustic Sleep Sanctuaries \u2014 Shorts",
+      "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS05",
-      "status": "STAGED_AWAITING_OAUTH_REFRESH"
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "status": "STAGED_FOR_POST_QUOTA_RESET"
     }
   ]
 }

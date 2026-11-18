@@ -13,7 +13,9 @@
       "PLAe5Tqk750cc"
     ],
     "parent_sanctuaries_playlist_id": "PLO3jEEgHm_Iw",
-    "parent_sanctuaries_playlist_title": "180-Minute Neuro-Acoustic Sleep Sanctuaries"
+    "parent_sanctuaries_playlist_title": "180-Minute Neuro-Acoustic Sleep Sanctuaries",
+    "playlist_id": "PLWoNsolCeb2g",
+    "playlist_url": "https://www.youtube.com/playlist?list=PLWoNsolCeb2g"
   },
   "technical_guardrails": {
     "format_type": "SLEEP_SANCTUARY_SHORT",
@@ -119,7 +121,11 @@
           "script_md": "1yB_Zq6NWOh24Za0wcOXbqqGaZKNxHrsp",
           "manifest_json": "1yX9PYGQRl7BeeiUNy_AP_aXYVaBDNMp8"
         }
-      }
+      },
+      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "playlist_id": "PLWoNsolCeb2g",
+      "parent_sanctuary_youtube_id": "psEs90dgdcU",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
     },
     {
       "asset_id": "SH02_S02",
@@ -182,7 +188,11 @@
           "script_md": "1d3Mc5Af3QMQgt1YIQ1ZVhEIzutt93esJ",
           "manifest_json": "1Hzh3AAjgXxoxSbC7dPUOW6lvWtbN9IBY"
         }
-      }
+      },
+      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "playlist_id": "PLWoNsolCeb2g",
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
     },
     {
       "asset_id": "SH02_S03",
@@ -245,7 +255,11 @@
           "script_md": "1i9JbkgVL65xPi7OVfzkNDxCMvn3x_NwW",
           "manifest_json": "12DY7V2Dts2z_b6vYA27OTgQ73gXB0JLr"
         }
-      }
+      },
+      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "playlist_id": "PLWoNsolCeb2g",
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
     },
     {
       "asset_id": "SH02_S04",
@@ -309,7 +323,11 @@
           "script_md": "1j4QItzFn8JWQgrKqXOmI2SHOJLpjegbX",
           "manifest_json": "1M7YArF-fFXvE-vCbxo8xn1YDEsVN1t_C"
         }
-      }
+      },
+      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "playlist_id": "PLWoNsolCeb2g",
+      "parent_sanctuary_youtube_id": "psEs90dgdcU",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
     },
     {
       "asset_id": "SH02_S05",
@@ -372,7 +390,11 @@
           "script_md": "1QlashMwwq83za1AY--5LWkwBxRs_ct2R",
           "manifest_json": "1zkMZNoZMGv0z-rIUNDkS0B8VBdEwB2VH"
         }
-      }
+      },
+      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "playlist_id": "PLWoNsolCeb2g",
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
     },
     {
       "asset_id": "SH02_S06",
@@ -435,10 +457,14 @@
           "script_md": "1vJLre-eOBKeXGj4Yp0fF8mba921xqYp-",
           "manifest_json": "1OJnToIYUGJC33xuNVj65gWfpRWmJzxV_"
         }
-      }
+      },
+      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "playlist_id": "PLWoNsolCeb2g",
+      "parent_sanctuary_youtube_id": "",
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
     }
   ],
-  "batch_state": "QA_VERIFIED",
+  "batch_state": "QA_VERIFIED_PLAYLIST_BOUND",
   "qa_completed_at_utc": "2026-11-18T09:06:34Z",
   "drive_archive": {
     "root_folder_id": "1mlAlS_xpEn11gUGyKi_zuQiDZ0Co9Ay9",
@@ -447,5 +473,5 @@
     "mirrored_at_utc": "2026-11-18T09:11:33Z",
     "status": "MIRRORED_6_OF_6"
   },
-  "youtube_sync_status": "STAGED_AWAITING_OAUTH_REFRESH"
+  "youtube_sync_status": "SCHEDULED_0_OF_6_DEFERRED_6_QUOTA_SOFT_CAP"
 }

@@ -81,7 +81,17 @@
     },
     "primary_source_org": "Sleep Foundation",
     "primary_source_citation": "Sleep Foundation \u2014 'Pink Noise, Rain Acoustics, and Auditory Masking: How steady broadband sound buffers sudden nocturnal dB spikes and cortical micro-arousals.'",
-    "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/"
+    "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+    "youtube_video_id": null,
+    "playlist_id": "PLWoNsolCeb2g",
+    "playlist_url": "https://www.youtube.com/playlist?list=PLWoNsolCeb2g",
+    "parent_sanctuary_id": "ABR_NS01",
+    "parent_sanctuary_youtube_id": "",
+    "companion_sanctuary_youtube_id": "q9woVuJb9X0",
+    "privacy_status": "private",
+    "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+    "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+    "quota_defer_reason": "QuotaLedger ceiling reached for purpose='production' (8315 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert"
   },
   "sop_version": "ABR-AG-SOP-v2.1",
   "sop03_verification": {
@@ -184,5 +194,6 @@
       "script_md": "1d3Mc5Af3QMQgt1YIQ1ZVhEIzutt93esJ",
       "manifest_json": "1Hzh3AAjgXxoxSbC7dPUOW6lvWtbN9IBY"
     }
-  }
+  },
+  "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET"
 }

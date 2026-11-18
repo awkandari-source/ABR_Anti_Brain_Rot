@@ -81,7 +81,17 @@
     },
     "primary_source_org": "NHLBI / NIH",
     "primary_source_citation": "National Heart, Lung, and Blood Institute (NHLBI / NIH) \u2014 'How Sleep Works: Parasympathetic vagal tone, cardiorespiratory slowing, and sleep-onset physiology.'",
-    "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/"
+    "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
+    "youtube_video_id": null,
+    "playlist_id": "PLWoNsolCeb2g",
+    "playlist_url": "https://www.youtube.com/playlist?list=PLWoNsolCeb2g",
+    "parent_sanctuary_id": "ABR_NS02",
+    "parent_sanctuary_youtube_id": "",
+    "companion_sanctuary_youtube_id": "xcAo79qLcLc",
+    "privacy_status": "private",
+    "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+    "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+    "quota_defer_reason": "QuotaLedger ceiling reached for purpose='production' (8315 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert"
   },
   "sop_version": "ABR-AG-SOP-v2.1",
   "sop03_verification": {
@@ -184,5 +194,6 @@
       "script_md": "1i9JbkgVL65xPi7OVfzkNDxCMvn3x_NwW",
       "manifest_json": "12DY7V2Dts2z_b6vYA27OTgQ73gXB0JLr"
     }
-  }
+  },
+  "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET"
 }
