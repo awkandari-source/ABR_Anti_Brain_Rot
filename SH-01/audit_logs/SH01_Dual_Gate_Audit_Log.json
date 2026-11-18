@@ -1,0 +1,1043 @@
+{
+  "batch_id": "SH-01",
+  "playlist_title": "Quiet Wonders & Slow Science \u2014 Shorts",
+  "completed_at_utc": "2026-11-18T09:07:04Z",
+  "elapsed_sec": 582.5,
+  "total_assets": 6,
+  "qa_verified_count": 6,
+  "all_6_qa_verified": true,
+  "assets": [
+    {
+      "asset_id": "SH01_S01",
+      "state": "QA_VERIFIED",
+      "file_size_bytes": 35264841,
+      "file_size_mb": 33.63,
+      "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S01_60s_Master.mp4",
+      "poster_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S01_Poster_1080x1920.jpg",
+      "thumb_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S01_Thumbnail_1280x720.jpg",
+      "manifest_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/SH-01/manifests/SH01_S01_Manifest.json",
+      "stream_metrics": {
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "fps": 24.0,
+        "profile": "High",
+        "color_space": "bt709",
+        "duration_sec": 60.0,
+        "visual_cuts_count": 3,
+        "min_scene_hold_sec": 15.0,
+        "master_lufs": -14.0,
+        "voice_lufs": -14.0,
+        "voice_lra_lu": 0.9,
+        "foley_lufs": -26.2,
+        "foley_lra_lu": 0.5,
+        "voice_foley_separation_db": 33.1,
+        "net_voice_separation_db": 33.1,
+        "true_peak_dbtp": -3.8,
+        "max_narration_silence_sec": 0.293,
+        "vocal_duty_cycle_pct": 95.11,
+        "vocal_entry_sec": 0.265,
+        "music_detected": false
+      },
+      "sop03_checks": {
+        "CHK-01": {
+          "pass": true,
+          "stream": {
+            "codec_name": "h264",
+            "profile": "High",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "field_order": "progressive",
+            "r_frame_rate": "24/1"
+          },
+          "fps": 24.0,
+          "expected_geometry": "1080x1920@24/1fps_High_BT709"
+        },
+        "CHK-02": {
+          "pass": true,
+          "duration_sec": 60.0,
+          "bounds_sec": [
+            59.5,
+            60.5
+          ]
+        },
+        "CHK-03": {
+          "pass": true,
+          "voice": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 0.9,
+            "true_peak_dbtp": -3.5
+          },
+          "foley": {
+            "integrated_lufs": -26.2,
+            "lra_lu": 0.5,
+            "true_peak_dbtp": -12.7
+          },
+          "master": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 0.9,
+            "true_peak_dbtp": -3.8
+          },
+          "volumedetect_voice": {
+            "mean_volume_db": -16.6,
+            "max_volume_db": -3.6
+          },
+          "volumedetect_foley": {
+            "mean_volume_db": -28.2,
+            "max_volume_db": -13.3
+          },
+          "net_voice_over_foley_separation_db": 33.1,
+          "true_peak_strictly_below_minus2_dbfs": true
+        },
+        "CHK-04": {
+          "pass": true,
+          "music_detected": false,
+          "max_tonal_concentration": 0.00203
+        },
+        "CHK-05": {
+          "pass": true,
+          "min_scene_hold_sec": 15.0,
+          "declared_cross_dissolve_cuts": 3,
+          "detected_hard_cuts_gt_035": 0,
+          "effective_cut_count": 3,
+          "max_cuts_allowed": 4
+        },
+        "CHK-06": {
+          "pass": true,
+          "missing_manifest_keys": [],
+          "quota_remaining": 9200,
+          "narrator_gender": "male",
+          "narrator_gender_verified_male": true
+        },
+        "CHK-07": {
+          "pass": true,
+          "command": "ffmpeg -i Voice_Stem.wav -af silencedetect=noise=-45dB:d=0.9 -f null -",
+          "noise_threshold_db": -45.0,
+          "max_silence_ceiling_sec": 0.9,
+          "min_vocal_duty_floor_pct": 90.0,
+          "max_narration_silence_sec": 0.293,
+          "total_narration_silence_sec": 2.936,
+          "vocal_duty_cycle_pct": 95.11,
+          "vocal_entry_sec": 0.265,
+          "vocal_entry_ok": true,
+          "exceeding_intervals_count": 0,
+          "exceeding_intervals": []
+        }
+      },
+      "qc_gates": {
+        "video_h264_high_bt709_progressive": true,
+        "audio_48khz_stereo_aac_lc_384k": true,
+        "container_moov_faststart": true,
+        "duration_in_bounds": true,
+        "integrated_loudness_minus14_lufs": true,
+        "voice_to_foley_separation_gte_30db": true,
+        "zero_music_spectral_audit": true,
+        "dead_air_and_vocal_duty_chk07": true
+      },
+      "qc_video_stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "field_order": "progressive",
+        "color_space": "bt709",
+        "color_primaries": "bt709",
+        "color_transfer": "bt709",
+        "r_frame_rate": "24/1",
+        "bit_rate_bps": 4334677
+      },
+      "qc_audio_stream": {
+        "codec_name": "aac",
+        "profile": "LC",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate_bps": 374707,
+        "bit_rate_kbps": 374.7
+      },
+      "qc_container_atoms": {
+        "moov_offset": 32,
+        "mdat_offset": 41864,
+        "faststart_verified": true,
+        "top_level_atoms": {
+          "ftyp": 0,
+          "moov": 32,
+          "free": 41856,
+          "mdat": 41864
+        }
+      },
+      "qc_master_loudness": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 0.9,
+        "true_peak_dbfs": -3.8,
+        "mean_volume_db": -16.7,
+        "max_volume_db": -3.9
+      },
+      "qc_effective_separation_db": 52.4
+    },
+    {
+      "asset_id": "SH01_S02",
+      "state": "QA_VERIFIED",
+      "file_size_bytes": 32404898,
+      "file_size_mb": 30.9,
+      "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S02_60s_Master.mp4",
+      "poster_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S02_Poster_1080x1920.jpg",
+      "thumb_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S02_Thumbnail_1280x720.jpg",
+      "manifest_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/SH-01/manifests/SH01_S02_Manifest.json",
+      "stream_metrics": {
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "fps": 24.0,
+        "profile": "High",
+        "color_space": "bt709",
+        "duration_sec": 60.0,
+        "visual_cuts_count": 3,
+        "min_scene_hold_sec": 15.0,
+        "master_lufs": -14.0,
+        "voice_lufs": -14.0,
+        "voice_lra_lu": 1.0,
+        "foley_lufs": -26.2,
+        "foley_lra_lu": 0.4,
+        "voice_foley_separation_db": 33.1,
+        "net_voice_separation_db": 33.1,
+        "true_peak_dbtp": -3.8,
+        "max_narration_silence_sec": 0.315,
+        "vocal_duty_cycle_pct": 94.64,
+        "vocal_entry_sec": 0.273,
+        "music_detected": false
+      },
+      "sop03_checks": {
+        "CHK-01": {
+          "pass": true,
+          "stream": {
+            "codec_name": "h264",
+            "profile": "High",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "field_order": "progressive",
+            "r_frame_rate": "24/1"
+          },
+          "fps": 24.0,
+          "expected_geometry": "1080x1920@24/1fps_High_BT709"
+        },
+        "CHK-02": {
+          "pass": true,
+          "duration_sec": 60.0,
+          "bounds_sec": [
+            59.5,
+            60.5
+          ]
+        },
+        "CHK-03": {
+          "pass": true,
+          "voice": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 1.0,
+            "true_peak_dbtp": -3.5
+          },
+          "foley": {
+            "integrated_lufs": -26.2,
+            "lra_lu": 0.4,
+            "true_peak_dbtp": -14.8
+          },
+          "master": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 1.0,
+            "true_peak_dbtp": -3.8
+          },
+          "volumedetect_voice": {
+            "mean_volume_db": -16.7,
+            "max_volume_db": -3.6
+          },
+          "volumedetect_foley": {
+            "mean_volume_db": -28.3,
+            "max_volume_db": -14.8
+          },
+          "net_voice_over_foley_separation_db": 33.1,
+          "true_peak_strictly_below_minus2_dbfs": true
+        },
+        "CHK-04": {
+          "pass": true,
+          "music_detected": false,
+          "max_tonal_concentration": 0.00158
+        },
+        "CHK-05": {
+          "pass": true,
+          "min_scene_hold_sec": 15.0,
+          "declared_cross_dissolve_cuts": 3,
+          "detected_hard_cuts_gt_035": 0,
+          "effective_cut_count": 3,
+          "max_cuts_allowed": 4
+        },
+        "CHK-06": {
+          "pass": true,
+          "missing_manifest_keys": [],
+          "quota_remaining": 9200,
+          "narrator_gender": "male",
+          "narrator_gender_verified_male": true
+        },
+        "CHK-07": {
+          "pass": true,
+          "command": "ffmpeg -i Voice_Stem.wav -af silencedetect=noise=-45dB:d=0.9 -f null -",
+          "noise_threshold_db": -45.0,
+          "max_silence_ceiling_sec": 0.9,
+          "min_vocal_duty_floor_pct": 90.0,
+          "max_narration_silence_sec": 0.315,
+          "total_narration_silence_sec": 3.216,
+          "vocal_duty_cycle_pct": 94.64,
+          "vocal_entry_sec": 0.273,
+          "vocal_entry_ok": true,
+          "exceeding_intervals_count": 0,
+          "exceeding_intervals": []
+        }
+      },
+      "qc_gates": {
+        "video_h264_high_bt709_progressive": true,
+        "audio_48khz_stereo_aac_lc_384k": true,
+        "container_moov_faststart": true,
+        "duration_in_bounds": true,
+        "integrated_loudness_minus14_lufs": true,
+        "voice_to_foley_separation_gte_30db": true,
+        "zero_music_spectral_audit": true,
+        "dead_air_and_vocal_duty_chk07": true
+      },
+      "qc_video_stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "field_order": "progressive",
+        "color_space": "bt709",
+        "color_primaries": "bt709",
+        "color_transfer": "bt709",
+        "r_frame_rate": "24/1",
+        "bit_rate_bps": 3949070
+      },
+      "qc_audio_stream": {
+        "codec_name": "aac",
+        "profile": "LC",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate_bps": 379114,
+        "bit_rate_kbps": 379.1
+      },
+      "qc_container_atoms": {
+        "moov_offset": 32,
+        "mdat_offset": 42072,
+        "faststart_verified": true,
+        "top_level_atoms": {
+          "ftyp": 0,
+          "moov": 32,
+          "free": 42064,
+          "mdat": 42072
+        }
+      },
+      "qc_master_loudness": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 1.0,
+        "true_peak_dbfs": -3.8,
+        "mean_volume_db": -16.7,
+        "max_volume_db": -3.9
+      },
+      "qc_effective_separation_db": 52.1
+    },
+    {
+      "asset_id": "SH01_S03",
+      "state": "QA_VERIFIED",
+      "file_size_bytes": 26638583,
+      "file_size_mb": 25.4,
+      "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S03_60s_Master.mp4",
+      "manifest_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/SH-01/manifests/SH01_S03_Manifest.json",
+      "stream_metrics": {
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "fps": 24.0,
+        "profile": "High",
+        "color_space": "bt709",
+        "duration_sec": 60.0,
+        "visual_cuts_count": 3,
+        "min_scene_hold_sec": 15.0,
+        "master_lufs": -14.1,
+        "voice_lufs": -14.0,
+        "voice_lra_lu": 0.9,
+        "foley_lufs": -26.2,
+        "foley_lra_lu": 0.5,
+        "voice_foley_separation_db": 33.2,
+        "net_voice_separation_db": 33.2,
+        "true_peak_dbtp": -3.8,
+        "max_narration_silence_sec": 0.305,
+        "vocal_duty_cycle_pct": 96.14,
+        "vocal_entry_sec": 0.265,
+        "music_detected": false
+      },
+      "sop03_checks": {
+        "CHK-01": {
+          "pass": true,
+          "stream": {
+            "codec_name": "h264",
+            "profile": "High",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "field_order": "progressive",
+            "r_frame_rate": "24/1"
+          },
+          "fps": 24.0,
+          "expected_geometry": "1080x1920@24/1fps_High_BT709"
+        },
+        "CHK-02": {
+          "pass": true,
+          "duration_sec": 60.0,
+          "bounds_sec": [
+            59.5,
+            60.5
+          ]
+        },
+        "CHK-03": {
+          "pass": true,
+          "voice": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 0.9,
+            "true_peak_dbtp": -3.5
+          },
+          "foley": {
+            "integrated_lufs": -26.2,
+            "lra_lu": 0.5,
+            "true_peak_dbtp": -14.2
+          },
+          "master": {
+            "integrated_lufs": -14.1,
+            "lra_lu": 0.9,
+            "true_peak_dbtp": -3.8
+          },
+          "volumedetect_voice": {
+            "mean_volume_db": -16.6,
+            "max_volume_db": -3.6
+          },
+          "volumedetect_foley": {
+            "mean_volume_db": -28.3,
+            "max_volume_db": -14.7
+          },
+          "net_voice_over_foley_separation_db": 33.2,
+          "true_peak_strictly_below_minus2_dbfs": true
+        },
+        "CHK-04": {
+          "pass": true,
+          "music_detected": false,
+          "max_tonal_concentration": 0.00111
+        },
+        "CHK-05": {
+          "pass": true,
+          "min_scene_hold_sec": 15.0,
+          "declared_cross_dissolve_cuts": 3,
+          "detected_hard_cuts_gt_035": 0,
+          "effective_cut_count": 3,
+          "max_cuts_allowed": 4
+        },
+        "CHK-06": {
+          "pass": true,
+          "missing_manifest_keys": [],
+          "quota_remaining": 9200,
+          "narrator_gender": "male",
+          "narrator_gender_verified_male": true
+        },
+        "CHK-07": {
+          "pass": true,
+          "command": "ffmpeg -i Voice_Stem.wav -af silencedetect=noise=-45dB:d=0.9 -f null -",
+          "noise_threshold_db": -45.0,
+          "max_silence_ceiling_sec": 0.9,
+          "min_vocal_duty_floor_pct": 90.0,
+          "max_narration_silence_sec": 0.305,
+          "total_narration_silence_sec": 2.315,
+          "vocal_duty_cycle_pct": 96.14,
+          "vocal_entry_sec": 0.265,
+          "vocal_entry_ok": true,
+          "exceeding_intervals_count": 0,
+          "exceeding_intervals": []
+        }
+      },
+      "qc_gates": {
+        "video_h264_high_bt709_progressive": true,
+        "audio_48khz_stereo_aac_lc_384k": true,
+        "container_moov_faststart": true,
+        "duration_in_bounds": true,
+        "integrated_loudness_minus14_lufs": true,
+        "voice_to_foley_separation_gte_30db": true,
+        "zero_music_spectral_audit": true,
+        "dead_air_and_vocal_duty_chk07": true
+      },
+      "qc_video_stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "field_order": "progressive",
+        "color_space": "bt709",
+        "color_primaries": "bt709",
+        "color_transfer": "bt709",
+        "r_frame_rate": "24/1",
+        "bit_rate_bps": 3175827
+      },
+      "qc_audio_stream": {
+        "codec_name": "aac",
+        "profile": "LC",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate_bps": 375491,
+        "bit_rate_kbps": 375.5
+      },
+      "qc_container_atoms": {
+        "moov_offset": 32,
+        "mdat_offset": 42235,
+        "faststart_verified": true,
+        "top_level_atoms": {
+          "ftyp": 0,
+          "moov": 32,
+          "free": 42227,
+          "mdat": 42235
+        }
+      },
+      "qc_master_loudness": {
+        "integrated_lufs": -14.1,
+        "lra_lu": 0.9,
+        "true_peak_dbfs": -3.8,
+        "mean_volume_db": -16.7,
+        "max_volume_db": -3.9
+      },
+      "qc_effective_separation_db": 52.6,
+      "poster_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S03_Poster_1080x1920.jpg",
+      "thumb_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S03_Thumbnail_1280x720.jpg"
+    },
+    {
+      "asset_id": "SH01_S04",
+      "state": "QA_VERIFIED",
+      "file_size_bytes": 29134048,
+      "file_size_mb": 27.78,
+      "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S04_60s_Master.mp4",
+      "manifest_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/SH-01/manifests/SH01_S04_Manifest.json",
+      "stream_metrics": {
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "fps": 24.0,
+        "profile": "High",
+        "color_space": "bt709",
+        "duration_sec": 60.0,
+        "visual_cuts_count": 3,
+        "min_scene_hold_sec": 15.0,
+        "master_lufs": -14.0,
+        "voice_lufs": -14.0,
+        "voice_lra_lu": 1.4,
+        "foley_lufs": -26.2,
+        "foley_lra_lu": 0.9,
+        "voice_foley_separation_db": 32.2,
+        "net_voice_separation_db": 32.2,
+        "true_peak_dbtp": -3.8,
+        "max_narration_silence_sec": 0.324,
+        "vocal_duty_cycle_pct": 94.58,
+        "vocal_entry_sec": 0.269,
+        "music_detected": false
+      },
+      "sop03_checks": {
+        "CHK-01": {
+          "pass": true,
+          "stream": {
+            "codec_name": "h264",
+            "profile": "High",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "field_order": "progressive",
+            "r_frame_rate": "24/1"
+          },
+          "fps": 24.0,
+          "expected_geometry": "1080x1920@24/1fps_High_BT709"
+        },
+        "CHK-02": {
+          "pass": true,
+          "duration_sec": 60.0,
+          "bounds_sec": [
+            59.5,
+            60.5
+          ]
+        },
+        "CHK-03": {
+          "pass": true,
+          "voice": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 1.4,
+            "true_peak_dbtp": -3.5
+          },
+          "foley": {
+            "integrated_lufs": -26.2,
+            "lra_lu": 0.9,
+            "true_peak_dbtp": -13.9
+          },
+          "master": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 1.3,
+            "true_peak_dbtp": -3.8
+          },
+          "volumedetect_voice": {
+            "mean_volume_db": -16.8,
+            "max_volume_db": -3.6
+          },
+          "volumedetect_foley": {
+            "mean_volume_db": -27.5,
+            "max_volume_db": -13.9
+          },
+          "net_voice_over_foley_separation_db": 32.2,
+          "true_peak_strictly_below_minus2_dbfs": true
+        },
+        "CHK-04": {
+          "pass": true,
+          "music_detected": false,
+          "max_tonal_concentration": 0.00601
+        },
+        "CHK-05": {
+          "pass": true,
+          "min_scene_hold_sec": 15.0,
+          "declared_cross_dissolve_cuts": 3,
+          "detected_hard_cuts_gt_035": 0,
+          "effective_cut_count": 3,
+          "max_cuts_allowed": 4
+        },
+        "CHK-06": {
+          "pass": true,
+          "missing_manifest_keys": [],
+          "quota_remaining": 9200,
+          "narrator_gender": "male",
+          "narrator_gender_verified_male": true
+        },
+        "CHK-07": {
+          "pass": true,
+          "command": "ffmpeg -i Voice_Stem.wav -af silencedetect=noise=-45dB:d=0.9 -f null -",
+          "noise_threshold_db": -45.0,
+          "max_silence_ceiling_sec": 0.9,
+          "min_vocal_duty_floor_pct": 90.0,
+          "max_narration_silence_sec": 0.324,
+          "total_narration_silence_sec": 3.25,
+          "vocal_duty_cycle_pct": 94.58,
+          "vocal_entry_sec": 0.269,
+          "vocal_entry_ok": true,
+          "exceeding_intervals_count": 0,
+          "exceeding_intervals": []
+        }
+      },
+      "qc_gates": {
+        "video_h264_high_bt709_progressive": true,
+        "audio_48khz_stereo_aac_lc_384k": true,
+        "container_moov_faststart": true,
+        "duration_in_bounds": true,
+        "integrated_loudness_minus14_lufs": true,
+        "voice_to_foley_separation_gte_30db": true,
+        "zero_music_spectral_audit": true,
+        "dead_air_and_vocal_duty_chk07": true
+      },
+      "qc_video_stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "field_order": "progressive",
+        "color_space": "bt709",
+        "color_primaries": "bt709",
+        "color_transfer": "bt709",
+        "r_frame_rate": "24/1",
+        "bit_rate_bps": 3509359
+      },
+      "qc_audio_stream": {
+        "codec_name": "aac",
+        "profile": "LC",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate_bps": 374678,
+        "bit_rate_kbps": 374.7
+      },
+      "qc_container_atoms": {
+        "moov_offset": 32,
+        "mdat_offset": 42219,
+        "faststart_verified": true,
+        "top_level_atoms": {
+          "ftyp": 0,
+          "moov": 32,
+          "free": 42211,
+          "mdat": 42219
+        }
+      },
+      "qc_master_loudness": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 1.3,
+        "true_peak_dbfs": -3.8,
+        "mean_volume_db": -16.8,
+        "max_volume_db": -3.9
+      },
+      "qc_effective_separation_db": 51.3,
+      "poster_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S04_Poster_1080x1920.jpg",
+      "thumb_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S04_Thumbnail_1280x720.jpg"
+    },
+    {
+      "asset_id": "SH01_S05",
+      "state": "QA_VERIFIED",
+      "file_size_bytes": 23754167,
+      "file_size_mb": 22.65,
+      "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S05_60s_Master.mp4",
+      "manifest_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/SH-01/manifests/SH01_S05_Manifest.json",
+      "stream_metrics": {
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "fps": 24.0,
+        "profile": "High",
+        "color_space": "bt709",
+        "duration_sec": 60.0,
+        "visual_cuts_count": 3,
+        "min_scene_hold_sec": 15.0,
+        "master_lufs": -14.0,
+        "voice_lufs": -14.0,
+        "voice_lra_lu": 0.9,
+        "foley_lufs": -26.2,
+        "foley_lra_lu": 0.4,
+        "voice_foley_separation_db": 33.3,
+        "net_voice_separation_db": 33.3,
+        "true_peak_dbtp": -3.4,
+        "max_narration_silence_sec": 0.316,
+        "vocal_duty_cycle_pct": 95.04,
+        "vocal_entry_sec": 0.27,
+        "music_detected": false
+      },
+      "sop03_checks": {
+        "CHK-01": {
+          "pass": true,
+          "stream": {
+            "codec_name": "h264",
+            "profile": "High",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "field_order": "progressive",
+            "r_frame_rate": "24/1"
+          },
+          "fps": 24.0,
+          "expected_geometry": "1080x1920@24/1fps_High_BT709"
+        },
+        "CHK-02": {
+          "pass": true,
+          "duration_sec": 60.0,
+          "bounds_sec": [
+            59.5,
+            60.5
+          ]
+        },
+        "CHK-03": {
+          "pass": true,
+          "voice": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 0.9,
+            "true_peak_dbtp": -3.1
+          },
+          "foley": {
+            "integrated_lufs": -26.2,
+            "lra_lu": 0.4,
+            "true_peak_dbtp": -10.5
+          },
+          "master": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 0.9,
+            "true_peak_dbtp": -3.4
+          },
+          "volumedetect_voice": {
+            "mean_volume_db": -16.7,
+            "max_volume_db": -3.6
+          },
+          "volumedetect_foley": {
+            "mean_volume_db": -28.5,
+            "max_volume_db": -10.5
+          },
+          "net_voice_over_foley_separation_db": 33.3,
+          "true_peak_strictly_below_minus2_dbfs": true
+        },
+        "CHK-04": {
+          "pass": true,
+          "music_detected": false,
+          "max_tonal_concentration": 0.00246
+        },
+        "CHK-05": {
+          "pass": true,
+          "min_scene_hold_sec": 15.0,
+          "declared_cross_dissolve_cuts": 3,
+          "detected_hard_cuts_gt_035": 0,
+          "effective_cut_count": 3,
+          "max_cuts_allowed": 4
+        },
+        "CHK-06": {
+          "pass": true,
+          "missing_manifest_keys": [],
+          "quota_remaining": 9200,
+          "narrator_gender": "male",
+          "narrator_gender_verified_male": true
+        },
+        "CHK-07": {
+          "pass": true,
+          "command": "ffmpeg -i Voice_Stem.wav -af silencedetect=noise=-45dB:d=0.9 -f null -",
+          "noise_threshold_db": -45.0,
+          "max_silence_ceiling_sec": 0.9,
+          "min_vocal_duty_floor_pct": 90.0,
+          "max_narration_silence_sec": 0.316,
+          "total_narration_silence_sec": 2.976,
+          "vocal_duty_cycle_pct": 95.04,
+          "vocal_entry_sec": 0.27,
+          "vocal_entry_ok": true,
+          "exceeding_intervals_count": 0,
+          "exceeding_intervals": []
+        }
+      },
+      "qc_gates": {
+        "video_h264_high_bt709_progressive": true,
+        "audio_48khz_stereo_aac_lc_384k": true,
+        "container_moov_faststart": true,
+        "duration_in_bounds": true,
+        "integrated_loudness_minus14_lufs": true,
+        "voice_to_foley_separation_gte_30db": true,
+        "zero_music_spectral_audit": true,
+        "dead_air_and_vocal_duty_chk07": true
+      },
+      "qc_video_stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "field_order": "progressive",
+        "color_space": "bt709",
+        "color_primaries": "bt709",
+        "color_transfer": "bt709",
+        "r_frame_rate": "24/1",
+        "bit_rate_bps": 2792838
+      },
+      "qc_audio_stream": {
+        "codec_name": "aac",
+        "profile": "LC",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate_bps": 373855,
+        "bit_rate_kbps": 373.9
+      },
+      "qc_container_atoms": {
+        "moov_offset": 32,
+        "mdat_offset": 42339,
+        "faststart_verified": true,
+        "top_level_atoms": {
+          "ftyp": 0,
+          "moov": 32,
+          "free": 42331,
+          "mdat": 42339
+        }
+      },
+      "qc_master_loudness": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 0.9,
+        "true_peak_dbfs": -3.4,
+        "mean_volume_db": -16.8,
+        "max_volume_db": -3.9
+      },
+      "qc_effective_separation_db": 52.4,
+      "poster_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S05_Poster_1080x1920.jpg",
+      "thumb_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S05_Thumbnail_1280x720.jpg"
+    },
+    {
+      "asset_id": "SH01_S06",
+      "state": "QA_VERIFIED",
+      "file_size_bytes": 26549474,
+      "file_size_mb": 25.32,
+      "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S06_60s_Master.mp4",
+      "manifest_path": "/home/antigravity/awkandari-source/ABR_Anti_Brain_Rot/SH-01/manifests/SH01_S06_Manifest.json",
+      "stream_metrics": {
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "24/1",
+        "fps": 24.0,
+        "profile": "High",
+        "color_space": "bt709",
+        "duration_sec": 60.0,
+        "visual_cuts_count": 3,
+        "min_scene_hold_sec": 15.0,
+        "master_lufs": -14.1,
+        "voice_lufs": -14.0,
+        "voice_lra_lu": 1.0,
+        "foley_lufs": -26.2,
+        "foley_lra_lu": 1.0,
+        "voice_foley_separation_db": 33.0,
+        "net_voice_separation_db": 33.0,
+        "true_peak_dbtp": -3.8,
+        "max_narration_silence_sec": 0.32,
+        "vocal_duty_cycle_pct": 96.14,
+        "vocal_entry_sec": 0.27,
+        "music_detected": false
+      },
+      "sop03_checks": {
+        "CHK-01": {
+          "pass": true,
+          "stream": {
+            "codec_name": "h264",
+            "profile": "High",
+            "width": 1080,
+            "height": 1920,
+            "pix_fmt": "yuv420p",
+            "color_space": "bt709",
+            "color_transfer": "bt709",
+            "color_primaries": "bt709",
+            "field_order": "progressive",
+            "r_frame_rate": "24/1"
+          },
+          "fps": 24.0,
+          "expected_geometry": "1080x1920@24/1fps_High_BT709"
+        },
+        "CHK-02": {
+          "pass": true,
+          "duration_sec": 60.0,
+          "bounds_sec": [
+            59.5,
+            60.5
+          ]
+        },
+        "CHK-03": {
+          "pass": true,
+          "voice": {
+            "integrated_lufs": -14.0,
+            "lra_lu": 1.0,
+            "true_peak_dbtp": -3.6
+          },
+          "foley": {
+            "integrated_lufs": -26.2,
+            "lra_lu": 1.0,
+            "true_peak_dbtp": -14.7
+          },
+          "master": {
+            "integrated_lufs": -14.1,
+            "lra_lu": 1.0,
+            "true_peak_dbtp": -3.8
+          },
+          "volumedetect_voice": {
+            "mean_volume_db": -16.8,
+            "max_volume_db": -3.8
+          },
+          "volumedetect_foley": {
+            "mean_volume_db": -28.3,
+            "max_volume_db": -14.7
+          },
+          "net_voice_over_foley_separation_db": 33.0,
+          "true_peak_strictly_below_minus2_dbfs": true
+        },
+        "CHK-04": {
+          "pass": true,
+          "music_detected": false,
+          "max_tonal_concentration": 0.00254
+        },
+        "CHK-05": {
+          "pass": true,
+          "min_scene_hold_sec": 15.0,
+          "declared_cross_dissolve_cuts": 3,
+          "detected_hard_cuts_gt_035": 0,
+          "effective_cut_count": 3,
+          "max_cuts_allowed": 4
+        },
+        "CHK-06": {
+          "pass": true,
+          "missing_manifest_keys": [],
+          "quota_remaining": 9200,
+          "narrator_gender": "male",
+          "narrator_gender_verified_male": true
+        },
+        "CHK-07": {
+          "pass": true,
+          "command": "ffmpeg -i Voice_Stem.wav -af silencedetect=noise=-45dB:d=0.9 -f null -",
+          "noise_threshold_db": -45.0,
+          "max_silence_ceiling_sec": 0.9,
+          "min_vocal_duty_floor_pct": 90.0,
+          "max_narration_silence_sec": 0.32,
+          "total_narration_silence_sec": 2.318,
+          "vocal_duty_cycle_pct": 96.14,
+          "vocal_entry_sec": 0.27,
+          "vocal_entry_ok": true,
+          "exceeding_intervals_count": 0,
+          "exceeding_intervals": []
+        }
+      },
+      "qc_gates": {
+        "video_h264_high_bt709_progressive": true,
+        "audio_48khz_stereo_aac_lc_384k": true,
+        "container_moov_faststart": true,
+        "duration_in_bounds": true,
+        "integrated_loudness_minus14_lufs": true,
+        "voice_to_foley_separation_gte_30db": true,
+        "zero_music_spectral_audit": true,
+        "dead_air_and_vocal_duty_chk07": true
+      },
+      "qc_video_stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "field_order": "progressive",
+        "color_space": "bt709",
+        "color_primaries": "bt709",
+        "color_transfer": "bt709",
+        "r_frame_rate": "24/1",
+        "bit_rate_bps": 3161693
+      },
+      "qc_audio_stream": {
+        "codec_name": "aac",
+        "profile": "LC",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate_bps": 377764,
+        "bit_rate_kbps": 377.8
+      },
+      "qc_container_atoms": {
+        "moov_offset": 32,
+        "mdat_offset": 42315,
+        "faststart_verified": true,
+        "top_level_atoms": {
+          "ftyp": 0,
+          "moov": 32,
+          "free": 42307,
+          "mdat": 42315
+        }
+      },
+      "qc_master_loudness": {
+        "integrated_lufs": -14.1,
+        "lra_lu": 1.0,
+        "true_peak_dbfs": -3.8,
+        "mean_volume_db": -16.7,
+        "max_volume_db": -3.9
+      },
+      "qc_effective_separation_db": 52.9,
+      "poster_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S06_Poster_1080x1920.jpg",
+      "thumb_jpg": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S06_Thumbnail_1280x720.jpg"
+    }
+  ]
+}

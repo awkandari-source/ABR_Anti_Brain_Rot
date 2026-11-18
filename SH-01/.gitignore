@@ -1,0 +1,11 @@
+# Exclude heavy media binaries and scratch artifacts from Git tracking
+*.mp4
+*.wav
+*.m4a
+*.aac
+*.npy
+__pycache__/
+build_tmp/
+renders/
+stems/
+plates/
