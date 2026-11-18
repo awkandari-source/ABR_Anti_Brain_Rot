@@ -112,8 +112,8 @@ def build_short_description(item: dict[str, Any], playlist_id: str | None) -> st
         "Continue into 3-Hour Deep Sleep Nature Ambience (Night Pine Forest): https://www.youtube.com/watch?v=OwMTPuornpo",
         "",
         "ABR Anti-Brain-Rot Audio & Visual Standard:",
-        "- 1080x1920 @ 24 fps low-stimulation watercolor macro holds (<= 4 cuts, 1.0s cross-dissolves)",
-        "- -14.0 LUFS calm baritone narration over -26.2 LUFS organic environmental foley (>= +30 dB voice separation, 0% music)",
+        "- 1080x1920 @ 24 fps low-stimulation watercolor macro holds (up to 4 cuts, 1.0s cross-dissolves)",
+        "- -14.0 LUFS calm baritone narration over -26.2 LUFS organic environmental foley (over +30 dB voice separation, 0% music)",
         "",
         f"Primary Sources ({item['primary_source']}):",
         *[f"- {c}" for c in item["citations"]],
@@ -124,6 +124,8 @@ def build_short_description(item: dict[str, Any], playlist_id: str | None) -> st
     desc = "\n".join(lines)
     if "drive.google.com" in desc.lower():
         raise ValueError(f"Privacy violation: drive.google.com link detected in {item['asset_id']} description!")
+    if "<" in desc or ">" in desc:
+        raise ValueError(f"YouTube snippet safety violation: angle brackets detected in {item['asset_id']} description!")
     return desc
 
 
@@ -135,8 +137,8 @@ def ensure_sh01_playlist(hub: LinkedAPIHub) -> str:
     desc = (
         "Quiet Wonders & Slow Science — Shorts (Batch SH-01): 60-second low-stimulation vertical "
         "explorations of deep-time biology, slow physics, historical engineering, gentle winter nature, "
-        "medieval timekeeping, and restorative neuroscience. Engineered at 24 fps with <= 4 cuts, "
-        "-14.0 LUFS calm narration, >= +30 dB voice-over-foley separation, and strictly 0% music."
+        "medieval timekeeping, and restorative neuroscience. Engineered at 24 fps with up to 4 cuts, "
+        "-14.0 LUFS calm narration, over +30 dB voice-over-foley separation, and strictly 0% music."
     )
     res = hub.youtube.request(
         "POST",
@@ -434,6 +436,8 @@ def main() -> int:
         batch_manifest["youtube_sync_status"] = "ALL_6_SCHEDULED"
     elif len(scheduled_rows) > 0:
         batch_manifest["youtube_sync_status"] = f"SCHEDULED_{len(scheduled_rows)}_OF_6_QUOTA_QUEUED_{6 - len(scheduled_rows)}"
+    elif yt_ready and playlist_id and quota_note:
+        batch_manifest["youtube_sync_status"] = "PLAYLIST_CREATED_QUOTA_QUEUED_6"
     else:
         batch_manifest["youtube_sync_status"] = "PENDING_OAUTH_REFRESH"
     if yt_auth_error:
@@ -450,7 +454,7 @@ def main() -> int:
     audit_drv_id = upload_or_replace_drive_file(hub, AUDIT_LOG_PATH, sh01_drive_folder_id)
     print(f"[SH-01 Sync] Mirrored sh01_manifest.json ({manifest_drv_id}) & audit log ({audit_drv_id}) to Drive.", flush=True)
 
-    if len(scheduled_rows) >= 1 and playlist_id:
+    if playlist_id:
         update_master_index_if_scheduled(sync_items_summary, playlist_id, sh01_drive_folder_id)
 
     q_state = hub.youtube.quota._load_today()

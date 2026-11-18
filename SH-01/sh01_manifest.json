@@ -515,8 +515,9 @@
   "qa_completed_at_utc": "2026-11-18T09:07:04Z",
   "drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
   "drive_folder_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
-  "youtube_sync_status": "PENDING_OAUTH_REFRESH",
-  "youtube_oauth_note": "HTTP 400 on POST https://www.googleapis.com/youtube/v3/playlists: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid playlist snippet.\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid playlist snippet.\",\n        \"domain\": \"youtube.playlist\",\n        \"reason\": \"invalidPlaylistSnippet\"\n      }\n    ]\n  }\n}\n",
+  "youtube_sync_status": "PLAYLIST_CREATED_QUOTA_QUEUED_6",
   "drive_sync_status": "MIRRORED_6_OF_6",
-  "youtube_quota_note": "QuotaLedger ceiling reached for purpose='production' (8212 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert (next PT quota reset: 2026-11-19T08:00:05Z)"
+  "youtube_quota_note": "QuotaLedger ceiling reached for purpose='production' (8264 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert (next PT quota reset: 2026-11-19T08:00:05Z)",
+  "youtube_playlist_id": "PLY-xpre4jtzU",
+  "youtube_playlist_url": "https://www.youtube.com/playlist?list=PLY-xpre4jtzU"
 }

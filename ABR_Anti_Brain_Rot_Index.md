@@ -103,6 +103,22 @@
 
 ## 3. Complete `9:16` Zero-Music Shorts Catalog (115 Releases)
 
+<!-- SH01_INDEX_START -->
+### 3.0 Batch SH-01: *Quiet Wonders & Slow Science — Shorts* (`9:16` 60s @ `24/1` fps Zero-Music)
+
+- **Official Shorts Playlist:** [`PLY-xpre4jtzU`](https://www.youtube.com/playlist?list=PLY-xpre4jtzU)
+- **Google Drive Batch Folder ID:** `1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5`
+
+| Asset ID | Short Title | Runtime | Voice Sep | Schedule (`UTC`) | YouTube ID | Drive Folder ID |
+| :--- | :--- | :---: | :--- | :--- | :--- | :--- |
+| `SH01_S01` | *The 11,000-Year-Old Deep-Sea Glass Sponge* | `60s` | **`+33.1 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-11-27T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1sUG7NeSzrtH0EZYNJXBzbQ2pgdwVoLZp` |
+| `SH01_S02` | *The World's Slowest Lab Experiment (Since 1927)* | `60s` | **`+33.1 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-11-28T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1ZX0y_q4x2D_-5YHZYg-mo1gS9BSF9Aqs` |
+| `SH01_S03` | *Ancient Bronze Gears That Tracked the Sky* | `60s` | **`+33.2 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-11-29T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1j1Ja2hs6Kz-y0f02rate-iesqI3qXYNh` |
+| `SH01_S04` | *How Woolly Bear Caterpillars Freeze Solid for Winter* | `60s` | **`+32.2 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-11-30T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1iHAtj5aqWmfzV2jVuMQdR18msOwhH899` |
+| `SH01_S05` | *Medieval Candle Clocks: Telling Time by Melting Wax* | `60s` | **`+33.3 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-12-01T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1vrKIvdb5s0zshNV8gBIMOrSvFsptN7DN` |
+| `SH01_S06` | *Why Your Brain Needs 15 Minutes of Quiet Boredom* | `60s` | **`+33.0 dB`** (`0%` Music) | **Queued (Next Quota Reset)** (`2026-12-02T15:00:00Z`) | `QUOTA_CAP_QUEUED_NEXT_RESET` | `1uhFX1mkvfy06rX44cr4M9cQ7vALsHS2N` |
+<!-- SH01_INDEX_END -->
+
 ### 3.1 Natively Scheduled Upcoming Shorts (37 Scheduled through Dec 30, 2026)
 
 | # | Code | Short Title | Pillar | Duration | Schedule (`UTC`) | YouTube ID | Drive Folder ID |
