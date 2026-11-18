@@ -1,0 +1,54 @@
+{
+  "series_id": "MS-09",
+  "series_playlist_id": "PLSkJwyyRdKug",
+  "pt_date": "2026-11-18",
+  "next_reset_utc": "2026-11-19T08:00:05Z",
+  "pending_tasks": [
+    {
+      "asset_id": "MS09_COMP",
+      "action": "upload_and_bind_playlist",
+      "publish_at_utc": "2026-12-18T15:00:00Z",
+      "playlist_id": "PLSkJwyyRdKug",
+      "position": 5,
+      "next_reset_utc": "2026-11-19T08:00:05Z",
+      "reason": "QuotaLedger ceiling reached for purpose='remediation_critical' (9965 + 1600 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert"
+    },
+    {
+      "asset_id": "MS09_E02",
+      "video_id": "iecByY0b2BM",
+      "action": "bind_series_playlist",
+      "playlist_id": "PLSkJwyyRdKug",
+      "position": 1,
+      "next_reset_utc": "2026-11-19T08:00:05Z",
+      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
+    },
+    {
+      "asset_id": "MS09_E03",
+      "video_id": "dCVlCjG6ig8",
+      "action": "bind_series_playlist",
+      "playlist_id": "PLSkJwyyRdKug",
+      "position": 2,
+      "next_reset_utc": "2026-11-19T08:00:05Z",
+      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
+    },
+    {
+      "asset_id": "MS09_E04",
+      "video_id": "hCNSy0-Pu2Q",
+      "action": "bind_series_playlist",
+      "playlist_id": "PLSkJwyyRdKug",
+      "position": 3,
+      "next_reset_utc": "2026-11-19T08:00:05Z",
+      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
+    },
+    {
+      "asset_id": "MS09_E05",
+      "video_id": "E_IttW6ODNo",
+      "action": "bind_series_playlist",
+      "playlist_id": "PLSkJwyyRdKug",
+      "position": 4,
+      "next_reset_utc": "2026-11-19T08:00:05Z",
+      "reason": "QuotaLedger ceiling reached for purpose='sweeper' (9965 + 50 > 10000 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:playlistItems"
+    }
+  ],
+  "resume_command": "PYTHONDONTWRITEBYTECODE=1 python3 /shared/user/.gemini/raw_video_studio/ms09_youtube_drive_sync.py"
+}

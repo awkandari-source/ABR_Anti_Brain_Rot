@@ -1,0 +1,12 @@
+# Ignore heavy binary media & transient caches inside MS-09 GitHub directory;
+# keep scripts, ms09_manifest.json, episode manifests, markdown scripts, and gate_audit_reports/*.json tracked.
+*.mp4
+*.wav
+*.m4a
+*.aac
+*.flac
+*.png
+*.jpg
+__pycache__/
+*.pyc
+quarantine/

@@ -1,0 +1,254 @@
+{
+  "asset_id": "MS09_E01",
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "format_type": "MINI_SERIES_EPISODE",
+  "series_id": "MS-09",
+  "series_title": "Earth's Slowest Clocks \u2014 Volume II",
+  "playlist_title": "Earth's Slowest Clocks \u2014 Volume II",
+  "episode_index": 1,
+  "title": "Earth's Slowest Clocks Vol. II Ep. 1: The 500-Year Clams of the North Atlantic | 15-Min Calm Documentary",
+  "youtube_title": "Earth's Slowest Clocks Vol. II Ep. 1: 500-Year Clams of the North Atlantic | Calm Documentary",
+  "narrator_name": "George-Daniel Baritone",
+  "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
+  "narrator_gender": "male",
+  "state": "API_SCHEDULED",
+  "sha256": "28a4a22303a048046885b5055b952f855942d10e51ea858c5dabb774c15036b7",
+  "stream_metrics": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "duration_sec": 901.0,
+    "min_scene_hold_sec": 15.0,
+    "shot_count": 1,
+    "voice_lufs": -14.0,
+    "voice_lra_lu": 1.2,
+    "foley_lufs": -26.2,
+    "foley_lra_lu": 0.2,
+    "master_lufs": -14.0,
+    "voice_foley_separation_db": 33.0,
+    "net_voice_separation_db": 33.0,
+    "true_peak_dbtp": -2.8,
+    "max_narration_silence_sec": 0.458,
+    "vocal_duty_cycle_pct": 92.97,
+    "vocal_entry_sec": 0.358,
+    "music_detected": false
+  },
+  "youtube_routing": {
+    "privacy_status": "private",
+    "publish_at_utc": "2026-12-01T15:00:00Z",
+    "series_playlist_id": "PLSkJwyyRdKug",
+    "made_for_kids": false,
+    "ad_policy": "PRE_MID_POST",
+    "core_shelf_playlist_id": "PLfO4Y6xIR8iU",
+    "youtube_video_id": "6D3fuN7So_c",
+    "watch_url": "https://www.youtube.com/watch?v=6D3fuN7So_c",
+    "studio_url": "https://studio.youtube.com/video/6D3fuN7So_c/edit",
+    "playlist_bound_series": true,
+    "playlist_bound_history_shelf": false,
+    "custom_thumbnail_applied": false
+  },
+  "sop03_verification": {
+    "CHK-01": {
+      "pass": true,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "r_frame_rate": "24/1"
+      },
+      "fps": 24.0,
+      "expected_geometry": "1920x1080@24fps"
+    },
+    "CHK-02": {
+      "pass": true,
+      "duration_sec": 901.0,
+      "bounds_sec": [
+        885.0,
+        930.0
+      ]
+    },
+    "CHK-03": {
+      "pass": true,
+      "voice": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 1.2,
+        "true_peak_dbtp": -2.9
+      },
+      "foley": {
+        "integrated_lufs": -26.2,
+        "lra_lu": 0.2,
+        "true_peak_dbtp": -14.0
+      },
+      "master": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 1.2,
+        "true_peak_dbtp": -2.8
+      },
+      "volumedetect_voice": {
+        "mean_volume_db": -16.8,
+        "max_volume_db": -2.9
+      },
+      "volumedetect_foley": {
+        "mean_volume_db": -28.3,
+        "max_volume_db": -14.0
+      },
+      "net_voice_over_foley_separation_db": 33.0
+    },
+    "CHK-04": {
+      "pass": true,
+      "music_detected": false,
+      "max_tonal_concentration": 0.00123
+    },
+    "CHK-05": {
+      "pass": true,
+      "min_scene_hold_sec": 15.0,
+      "detected_cuts_gt_035": 0,
+      "shot_count": 1
+    },
+    "CHK-06": {
+      "pass": true,
+      "missing_manifest_keys": [],
+      "quota_remaining": 9200,
+      "same_day_live_units_remaining": 9200,
+      "google_drive_only": false,
+      "narrator_gender": "male",
+      "narrator_gender_verified_male": true
+    },
+    "CHK-07": {
+      "pass": true,
+      "command": "ffmpeg -i MS09_E01_Voice_Stem.wav -af silencedetect=noise=-45dB:d=1.5 -f null -",
+      "noise_threshold_db": -45.0,
+      "max_silence_ceiling_sec": 1.5,
+      "min_vocal_duty_floor_pct": 88.0,
+      "max_narration_silence_sec": 0.458,
+      "total_narration_silence_sec": 63.31,
+      "vocal_duty_cycle_pct": 92.97,
+      "vocal_entry_sec": 0.358,
+      "vocal_entry_ok": true,
+      "exceeding_intervals_count": 0,
+      "exceeding_intervals": []
+    }
+  },
+  "qc_gate_audit": {
+    "mp4_path": "/home/antigravity/MS-09/MS09_E01/MS09_E01_15m_Master.mp4",
+    "file_size_bytes": 365798146,
+    "duration_sec": 901.0,
+    "duration_bounds_sec": [
+      885.0,
+      930.0
+    ],
+    "video_stream": {
+      "codec_name": "h264",
+      "profile": "High",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuv420p",
+      "field_order": "progressive",
+      "color_space": "bt709",
+      "color_primaries": "bt709",
+      "color_transfer": "bt709",
+      "r_frame_rate": "24/1",
+      "bit_rate_bps": 2863469
+    },
+    "audio_stream": {
+      "codec_name": "aac",
+      "profile": "LC",
+      "sample_rate": "48000",
+      "channels": 2,
+      "bit_rate_bps": 380401,
+      "bit_rate_kbps": 380.4
+    },
+    "container_atoms": {
+      "moov_offset": 32,
+      "mdat_offset": 456210,
+      "faststart_verified": true,
+      "top_level_atoms": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 456202,
+        "mdat": 456210
+      }
+    },
+    "master_loudness": {
+      "integrated_lufs": -14.0,
+      "lra_lu": 1.2,
+      "true_peak_dbfs": -2.8,
+      "mean_volume_db": -16.7,
+      "max_volume_db": -2.9
+    },
+    "gates": {
+      "video_h264_high_bt709_progressive": true,
+      "audio_48khz_stereo_aac_lc_384k": true,
+      "container_moov_faststart": true,
+      "duration_in_bounds": true,
+      "integrated_loudness_minus14_lufs": true,
+      "voice_to_foley_separation_gte_30db": true,
+      "zero_music_spectral_audit": true,
+      "dead_air_and_vocal_duty_chk07": true
+    },
+    "stems_audit": {
+      "voice_stem": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 1.2,
+        "true_peak_dbfs": -2.9,
+        "mean_volume_db": -16.7,
+        "max_volume_db": -2.9,
+        "active_speech_mean_volume_db": -16.6
+      },
+      "foley_stem": {
+        "mean_volume_db": -66.8,
+        "max_volume_db": -36.8
+      },
+      "voice_lufs_minus_foley_mean_db": 52.8,
+      "voice_active_mean_minus_foley_mean_db": 50.2,
+      "voice_mean_minus_foley_mean_db": 50.1,
+      "effective_separation_db": 50.1,
+      "dead_air_and_vocal_duty_chk07": {
+        "passed": true,
+        "max_silence_ceiling_sec": 1.5,
+        "min_vocal_duty_floor_pct": 88.0,
+        "max_narration_silence_sec": 0.458,
+        "total_narration_silence_sec": 63.31,
+        "vocal_duty_cycle_pct": 92.97,
+        "vocal_entry_sec": 0.358,
+        "vocal_entry_ok": true,
+        "exceeding_intervals_count": 0
+      },
+      "zero_music_spectral": {
+        "passed": true,
+        "music_detected": false,
+        "tonal_windows": 0,
+        "band_hits": {
+          "drone_55_220hz": 0,
+          "melodic_220_1333hz": 0,
+          "chime_1333_3500hz": 0
+        },
+        "max_periodicity_ratio": 0.3437,
+        "windows_inspected": 5
+      },
+      "master_pause_zero_music": {
+        "passed": true,
+        "pauses_checked": 0,
+        "note": "Continuous speech (no >=0.9s silence window)"
+      }
+    },
+    "all_passed": true
+  },
+  "drive_archive": {
+    "series_drive_folder_id": "17fRtsB6iaSlaTTaxNNG6ZooegRA-QN-d",
+    "asset_drive_folder_id": "1oSJo0HsVUld8mwkP4ZwPR-i3qhk2FD7y",
+    "asset_drive_url": "https://drive.google.com/drive/folders/1oSJo0HsVUld8mwkP4ZwPR-i3qhk2FD7y",
+    "files": {
+      "master_mp4": "1HGHOaINeOvapfxHQyzRO_p9wZsR69TOF",
+      "thumbnail_jpg": "1OqNRTjApk12IJG7QjOlM67ytfWzlPI7o",
+      "script_md": "19MnyjSQ859tOzddMonwGFAlWSLBAVKrC",
+      "dual_gate_audit_json": "1WX-0ukibYhSe03h5jdILjwndQss0B40N",
+      "manifest_json": "10p0TU0WWbQW3VbSLBVoWGYThffjGW43M"
+    }
+  }
+}
