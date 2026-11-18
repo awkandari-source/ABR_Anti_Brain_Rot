@@ -117,7 +117,7 @@
       },
       "youtube_video_id": null,
       "shorts_url": null,
-      "youtube_sync_status": "OAUTH_REFRESH_REQUIRED",
+      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -192,7 +192,7 @@
       },
       "youtube_video_id": null,
       "shorts_url": null,
-      "youtube_sync_status": "OAUTH_REFRESH_REQUIRED",
+      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -268,7 +268,7 @@
       },
       "youtube_video_id": null,
       "shorts_url": null,
-      "youtube_sync_status": "OAUTH_REFRESH_REQUIRED",
+      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -343,7 +343,7 @@
       },
       "youtube_video_id": null,
       "shorts_url": null,
-      "youtube_sync_status": "OAUTH_REFRESH_REQUIRED",
+      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -418,7 +418,7 @@
       },
       "youtube_video_id": null,
       "shorts_url": null,
-      "youtube_sync_status": "OAUTH_REFRESH_REQUIRED",
+      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -493,7 +493,7 @@
       },
       "youtube_video_id": null,
       "shorts_url": null,
-      "youtube_sync_status": "OAUTH_REFRESH_REQUIRED",
+      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -516,6 +516,7 @@
   "drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
   "drive_folder_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
   "youtube_sync_status": "PENDING_OAUTH_REFRESH",
-  "youtube_oauth_note": "HTTP 400 on POST https://oauth2.googleapis.com/token: {\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Token has been expired or revoked.\"\n}",
-  "drive_sync_status": "MIRRORED_6_OF_6"
+  "youtube_oauth_note": "HTTP 400 on POST https://www.googleapis.com/youtube/v3/playlists: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid playlist snippet.\",\n    \"errors\": [\n      {\n        \"message\": \"Invalid playlist snippet.\",\n        \"domain\": \"youtube.playlist\",\n        \"reason\": \"invalidPlaylistSnippet\"\n      }\n    ]\n  }\n}\n",
+  "drive_sync_status": "MIRRORED_6_OF_6",
+  "youtube_quota_note": "QuotaLedger ceiling reached for purpose='production' (8212 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert (next PT quota reset: 2026-11-19T08:00:05Z)"
 }

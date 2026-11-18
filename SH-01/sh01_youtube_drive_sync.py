@@ -45,7 +45,7 @@ HISTORY_CORE_PLAYLIST_ID = "PLfO4Y6xIR8iU"
 SH01_PLAYLIST_TITLE = "Quiet Wonders & Slow Science — Shorts"
 
 sys.path.insert(0, str(STUDIO_DIR))
-from linked_api_hub import LinkedAPIHub  # type: ignore
+from linked_api_hub import LinkedAPIHub, YouTubeQuotaExhaustedError  # type: ignore
 
 
 def gdrive_extract_id(res: Any) -> str:
@@ -182,33 +182,52 @@ def sync_github_cleanly(commit_msg: str) -> tuple[str, str]:
     return head_sha, full_porcelain
 
 
-def update_master_index_if_scheduled(scheduled_rows: list[dict[str, Any]], playlist_id: str, drive_folder_id: str) -> None:
-    if not scheduled_rows:
+def update_master_index_if_scheduled(all_rows: list[dict[str, Any]], playlist_id: str, drive_folder_id: str) -> None:
+    if not all_rows:
         return
+    import re as _re
     idx_md_path = GITHUB_REPO / "ABR_Anti_Brain_Rot_Index.md"
     md_text = idx_md_path.read_text(encoding="utf-8")
-    if "### 3.0 Batch SH-01: *Quiet Wonders & Slow Science — Shorts*" in md_text:
-        return
-    block = [
+    block_lines = [
+        "<!-- SH01_INDEX_START -->",
         "### 3.0 Batch SH-01: *Quiet Wonders & Slow Science — Shorts* (`9:16` 60s @ `24/1` fps Zero-Music)",
         "",
         f"- **Official Shorts Playlist:** [`{playlist_id}`](https://www.youtube.com/playlist?list={playlist_id})",
-        f"- **Google Drive Batch Archive:** [`{drive_folder_id}`](https://drive.google.com/drive/folders/{drive_folder_id})",
+        f"- **Google Drive Batch Folder ID:** `{drive_folder_id}`",
         "",
-        "| Asset ID | Short Title | Runtime | Voice Sep | Schedule (`UTC`) | YouTube Link | Drive Folder |",
+        "| Asset ID | Short Title | Runtime | Voice Sep | Schedule (`UTC`) | YouTube ID | Drive Folder ID |",
         "| :--- | :--- | :---: | :--- | :--- | :--- | :--- |",
     ]
-    for r in scheduled_rows:
+    for r in all_rows:
         t_esc = r["title"].replace("|", "\\|")
-        block.append(
-            f"| `{r['asset_id']}` | *{t_esc}* | `60s` | **`+{r['voice_sep_db']} dB`** (`0%` Music) | "
-            f"**Scheduled** (`{r['publish_at_utc']}`) | [`{r['youtube_video_id']}`]({r['shorts_url']}) | "
-            f"[`{r['asset_drive_folder_id']}`](https://drive.google.com/drive/folders/{r['asset_drive_folder_id']}) |"
+        yt_cell = (
+            f"[`{r['youtube_video_id']}`]({r['shorts_url']})"
+            if r.get("youtube_video_id")
+            else f"`{r['youtube_sync_status']}`"
         )
-    block.append("")
-    anchor = "## 3. Complete `9:16` Zero-Music Shorts Catalog"
-    if anchor in md_text:
-        md_text = md_text.replace(anchor, anchor + "\n\n" + "\n".join(block), 1)
+        sched_label = "**Scheduled**" if r.get("youtube_video_id") else "**Queued (Next Quota Reset)**"
+        block_lines.append(
+            f"| `{r['asset_id']}` | *{t_esc}* | `60s` | **`+{r['voice_sep_db']} dB`** (`0%` Music) | "
+            f"{sched_label} (`{r['publish_at_utc']}`) | {yt_cell} | `{r['asset_drive_folder_id']}` |"
+        )
+    block_lines.append("<!-- SH01_INDEX_END -->")
+    new_block = "\n".join(block_lines)
+
+    if "<!-- SH01_INDEX_START -->" in md_text and "<!-- SH01_INDEX_END -->" in md_text:
+        md_text = _re.sub(
+            r"<!-- SH01_INDEX_START -->.*?<!-- SH01_INDEX_END -->",
+            new_block,
+            md_text,
+            count=1,
+            flags=_re.DOTALL,
+        )
+        idx_md_path.write_text(md_text, encoding="utf-8")
+        return
+
+    m = _re.search(r"^## 3\. Complete `9:16` Zero-Music Shorts Catalog.*$", md_text, flags=_re.MULTILINE)
+    if m:
+        anchor_line = m.group(0)
+        md_text = md_text.replace(anchor_line, anchor_line + "\n\n" + new_block, 1)
         idx_md_path.write_text(md_text, encoding="utf-8")
 
 
@@ -238,6 +257,7 @@ def main() -> int:
     # 2. Check YouTube OAuth live readiness
     yt_ready = False
     yt_auth_error: str | None = None
+    quota_note: str | None = None
     playlist_id: str | None = batch_manifest.get("youtube_playlist_id")
     try:
         ch_info = hub.youtube.get_channel_overview()
@@ -246,6 +266,7 @@ def main() -> int:
         playlist_id = ensure_sh01_playlist(hub)
         batch_manifest["youtube_playlist_id"] = playlist_id
         batch_manifest["youtube_playlist_url"] = f"https://www.youtube.com/playlist?list={playlist_id}"
+        MANIFEST_PATH.write_text(json.dumps(batch_manifest, indent=2) + "\n", encoding="utf-8")
         print(f"[SH-01 Sync] Bound Playlist '{SH01_PLAYLIST_TITLE}': {playlist_id}", flush=True)
     except Exception as exc:
         yt_auth_error = str(exc)
@@ -298,56 +319,67 @@ def main() -> int:
         desc = build_short_description(item, playlist_id)
         vid_id = mdoc.get("youtube_routing", {}).get("youtube_video_id")
         shorts_url = f"https://www.youtube.com/shorts/{vid_id}" if vid_id else None
+        yt_item_status = "API_SCHEDULED" if vid_id else ("READY_TO_UPLOAD" if yt_ready else "OAUTH_REFRESH_REQUIRED")
+
+        assigned_pls = [pl for pl in [playlist_id, SHORTS_SHELF_PLAYLIST_ID] if pl]
+        if item["category"] in ("Historical Engineering", "Historical Timekeeping", "Deep-Time Biology"):
+            assigned_pls.append(HISTORY_CORE_PLAYLIST_ID)
 
         if yt_ready and not vid_id:
-            print(f"[{aid}] Uploading vertical Short to @ABR-AntiBrainRot -> publishAt={item['publish_at_utc']}...", flush=True)
-            up_res = hub.youtube.upload_video(
-                mp4_path,
-                title=item["youtube_title"],
-                description=desc,
-                tags=item["tags"],
-                category_id="27",
-                privacy_status="private",
-                publish_at_iso=item["publish_at_utc"],
-                made_for_kids=False,
-            )
-            vid_id = str(up_res["id"])
-            shorts_url = f"https://www.youtube.com/shorts/{vid_id}"
-            assert playlist_id is not None
-            hub.youtube.add_to_playlist(playlist_id, vid_id, position=int(item["position"]))
-            hub.youtube.add_to_playlist(SHORTS_SHELF_PLAYLIST_ID, vid_id)
-            if item["category"] in ("Historical Engineering", "Historical Timekeeping", "Deep-Time Biology"):
-                hub.youtube.add_to_playlist(HISTORY_CORE_PLAYLIST_ID, vid_id)
+            try:
+                print(f"[{aid}] Uploading vertical Short to @ABR-AntiBrainRot -> publishAt={item['publish_at_utc']}...", flush=True)
+                up_res = hub.youtube.upload_video(
+                    mp4_path,
+                    title=item["youtube_title"],
+                    description=desc,
+                    tags=item["tags"],
+                    category_id="27",
+                    privacy_status="private",
+                    publish_at_iso=item["publish_at_utc"],
+                    made_for_kids=False,
+                )
+                vid_id = str(up_res["id"])
+                shorts_url = f"https://www.youtube.com/shorts/{vid_id}"
+                yt_item_status = "API_SCHEDULED"
+                assert playlist_id is not None
+                hub.youtube.add_to_playlist(playlist_id, vid_id, position=int(item["position"]))
+                hub.youtube.add_to_playlist(SHORTS_SHELF_PLAYLIST_ID, vid_id)
+                print(f"[{aid}] SCHEDULED -> {shorts_url} ({item['publish_at_utc']}) | Bound to playlist {playlist_id}", flush=True)
+            except YouTubeQuotaExhaustedError as q_exc:
+                next_rst = hub.youtube.quota.next_reset_utc()
+                quota_note = f"{q_exc} (next PT quota reset: {next_rst})"
+                yt_item_status = "QUOTA_CAP_QUEUED_NEXT_RESET"
+                print(f"[{aid}] QuotaLedger 9,200-unit daily production cap reached ({quota_note}); staged for automatic release on next reset.", flush=True)
 
-            sweeper_dir = STUDIO_DIR / item["slug"]
-            sweeper_dir.mkdir(parents=True, exist_ok=True)
-            sweeper_meta = {
-                "slug": item["slug"],
-                "asset_id": aid,
-                "title": item["youtube_title"],
-                "pillar": item["pillar"],
-                "format": "9:16_YOUTUBE_SHORT",
-                "youtube_video_id": vid_id,
-                "youtube_url": shorts_url,
-                "watch_url": f"https://www.youtube.com/watch?v={vid_id}",
-                "status": "API_SCHEDULED",
-                "publish_at_utc": item["publish_at_utc"],
-                "youtube_status": {
-                    "uploadStatus": "uploaded",
-                    "privacyStatus": "private",
-                    "publishAt": item["publish_at_utc"],
-                    "selfDeclaredMadeForKids": False,
-                },
-                "playlist_id": playlist_id,
-                "assigned_playlists": [playlist_id, SHORTS_SHELF_PLAYLIST_ID],
-                "question_hook": item["question_hook"],
-                "post_publish_swept": False,
-                "mp4_path": str(mp4_path),
-                "drive_root_folder_id": DRIVE_ROOT_ID,
-                "drive_archive_folder_id": sub_folder_id,
-                "drive_archive_url": f"https://drive.google.com/drive/folders/{sub_folder_id}",
-            }
-            (sweeper_dir / "youtube_publish_metadata.json").write_text(json.dumps(sweeper_meta, indent=2) + "\n")
+        sweeper_dir = STUDIO_DIR / item["slug"]
+        sweeper_dir.mkdir(parents=True, exist_ok=True)
+        sweeper_meta = {
+            "slug": item["slug"],
+            "asset_id": aid,
+            "title": item["youtube_title"],
+            "pillar": item["pillar"],
+            "format": "9:16_YOUTUBE_SHORT",
+            "youtube_video_id": vid_id,
+            "youtube_url": shorts_url,
+            "watch_url": f"https://www.youtube.com/watch?v={vid_id}" if vid_id else None,
+            "status": yt_item_status,
+            "publish_at_utc": item["publish_at_utc"],
+            "youtube_status": {
+                "uploadStatus": "uploaded" if vid_id else "queued_next_quota_reset",
+                "privacyStatus": "private",
+                "publishAt": item["publish_at_utc"],
+                "selfDeclaredMadeForKids": False,
+            },
+            "playlist_id": playlist_id,
+            "assigned_playlists": assigned_pls,
+            "question_hook": item["question_hook"],
+            "post_publish_swept": False,
+            "mp4_path": str(mp4_path),
+            "drive_root_folder_id": DRIVE_ROOT_ID,
+            "drive_archive_folder_id": sub_folder_id,
+            "drive_archive_url": f"https://drive.google.com/drive/folders/{sub_folder_id}",
+        }
+        (sweeper_dir / "youtube_publish_metadata.json").write_text(json.dumps(sweeper_meta, indent=2) + "\n")
 
         new_state = "API_SCHEDULED" if vid_id else "QA_VERIFIED"
         mdoc["state"] = new_state
@@ -360,7 +392,7 @@ def main() -> int:
             "made_for_kids": False,
             "youtube_video_id": vid_id,
             "shorts_url": shorts_url,
-            "youtube_sync_status": "API_SCHEDULED" if vid_id else "OAUTH_REFRESH_REQUIRED",
+            "youtube_sync_status": yt_item_status,
             "prepared_description": desc,
         })
         mdoc["drive_archive"] = {
@@ -378,7 +410,7 @@ def main() -> int:
         item["state"] = new_state
         item["youtube_video_id"] = vid_id
         item["shorts_url"] = shorts_url
-        item["youtube_sync_status"] = "API_SCHEDULED" if vid_id else "OAUTH_REFRESH_REQUIRED"
+        item["youtube_sync_status"] = yt_item_status
         item["drive_archive"] = mdoc["drive_archive"]
 
         rec = {
@@ -388,7 +420,7 @@ def main() -> int:
             "publish_at_utc": item["publish_at_utc"],
             "youtube_video_id": vid_id,
             "shorts_url": shorts_url,
-            "youtube_sync_status": item["youtube_sync_status"],
+            "youtube_sync_status": yt_item_status,
             "asset_drive_folder_id": sub_folder_id,
             "master_mp4_drive_id": drv_files["master_mp4"],
             "voice_sep_db": mdoc["stream_metrics"]["net_voice_separation_db"],
@@ -398,9 +430,18 @@ def main() -> int:
             scheduled_rows.append(rec)
 
     # Save updated sh01_manifest.json and mirror batch manifest + audit log to SH-01 Drive root
-    batch_manifest["youtube_sync_status"] = "ALL_6_SCHEDULED" if len(scheduled_rows) == 6 else "PENDING_OAUTH_REFRESH"
+    if len(scheduled_rows) == 6:
+        batch_manifest["youtube_sync_status"] = "ALL_6_SCHEDULED"
+    elif len(scheduled_rows) > 0:
+        batch_manifest["youtube_sync_status"] = f"SCHEDULED_{len(scheduled_rows)}_OF_6_QUOTA_QUEUED_{6 - len(scheduled_rows)}"
+    else:
+        batch_manifest["youtube_sync_status"] = "PENDING_OAUTH_REFRESH"
     if yt_auth_error:
         batch_manifest["youtube_oauth_note"] = yt_auth_error
+    else:
+        batch_manifest.pop("youtube_oauth_note", None)
+    if quota_note:
+        batch_manifest["youtube_quota_note"] = quota_note
     batch_manifest["drive_sync_status"] = "MIRRORED_6_OF_6"
     MANIFEST_PATH.write_text(json.dumps(batch_manifest, indent=2) + "\n", encoding="utf-8")
     shutil.copyfile(MANIFEST_PATH, MEDIA_SH01 / "sh01_manifest.json")
@@ -409,15 +450,21 @@ def main() -> int:
     audit_drv_id = upload_or_replace_drive_file(hub, AUDIT_LOG_PATH, sh01_drive_folder_id)
     print(f"[SH-01 Sync] Mirrored sh01_manifest.json ({manifest_drv_id}) & audit log ({audit_drv_id}) to Drive.", flush=True)
 
-    if len(scheduled_rows) == 6 and playlist_id:
-        update_master_index_if_scheduled(scheduled_rows, playlist_id, sh01_drive_folder_id)
+    if len(scheduled_rows) >= 1 and playlist_id:
+        update_master_index_if_scheduled(sync_items_summary, playlist_id, sh01_drive_folder_id)
 
+    q_state = hub.youtube.quota._load_today()
     receipt = {
         "batch_id": "SH-01",
         "playlist_title": SH01_PLAYLIST_TITLE,
         "youtube_playlist_id": playlist_id,
+        "youtube_playlist_url": f"https://www.youtube.com/playlist?list={playlist_id}" if playlist_id else None,
         "youtube_sync_status": batch_manifest["youtube_sync_status"],
         "youtube_oauth_error": yt_auth_error,
+        "youtube_quota_note": quota_note,
+        "quota_ledger_units_used": q_state.get("units_used"),
+        "quota_ledger_production_soft_cap": q_state.get("production_soft_cap"),
+        "quota_ledger_next_reset_utc": hub.youtube.quota.next_reset_utc(),
         "drive_folder_id": sh01_drive_folder_id,
         "drive_folder_url": sh01_drive_url,
         "drive_manifest_file_id": manifest_drv_id,
@@ -431,7 +478,7 @@ def main() -> int:
 
     # 4. Commit and push cleanly to GitHub (preserving -uno working-tree check)
     commit_msg = (
-        f"feat(sh-01): add Batch SH-01 Quiet Wonders & Slow Science Shorts pipeline, QA logs, and sync ({batch_manifest['youtube_sync_status']})"
+        f"feat(sh-01): schedule Batch SH-01 Shorts on @ABR-AntiBrainRot and sync indices ({batch_manifest['youtube_sync_status']})"
     )
     head_sha, porcelain = sync_github_cleanly(commit_msg)
     print(f"[SH-01 Sync] GitHub HEAD: {head_sha} | git status clean: {porcelain == ''}", flush=True)
