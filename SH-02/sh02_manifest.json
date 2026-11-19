@@ -83,7 +83,7 @@
         "SH02_S01_shot2.jpg",
         "SH02_S01_shot3.jpg"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "qa_metrics": {
         "asset_id": "SH02_S01",
         "title": "Why Sub-1900K Hearth Light Helps Your Brain Release Melatonin #Shorts",
@@ -125,7 +125,9 @@
       "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_youtube_id": "psEs90dgdcU",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "youtube_video_id": "DOL44LfW2N8",
+      "youtube_url": "https://www.youtube.com/shorts/DOL44LfW2N8"
     },
     {
       "asset_id": "SH02_S02",
@@ -150,7 +152,7 @@
         "SH02_S02_shot2.jpg",
         "SH02_S02_shot3.jpg"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "qa_metrics": {
         "asset_id": "SH02_S02",
         "title": "How Steady Rain on Cedar Masks Midnight Micro-Arousals #Shorts",
@@ -192,7 +194,9 @@
       "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "youtube_video_id": "2I2P9aPIXUs",
+      "youtube_url": "https://www.youtube.com/shorts/2I2P9aPIXUs"
     },
     {
       "asset_id": "SH02_S03",
@@ -217,7 +221,7 @@
         "SH02_S03_shot2.jpg",
         "SH02_S03_shot3.jpg"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "qa_metrics": {
         "asset_id": "SH02_S03",
         "title": "Why Slow Ocean Swells Pace Your Breathing Before Sleep #Shorts",
@@ -259,7 +263,9 @@
       "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "youtube_video_id": "WUd2B5zP--8",
+      "youtube_url": "https://www.youtube.com/shorts/WUd2B5zP--8"
     },
     {
       "asset_id": "SH02_S04",
@@ -285,7 +291,7 @@
         "SH02_S04_shot2.jpg",
         "SH02_S04_shot3.jpg"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "qa_metrics": {
         "asset_id": "SH02_S04",
         "title": "Why 180 Minutes Covers Two Full 90-Minute Sleep Cycles #Shorts",
@@ -327,7 +333,9 @@
       "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_youtube_id": "psEs90dgdcU",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "youtube_video_id": "fW6ksqN9BBU",
+      "youtube_url": "https://www.youtube.com/shorts/fW6ksqN9BBU"
     },
     {
       "asset_id": "SH02_S05",
@@ -352,7 +360,7 @@
         "SH02_S05_shot2.jpg",
         "SH02_S05_shot3.jpg"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "qa_metrics": {
         "asset_id": "SH02_S05",
         "title": "Acoustic Dampening: How Falling Snow Quiets an Alert Brain #Shorts",
@@ -394,7 +402,9 @@
       "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "youtube_video_id": "Qu68axIvplc",
+      "youtube_url": "https://www.youtube.com/shorts/Qu68axIvplc"
     },
     {
       "asset_id": "SH02_S06",
@@ -419,7 +429,7 @@
         "SH02_S06_shot2.jpg",
         "SH02_S06_shot3.jpg"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "qa_metrics": {
         "asset_id": "SH02_S06",
         "title": "Cooling Basalt & Desert Night Air: Temperature Cues for Deep Sleep #Shorts",
@@ -461,10 +471,12 @@
       "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z"
+      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
+      "youtube_video_id": "NQ3m2Xm02KI",
+      "youtube_url": "https://www.youtube.com/shorts/NQ3m2Xm02KI"
     }
   ],
-  "batch_state": "QA_VERIFIED_PLAYLIST_BOUND",
+  "batch_state": "API_SCHEDULED",
   "qa_completed_at_utc": "2026-11-18T09:06:34Z",
   "drive_archive": {
     "root_folder_id": "1mlAlS_xpEn11gUGyKi_zuQiDZ0Co9Ay9",
@@ -473,5 +485,5 @@
     "mirrored_at_utc": "2026-11-18T09:11:33Z",
     "status": "MIRRORED_6_OF_6"
   },
-  "youtube_sync_status": "SCHEDULED_0_OF_6_DEFERRED_6_QUOTA_SOFT_CAP"
+  "youtube_sync_status": "SCHEDULED_6_OF_6"
 }

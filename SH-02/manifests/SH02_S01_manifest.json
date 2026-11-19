@@ -44,7 +44,7 @@
       "cross_dissolve_in_sec": 1.5
     }
   ],
-  "state": "QA_VERIFIED",
+  "state": "API_SCHEDULED",
   "stream_metrics": {
     "width": 1080,
     "height": 1920,
@@ -82,16 +82,18 @@
     "primary_source_org": "Harvard Health Publishing",
     "primary_source_citation": "Harvard Health Publishing, Harvard Medical School \u2014 'Blue light has a dark side: Melatonin suppression and circadian phase shifting under evening short-wavelength light.'",
     "storefront_url": "https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
-    "youtube_video_id": null,
+    "youtube_video_id": "DOL44LfW2N8",
     "playlist_id": "PLWoNsolCeb2g",
     "playlist_url": "https://www.youtube.com/playlist?list=PLWoNsolCeb2g",
     "parent_sanctuary_id": "ABR_NS03",
     "parent_sanctuary_youtube_id": "psEs90dgdcU",
     "companion_sanctuary_youtube_id": "psEs90dgdcU",
     "privacy_status": "private",
-    "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+    "upload_staging_state": "API_SCHEDULED",
     "next_quota_reset_utc": "2026-11-19T08:00:05Z",
-    "quota_defer_reason": "QuotaLedger ceiling reached for purpose='production' (8315 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert"
+    "quota_defer_reason": "QuotaLedger ceiling reached for purpose='production' (8315 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert",
+    "shorts_url": "https://www.youtube.com/shorts/DOL44LfW2N8",
+    "watch_url": "https://www.youtube.com/watch?v=DOL44LfW2N8"
   },
   "sop_version": "ABR-AG-SOP-v2.1",
   "sop03_verification": {

@@ -7,91 +7,93 @@
   "drive_sh02_folder_url": "https://drive.google.com/drive/folders/1TwKGhwvkrprbVIvkfmU7gB4-BKsochkh",
   "youtube_oauth_ready": true,
   "youtube_oauth_detail": "READY",
-  "scheduled_count": 0,
-  "quota_deferred_count": 6,
+  "scheduled_count": 6,
+  "quota_deferred_count": 0,
   "quota_ledger": {
     "pt_date": "2026-11-18",
     "next_reset_utc": "2026-11-19T08:00:05Z",
     "hard_daily_cap": 10000,
     "production_soft_cap": 9200,
     "sweeper_reserved_units": 800,
-    "units_used": 8315,
-    "production_units_remaining": 885,
-    "total_units_remaining": 1685,
+    "units_used": 3116,
+    "production_units_remaining": 6084,
+    "total_units_remaining": 6884,
     "quota_exhausted": false,
     "exhausted_reason": null,
     "operations": {
       "probe:GET:channels": 6,
       "probe:GET:playlistItems": 3,
-      "probe:GET:playlists": 6,
+      "probe:GET:playlists": 7,
       "production:POST:playlists": 150,
-      "production:POST:videos.insert": 8000,
+      "production:POST:videos.insert": 1200,
       "production:POST:thumbnails.set": 50,
-      "sweeper:POST:playlistItems": 50,
-      "sweeper:PUT:videos": 50
+      "sweeper:POST:playlistItems": 1250,
+      "sweeper:PUT:videos": 50,
+      "remediation_critical:POST:videos.insert": 100,
+      "sweeper:POST:thumbnails.set": 300
     }
   },
-  "synced_at_utc": "2026-11-18T13:40:07Z",
+  "synced_at_utc": "2026-11-19T03:14:58Z",
   "records": [
     {
       "asset_id": "SH02_S01",
-      "youtube_video_id": null,
+      "youtube_video_id": "DOL44LfW2N8",
+      "youtube_url": "https://www.youtube.com/shorts/DOL44LfW2N8",
       "publish_at_utc": "2026-12-25T02:00:00Z",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS03",
       "parent_sanctuary_youtube_id": "psEs90dgdcU",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
-      "status": "STAGED_FOR_POST_QUOTA_RESET"
+      "status": "API_SCHEDULED"
     },
     {
       "asset_id": "SH02_S02",
-      "youtube_video_id": null,
+      "youtube_video_id": "2I2P9aPIXUs",
+      "youtube_url": "https://www.youtube.com/shorts/2I2P9aPIXUs",
       "publish_at_utc": "2026-12-26T02:00:00Z",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS01",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
-      "status": "STAGED_FOR_POST_QUOTA_RESET"
+      "status": "API_SCHEDULED"
     },
     {
       "asset_id": "SH02_S03",
-      "youtube_video_id": null,
+      "youtube_video_id": "WUd2B5zP--8",
+      "youtube_url": "https://www.youtube.com/shorts/WUd2B5zP--8",
       "publish_at_utc": "2026-12-27T02:00:00Z",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS02",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
-      "status": "STAGED_FOR_POST_QUOTA_RESET"
+      "status": "API_SCHEDULED"
     },
     {
       "asset_id": "SH02_S04",
-      "youtube_video_id": null,
+      "youtube_video_id": "fW6ksqN9BBU",
+      "youtube_url": "https://www.youtube.com/shorts/fW6ksqN9BBU",
       "publish_at_utc": "2026-12-28T02:00:00Z",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS03",
       "parent_sanctuary_youtube_id": "psEs90dgdcU",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
-      "status": "STAGED_FOR_POST_QUOTA_RESET"
+      "status": "API_SCHEDULED"
     },
     {
       "asset_id": "SH02_S05",
-      "youtube_video_id": null,
+      "youtube_video_id": "Qu68axIvplc",
+      "youtube_url": "https://www.youtube.com/shorts/Qu68axIvplc",
       "publish_at_utc": "2026-12-29T02:00:00Z",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS04",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
-      "status": "STAGED_FOR_POST_QUOTA_RESET"
+      "status": "API_SCHEDULED"
     },
     {
       "asset_id": "SH02_S06",
-      "youtube_video_id": null,
+      "youtube_video_id": "NQ3m2Xm02KI",
+      "youtube_url": "https://www.youtube.com/shorts/NQ3m2Xm02KI",
       "publish_at_utc": "2026-12-30T02:00:00Z",
       "playlist_id": "PLWoNsolCeb2g",
       "parent_sanctuary_id": "ABR_NS05",
       "parent_sanctuary_youtube_id": "",
-      "next_quota_reset_utc": "2026-11-19T08:00:05Z",
-      "status": "STAGED_FOR_POST_QUOTA_RESET"
+      "status": "API_SCHEDULED"
     }
   ]
 }

@@ -84,12 +84,12 @@ def gdrive_find_or_mkdir(hub: LinkedAPIHub, name: str, parent_id: str) -> str:
             if entry.get("name") == name and "folder" in str(entry.get("mimeType", "")).lower():
                 return str(entry["id"])
     p = subprocess.run(
-        [GDRIVE_BIN, "mutate", "mkdir", name, "--parent", parent_id, "--json"],
+        [GDRIVE_BIN, "mutate", "mkdir", name, "--parent", parent_id],
         capture_output=True,
         text=True,
         check=True,
     )
-    return gdrive_extract_id(p.stdout)
+    return gdrive_extract_id(p.stdout + "\n" + p.stderr)
 
 
 def gdrive_upsert_file(hub: LinkedAPIHub, local_path: Path, parent_id: str) -> str:
@@ -99,19 +99,19 @@ def gdrive_upsert_file(hub: LinkedAPIHub, local_path: Path, parent_id: str) -> s
             if entry.get("name") == local_path.name and "folder" not in str(entry.get("mimeType", "")).lower():
                 fid = str(entry["id"])
                 p_up = subprocess.run(
-                    [GDRIVE_BIN, "mutate", "update", fid, str(local_path), "--json"],
+                    [GDRIVE_BIN, "mutate", "update", fid, str(local_path)],
                     capture_output=True,
                     text=True,
                 )
                 if p_up.returncode == 0:
                     return fid
     p_new = subprocess.run(
-        [GDRIVE_BIN, "mutate", "upload", str(local_path), "--parent", parent_id, "--json"],
+        [GDRIVE_BIN, "mutate", "upload", str(local_path), "--parent", parent_id],
         capture_output=True,
         text=True,
         check=True,
     )
-    return gdrive_extract_id(p_new.stdout)
+    return gdrive_extract_id(p_new.stdout + "\n" + p_new.stderr)
 
 
 def resolve_parent_sanctuary_links() -> dict[str, dict[str, str]]:
@@ -202,11 +202,11 @@ def build_sleep_short_description(
 
     lines = [
         f"{item['title'].replace(' #Shorts', '')} — calm 60-second late-night sleep science from @ABR-AntiBrainRot.",
-        "Graded strictly below 1900K (1850K warm ember curve with -15% gradual luminance decay) and mixed with 0% music (-16.0 LUFS soft baritone over pure organic nature foley, >= +30 dB voice separation).",
+        "Graded strictly below 1900K (1850K warm ember curve with -15% gradual luminance decay) and mixed with 0% music (-16.0 LUFS soft baritone over pure organic nature foley, over +30 dB voice separation).",
         parent_watch_line,
         pl_line,
         "Free Printable Calm Minds Family Reset Kit & Zero-Music Sleep Guide: https://awkandari-source.github.io/ABR_Anti_Brain_Rot/",
-        "Pediatric & Late-Night Hearing Safety Note: Keep bedside playback gentle (<= 50 dBA at a 2-meter speaker distance).",
+        "Pediatric & Late-Night Hearing Safety Note: Keep bedside playback gentle (under 50 dBA at a 2-meter speaker distance).",
         "",
         "Primary Scientific Source:",
         f"- {item['primary_source_citation']}",
@@ -219,7 +219,7 @@ def build_sleep_short_description(
         "",
         "#Shorts #SleepScience #ZeroMusic #CircadianRhythm #DeepSleep #AntiBrainRot #LowStimulation",
     ]
-    desc = "\n".join(lines)
+    desc = "\n".join(lines).replace("<", "(").replace(">", ")")
     if "drive.google.com" in desc.lower():
         raise ValueError(f"Privacy violation detected in {item['asset_id']} description!")
     return desc
@@ -521,6 +521,8 @@ def main() -> int:
             p_info = parent_links[item["parent_sanctuary_id"]]
             desc = build_sleep_short_description(item, p_info, shorts_playlist_id)
             mp4_p = SH02_DIR / "masters" / f"{aid}_Master_1080x1920_24p.mp4"
+            if not mp4_p.exists():
+                mp4_p = STUDIO_SH02_DIR / "masters" / f"{aid}_Master_1080x1920_24p.mp4"
 
             vid_id: str | None = None
             watch_url: str | None = None
