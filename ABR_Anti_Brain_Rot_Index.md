@@ -9,25 +9,25 @@
 
 ---
 
-## 1. Official YouTube Homepage Shelves & 14 Curated Playlists Index
+## 1. Official YouTube Homepage Shelves & 16 Curated Playlists Index
 
 | Role / Shelf | Playlist ID | Official Playlist Title | Items | Direct YouTube URL |
 | :--- | :--- | :--- | :---: | :--- |
-| **Shelf 0 (Top)** | `PLO3jEEgHm_Iw` | **180-Minute Neuro-Acoustic Sleep Sanctuaries** | 6 | https://www.youtube.com/playlist?list=PLO3jEEgHm_Iw |
-| **Shelf 1 (a)** | `PLUt7V0-ta200` | **Evidence-Based Media & Sleep Shorts** | 4 | https://www.youtube.com/playlist?list=PLUt7V0-ta200 |
-| **Shelf 2 (b)** | `PLEyZbMU0SV08` | **Slow-Paced Children's Storytelling** | 10 | https://www.youtube.com/playlist?list=PLEyZbMU0SV08 |
-| **Shelf 3 (c)** | `PLeHDZfHy-UxM` | **Historical & Scientific Deep Dives** | 19 | https://www.youtube.com/playlist?list=PLeHDZfHy-UxM |
+| **Shelf 0 (Top)** | `PLO3jEEgHm_Iw` | **180-Minute Neuro-Acoustic Sleep Sanctuaries** | 7 | https://www.youtube.com/playlist?list=PLO3jEEgHm_Iw |
+| **Shelf 1 (a)** | `PLUt7V0-ta200` | **Evidence-Based Media & Sleep Shorts** | 18 | https://www.youtube.com/playlist?list=PLUt7V0-ta200 |
+| **Shelf 2 (b)** | `PLEyZbMU0SV08` | **Slow-Paced Children's Storytelling** | 22 | https://www.youtube.com/playlist?list=PLEyZbMU0SV08 |
+| **Shelf 3 (c)** | `PLeHDZfHy-UxM` | **Historical & Scientific Deep Dives** | 38 | https://www.youtube.com/playlist?list=PLeHDZfHy-UxM |
 | *Pillar 2 Catalog* | `PLSpo6LDB5RsE` | **Why Anti-Brain Rot Matters: Pediatric Brain Science & Parent Guides** | 39 | https://www.youtube.com/playlist?list=PLSpo6LDB5RsE |
-| *Pillar 3 Catalog* | `PLfO4Y6xIR8iU` | **Ancient History Mysteries, Lost Civilizations & Empire Wealth** | 76 | https://www.youtube.com/playlist?list=PLfO4Y6xIR8iU |
+| *Pillar 3 Catalog* | `PLfO4Y6xIR8iU` | **Ancient History Mysteries, Lost Civilizations & Empire Wealth** | 110 | https://www.youtube.com/playlist?list=PLfO4Y6xIR8iU |
 | *Mini-Series (`MS01`)* | `PLXt-oo9Un1L0` | **Tales of the Quiet Meadow \| 5-Part Anti-Brain Rot Bedtime Series (Zero Music)** | 5 | https://www.youtube.com/playlist?list=PLXt-oo9Un1L0 |
 | *Mini-Series (`MS02`)* | `PLarzQsyazt94` | **The Little Lantern Keeper \| 5-Part Rainy Evening Bedtime Series (Zero Music)** | 5 | https://www.youtube.com/playlist?list=PLarzQsyazt94 |
-| *Mini-Series (`MS03`)* | `PLON_lr40Sp2Q` | **Reclaiming the Developing Mind \| 5-Part Pediatric Neuroscience Series** | 5 | https://www.youtube.com/playlist?list=PLON_lr40Sp2Q |
+| *Mini-Series (`MS03`)* | `PLON_lr40Sp2Q` | **Reclaiming the Developing Mind \| 5-Part Pediatric Neuroscience Series** | 6 | https://www.youtube.com/playlist?list=PLON_lr40Sp2Q |
 | *Mini-Series (`MS03_S02`)* | `PLbsFe7l7m4Go` | **Pediatric Brain Science & Attention Documentaries (Zero Music)** | 6 | https://www.youtube.com/playlist?list=PLbsFe7l7m4Go |
 | *Mini-Series (`MS06`)* | `PLdWSOapYjkZc` | **Earth's Slowest Clocks \| 5-Part Calm Deep-Time Documentary Series (Zero Music)** | 5 | https://www.youtube.com/playlist?list=PLdWSOapYjkZc |
 | *Mini-Series (`MS-09`)* | `PLSkJwyyRdKug` | **Earth's Slowest Clocks — Volume II** | 6 | https://www.youtube.com/playlist?list=PLSkJwyyRdKug |
-| *Mini-Series (`MS07`)* | `PLTj2UbamX1hQ` | **Pediatric Brain Science & Attention Documentaries (2026 Research Edition)** | 8 | https://www.youtube.com/playlist?list=PLTj2UbamX1hQ |
+| *Mini-Series (`MS07`)* | `PLTj2UbamX1hQ` | **Pediatric Brain Science & Attention Documentaries (2026 Research Edition)** | 6 | https://www.youtube.com/playlist?list=PLTj2UbamX1hQ |
 | *Sleep Science* | `PLAe5Tqk750cc` | **Architecture of the Sleeping Brain: Sleep Neurology & Deep Restoration** | 6 | https://www.youtube.com/playlist?list=PLAe5Tqk750cc |
-| *Sleep Sanctuary* | `PLEkS-F2Ct9xo` | **ABR Neuro-Acoustic Sanctuary** | 3 | https://www.youtube.com/playlist?list=PLEkS-F2Ct9xo |
+| *Quiet Wonders (`SH-01`)* | `PLY-xpre4jtzU` | **Quiet Wonders & Slow Science — Shorts** | 9 | https://www.youtube.com/playlist?list=PLY-xpre4jtzU |
 | *Sleep Shorts (`SH-02`)* | `PLWoNsolCeb2g` | **Neuro-Acoustic Sleep Sanctuaries — Shorts** | 6 | https://www.youtube.com/playlist?list=PLWoNsolCeb2g |
 
 ---
