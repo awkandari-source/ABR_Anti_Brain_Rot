@@ -82,7 +82,9 @@
         "playlist_bound": true,
         "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
-      }
+      },
+      "state": "PUBLIC",
+      "privacy_status": "public"
     },
     {
       "asset_id": "MS09_E02",
@@ -143,7 +145,9 @@
         "playlist_bound": true,
         "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
-      }
+      },
+      "state": "PUBLIC",
+      "privacy_status": "public"
     },
     {
       "asset_id": "MS09_E03",
@@ -204,7 +208,9 @@
         "playlist_bound": true,
         "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
-      }
+      },
+      "state": "PUBLIC",
+      "privacy_status": "public"
     },
     {
       "asset_id": "MS09_E04",
@@ -265,7 +271,9 @@
         "playlist_bound": true,
         "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
-      }
+      },
+      "state": "PUBLIC",
+      "privacy_status": "public"
     },
     {
       "asset_id": "MS09_E05",
@@ -326,7 +334,9 @@
         "playlist_bound": true,
         "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
-      }
+      },
+      "state": "PUBLIC",
+      "privacy_status": "public"
     },
     {
       "asset_id": "MS09_COMP",
@@ -413,7 +423,9 @@
         "playlist_bound": true,
         "custom_thumbnail_applied": true,
         "quota_next_reset_utc": null
-      }
+      },
+      "state": "PUBLIC",
+      "privacy_status": "public"
     }
   ],
   "drive_series_archive": {
@@ -436,5 +448,6 @@
     "title": "Earth's Slowest Clocks \u2014 Volume II",
     "url": "https://www.youtube.com/playlist?list=PLSkJwyyRdKug"
   },
-  "series_status": "API_SCHEDULED_AND_ARCHIVED"
+  "series_status": "API_SCHEDULED_AND_ARCHIVED",
+  "youtube_visibility_status": "ALL_6_PUBLIC"
 }

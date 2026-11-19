@@ -8,76 +8,82 @@
   },
   "assets": {
     "SH02_S01": {
-      "state": "API_SCHEDULED",
+      "state": "PUBLIC",
       "parent_sanctuary_id": "ABR_NS03",
       "max_narration_silence_sec": 0.373,
       "vocal_duty_cycle_pct": 94.93,
-      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "upload_staging_state": "PUBLIC",
       "playlist_id": "PLWoNsolCeb2g",
       "publish_at_utc": "2026-12-25T02:00:00Z",
       "next_quota_reset_utc": "2026-11-19T08:00:05Z",
       "youtube_video_id": "DOL44LfW2N8",
-      "youtube_url": "https://www.youtube.com/shorts/DOL44LfW2N8"
+      "youtube_url": "https://www.youtube.com/shorts/DOL44LfW2N8",
+      "privacy_status": "public"
     },
     "SH02_S02": {
-      "state": "API_SCHEDULED",
+      "state": "PUBLIC",
       "parent_sanctuary_id": "ABR_NS01",
       "max_narration_silence_sec": 0.355,
       "vocal_duty_cycle_pct": 94.42,
-      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "upload_staging_state": "PUBLIC",
       "playlist_id": "PLWoNsolCeb2g",
       "publish_at_utc": "2026-12-26T02:00:00Z",
       "next_quota_reset_utc": "2026-11-19T08:00:05Z",
       "youtube_video_id": "2I2P9aPIXUs",
-      "youtube_url": "https://www.youtube.com/shorts/2I2P9aPIXUs"
+      "youtube_url": "https://www.youtube.com/shorts/2I2P9aPIXUs",
+      "privacy_status": "public"
     },
     "SH02_S03": {
-      "state": "API_SCHEDULED",
+      "state": "PUBLIC",
       "parent_sanctuary_id": "ABR_NS02",
       "max_narration_silence_sec": 0.389,
       "vocal_duty_cycle_pct": 94.53,
-      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "upload_staging_state": "PUBLIC",
       "playlist_id": "PLWoNsolCeb2g",
       "publish_at_utc": "2026-12-27T02:00:00Z",
       "next_quota_reset_utc": "2026-11-19T08:00:05Z",
       "youtube_video_id": "WUd2B5zP--8",
-      "youtube_url": "https://www.youtube.com/shorts/WUd2B5zP--8"
+      "youtube_url": "https://www.youtube.com/shorts/WUd2B5zP--8",
+      "privacy_status": "public"
     },
     "SH02_S04": {
-      "state": "API_SCHEDULED",
+      "state": "PUBLIC",
       "parent_sanctuary_id": "ABR_NS03",
       "max_narration_silence_sec": 0.346,
       "vocal_duty_cycle_pct": 94.55,
-      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "upload_staging_state": "PUBLIC",
       "playlist_id": "PLWoNsolCeb2g",
       "publish_at_utc": "2026-12-28T02:00:00Z",
       "next_quota_reset_utc": "2026-11-19T08:00:05Z",
       "youtube_video_id": "fW6ksqN9BBU",
-      "youtube_url": "https://www.youtube.com/shorts/fW6ksqN9BBU"
+      "youtube_url": "https://www.youtube.com/shorts/fW6ksqN9BBU",
+      "privacy_status": "public"
     },
     "SH02_S05": {
-      "state": "API_SCHEDULED",
+      "state": "PUBLIC",
       "parent_sanctuary_id": "ABR_NS04",
       "max_narration_silence_sec": 0.349,
       "vocal_duty_cycle_pct": 93.19,
-      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "upload_staging_state": "PUBLIC",
       "playlist_id": "PLWoNsolCeb2g",
       "publish_at_utc": "2026-12-29T02:00:00Z",
       "next_quota_reset_utc": "2026-11-19T08:00:05Z",
       "youtube_video_id": "Qu68axIvplc",
-      "youtube_url": "https://www.youtube.com/shorts/Qu68axIvplc"
+      "youtube_url": "https://www.youtube.com/shorts/Qu68axIvplc",
+      "privacy_status": "public"
     },
     "SH02_S06": {
-      "state": "API_SCHEDULED",
+      "state": "PUBLIC",
       "parent_sanctuary_id": "ABR_NS05",
       "max_narration_silence_sec": 0.406,
       "vocal_duty_cycle_pct": 95.12,
-      "upload_staging_state": "STAGED_FOR_POST_QUOTA_RESET",
+      "upload_staging_state": "PUBLIC",
       "playlist_id": "PLWoNsolCeb2g",
       "publish_at_utc": "2026-12-30T02:00:00Z",
       "next_quota_reset_utc": "2026-11-19T08:00:05Z",
       "youtube_video_id": "NQ3m2Xm02KI",
-      "youtube_url": "https://www.youtube.com/shorts/NQ3m2Xm02KI"
+      "youtube_url": "https://www.youtube.com/shorts/NQ3m2Xm02KI",
+      "privacy_status": "public"
     }
   },
   "playlist_id": "PLWoNsolCeb2g",

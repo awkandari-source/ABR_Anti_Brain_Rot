@@ -46,14 +46,16 @@
       "voice_sep_db": 33.0,
       "music_detected": false,
       "publish_at": "2026-12-01T15:00:00Z",
-      "status": "API_SCHEDULED",
+      "status": "PUBLIC",
       "youtube_id": "6D3fuN7So_c",
       "watch_url": "https://www.youtube.com/watch?v=6D3fuN7So_c",
       "playlist_id": "PLSkJwyyRdKug",
       "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "1oSJo0HsVUld8mwkP4ZwPR-i3qhk2FD7y",
-      "drive_url": "https://drive.google.com/drive/folders/1oSJo0HsVUld8mwkP4ZwPR-i3qhk2FD7y"
+      "drive_url": "https://drive.google.com/drive/folders/1oSJo0HsVUld8mwkP4ZwPR-i3qhk2FD7y",
+      "privacy_status": "public",
+      "published_live_at_utc": "2026-11-19T11:37:00Z"
     },
     {
       "asset_id": "MS09_E02",
@@ -68,14 +70,16 @@
       "voice_sep_db": 32.5,
       "music_detected": false,
       "publish_at": "2026-12-04T15:00:00Z",
-      "status": "API_SCHEDULED",
+      "status": "PUBLIC",
       "youtube_id": "iecByY0b2BM",
       "watch_url": "https://www.youtube.com/watch?v=iecByY0b2BM",
       "playlist_id": "PLSkJwyyRdKug",
       "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "1OAH1HD64PhjajghisGh_xAEfx9O4ZCDW",
-      "drive_url": "https://drive.google.com/drive/folders/1OAH1HD64PhjajghisGh_xAEfx9O4ZCDW"
+      "drive_url": "https://drive.google.com/drive/folders/1OAH1HD64PhjajghisGh_xAEfx9O4ZCDW",
+      "privacy_status": "public",
+      "published_live_at_utc": "2026-11-19T11:37:00Z"
     },
     {
       "asset_id": "MS09_E03",
@@ -90,14 +94,16 @@
       "voice_sep_db": 33.2,
       "music_detected": false,
       "publish_at": "2026-12-08T15:00:00Z",
-      "status": "API_SCHEDULED",
+      "status": "PUBLIC",
       "youtube_id": "dCVlCjG6ig8",
       "watch_url": "https://www.youtube.com/watch?v=dCVlCjG6ig8",
       "playlist_id": "PLSkJwyyRdKug",
       "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "13MufZKMeewGjpNfxAhvShCBKgXcQULVt",
-      "drive_url": "https://drive.google.com/drive/folders/13MufZKMeewGjpNfxAhvShCBKgXcQULVt"
+      "drive_url": "https://drive.google.com/drive/folders/13MufZKMeewGjpNfxAhvShCBKgXcQULVt",
+      "privacy_status": "public",
+      "published_live_at_utc": "2026-11-19T11:37:00Z"
     },
     {
       "asset_id": "MS09_E04",
@@ -112,14 +118,16 @@
       "voice_sep_db": 33.1,
       "music_detected": false,
       "publish_at": "2026-12-11T15:00:00Z",
-      "status": "API_SCHEDULED",
+      "status": "PUBLIC",
       "youtube_id": "hCNSy0-Pu2Q",
       "watch_url": "https://www.youtube.com/watch?v=hCNSy0-Pu2Q",
       "playlist_id": "PLSkJwyyRdKug",
       "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "1m_Fi1ifY0R1BEqTS4dFwM8O1oNUOH-A-",
-      "drive_url": "https://drive.google.com/drive/folders/1m_Fi1ifY0R1BEqTS4dFwM8O1oNUOH-A-"
+      "drive_url": "https://drive.google.com/drive/folders/1m_Fi1ifY0R1BEqTS4dFwM8O1oNUOH-A-",
+      "privacy_status": "public",
+      "published_live_at_utc": "2026-11-19T11:37:00Z"
     },
     {
       "asset_id": "MS09_E05",
@@ -134,14 +142,16 @@
       "voice_sep_db": 32.8,
       "music_detected": false,
       "publish_at": "2026-12-15T15:00:00Z",
-      "status": "API_SCHEDULED",
+      "status": "PUBLIC",
       "youtube_id": "E_IttW6ODNo",
       "watch_url": "https://www.youtube.com/watch?v=E_IttW6ODNo",
       "playlist_id": "PLSkJwyyRdKug",
       "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "1UVkgMsDoP4BqGPYmREXjy4NA7wa4LgWW",
-      "drive_url": "https://drive.google.com/drive/folders/1UVkgMsDoP4BqGPYmREXjy4NA7wa4LgWW"
+      "drive_url": "https://drive.google.com/drive/folders/1UVkgMsDoP4BqGPYmREXjy4NA7wa4LgWW",
+      "privacy_status": "public",
+      "published_live_at_utc": "2026-11-19T11:37:00Z"
     },
     {
       "asset_id": "MS09_COMP",
@@ -156,14 +166,17 @@
       "voice_sep_db": 33.0,
       "music_detected": false,
       "publish_at": "2026-12-18T15:00:00Z",
-      "status": "API_SCHEDULED",
+      "status": "PUBLIC",
       "youtube_id": "1oxDLc1Gcos",
       "watch_url": "https://www.youtube.com/watch?v=1oxDLc1Gcos",
       "playlist_id": "PLSkJwyyRdKug",
       "playlist_bound": true,
       "quota_next_reset_utc": null,
       "drive_folder_id": "15BVSEbdBEuz_GZbzaQX3yhuzeZbnFy_j",
-      "drive_url": "https://drive.google.com/drive/folders/15BVSEbdBEuz_GZbzaQX3yhuzeZbnFy_j"
+      "drive_url": "https://drive.google.com/drive/folders/15BVSEbdBEuz_GZbzaQX3yhuzeZbnFy_j",
+      "privacy_status": "public",
+      "published_live_at_utc": "2026-11-19T11:37:00Z"
     }
-  ]
+  ],
+  "visibility_state": "ALL_6_PUBLIC"
 }
