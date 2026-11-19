@@ -20,7 +20,7 @@
   "narrator_name": "George-Daniel Baritone",
   "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
   "narrator_gender": "male",
-  "state": "QA_VERIFIED",
+  "state": "API_SCHEDULED",
   "sha256": "faca111d262d91896aab7d5d92a3165a1d4573bd4da3828c08149f2562e13db1",
   "file_size_bytes": 23754167,
   "script_metrics": {
@@ -58,9 +58,9 @@
     "made_for_kids": false,
     "ad_policy": "SHORTS_FEED",
     "shelf_playlist_id": "PLUt7V0-ta200",
-    "youtube_video_id": null,
-    "shorts_url": null,
-    "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+    "youtube_video_id": "Oe6EgVaZqvg",
+    "shorts_url": "https://www.youtube.com/shorts/Oe6EgVaZqvg",
+    "youtube_sync_status": "API_SCHEDULED",
     "prepared_description": "Long before mechanical tower clocks, medieval households and monasteries tracked night hours with calibrated beeswax tapers, translucent horn lanterns, and brass reminder pins.\nPart 5 of Quiet Wonders & Slow Science \u2014 Shorts: 60 seconds of calm historical timekeeping over gentle evening rain and warm hearth air with strictly zero music.\n\nExplore the Quiet Wonders & Slow Science \u2014 Shorts Playlist: https://www.youtube.com/playlist?list=PLY-xpre4jtzU\nFree 14-Day Family Reset & Screen-Free Parent Kit: https://awkandari-source.github.io/ABR_Anti_Brain_Rot/\nContinue into 3-Hour Deep Sleep Nature Ambience (Night Pine Forest): https://www.youtube.com/watch?v=OwMTPuornpo\n\nABR Anti-Brain-Rot Audio & Visual Standard:\n- 1080x1920 @ 24 fps low-stimulation watercolor macro holds (up to 4 cuts, 1.0s cross-dissolves)\n- -14.0 LUFS calm baritone narration over -26.2 LUFS organic environmental foley (over +30 dB voice separation, 0% music)\n\nPrimary Sources (Smithsonian Institution):\n- Smithsonian Institution (National Museum of American History) \u2014 On Time: Early Non-Mechanical Timekeeping & Candle Clocks.\n- Asser (c. 893 AD). Life of King Alfred, Ch. 104 (Six 12-inch beeswax tapers shielded by translucent ox-horn lantern panels).\n\nDisclosure: ABR Anti-Brain Rot is viewer-supported; any optional family printables follow strict FTC guidelines.\n#QuietWonders #SlowScience #AntiBrainRot #ZeroMusic #CalmScience #LowStimulation #shorts"
   },
   "sop03_verification": {

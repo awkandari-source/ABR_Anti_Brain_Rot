@@ -91,7 +91,7 @@
         "anti brain rot",
         "calm science"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S01_60s_Master.mp4",
       "poster_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S01_Poster_1080x1920.jpg",
       "thumb_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S01_Thumbnail_1280x720.jpg",
@@ -115,9 +115,9 @@
         "vocal_duty_cycle_pct": 95.11,
         "music_detected": false
       },
-      "youtube_video_id": null,
-      "shorts_url": null,
-      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+      "youtube_video_id": "lcY6sieX8Xo",
+      "shorts_url": "https://www.youtube.com/shorts/lcY6sieX8Xo",
+      "youtube_sync_status": "API_SCHEDULED",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -166,7 +166,7 @@
         "no music documentary",
         "anti brain rot"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S02_60s_Master.mp4",
       "poster_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S02_Poster_1080x1920.jpg",
       "thumb_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S02_Thumbnail_1280x720.jpg",
@@ -190,9 +190,9 @@
         "vocal_duty_cycle_pct": 94.64,
         "music_detected": false
       },
-      "youtube_video_id": null,
-      "shorts_url": null,
-      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+      "youtube_video_id": "oOY74muqSQo",
+      "shorts_url": "https://www.youtube.com/shorts/oOY74muqSQo",
+      "youtube_sync_status": "API_SCHEDULED",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -242,7 +242,7 @@
         "zero music shorts",
         "anti brain rot"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S03_60s_Master.mp4",
       "poster_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S03_Poster_1080x1920.jpg",
       "thumb_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S03_Thumbnail_1280x720.jpg",
@@ -266,9 +266,9 @@
         "vocal_duty_cycle_pct": 96.14,
         "music_detected": false
       },
-      "youtube_video_id": null,
-      "shorts_url": null,
-      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+      "youtube_video_id": "JE7JeAS74Yk",
+      "shorts_url": "https://www.youtube.com/shorts/JE7JeAS74Yk",
+      "youtube_sync_status": "API_SCHEDULED",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -317,7 +317,7 @@
         "calm nature shorts",
         "anti brain rot"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S04_60s_Master.mp4",
       "poster_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S04_Poster_1080x1920.jpg",
       "thumb_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S04_Thumbnail_1280x720.jpg",
@@ -341,9 +341,9 @@
         "vocal_duty_cycle_pct": 94.58,
         "music_detected": false
       },
-      "youtube_video_id": null,
-      "shorts_url": null,
-      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+      "youtube_video_id": "GUK_uWgLku4",
+      "shorts_url": "https://www.youtube.com/shorts/GUK_uWgLku4",
+      "youtube_sync_status": "API_SCHEDULED",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -392,7 +392,7 @@
         "no music shorts",
         "anti brain rot"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S05_60s_Master.mp4",
       "poster_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S05_Poster_1080x1920.jpg",
       "thumb_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S05_Thumbnail_1280x720.jpg",
@@ -416,9 +416,9 @@
         "vocal_duty_cycle_pct": 95.04,
         "music_detected": false
       },
-      "youtube_video_id": null,
-      "shorts_url": null,
-      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+      "youtube_video_id": "Oe6EgVaZqvg",
+      "shorts_url": "https://www.youtube.com/shorts/Oe6EgVaZqvg",
+      "youtube_sync_status": "API_SCHEDULED",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -467,7 +467,7 @@
         "quiet wonders",
         "no music shorts"
       ],
-      "state": "QA_VERIFIED",
+      "state": "API_SCHEDULED",
       "mp4_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S06_60s_Master.mp4",
       "poster_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S06_Poster_1080x1920.jpg",
       "thumb_path": "/shared/user/.gemini/raw_video_studio/ABR_AntiGravity_Workspace/02_Daily_Shorts_Queue/SH-01/renders/SH01_S06_Thumbnail_1280x720.jpg",
@@ -491,9 +491,9 @@
         "vocal_duty_cycle_pct": 96.14,
         "music_detected": false
       },
-      "youtube_video_id": null,
-      "shorts_url": null,
-      "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+      "youtube_video_id": "E9On9qbGKF4",
+      "shorts_url": "https://www.youtube.com/shorts/E9On9qbGKF4",
+      "youtube_sync_status": "API_SCHEDULED",
       "drive_archive": {
         "batch_drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
         "batch_drive_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
@@ -515,7 +515,7 @@
   "qa_completed_at_utc": "2026-11-18T09:07:04Z",
   "drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
   "drive_folder_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
-  "youtube_sync_status": "PLAYLIST_CREATED_QUOTA_QUEUED_6",
+  "youtube_sync_status": "ALL_6_SCHEDULED",
   "drive_sync_status": "MIRRORED_6_OF_6",
   "youtube_quota_note": "QuotaLedger ceiling reached for purpose='production' (8264 + 1600 > 9200 units on 2026-11-18; resets 2026-11-19T08:00:05Z). Operation deferred: POST:videos.insert (next PT quota reset: 2026-11-19T08:00:05Z)",
   "youtube_playlist_id": "PLY-xpre4jtzU",

@@ -21,7 +21,7 @@
   "narrator_name": "George-Daniel Baritone",
   "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
   "narrator_gender": "male",
-  "state": "QA_VERIFIED",
+  "state": "API_SCHEDULED",
   "sha256": "00d4415c6bfa52acfa07bfc14e2a420f81ff2ba350f50ddac4261f4a9d0397bf",
   "file_size_bytes": 26638583,
   "script_metrics": {
@@ -59,9 +59,9 @@
     "made_for_kids": false,
     "ad_policy": "SHORTS_FEED",
     "shelf_playlist_id": "PLUt7V0-ta200",
-    "youtube_video_id": null,
-    "shorts_url": null,
-    "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+    "youtube_video_id": "JE7JeAS74Yk",
+    "shorts_url": "https://www.youtube.com/shorts/JE7JeAS74Yk",
+    "youtube_sync_status": "API_SCHEDULED",
     "prepared_description": "Recovered from an Aegean shipwreck in 1900, the 2,100-year-old Antikythera Mechanism packed at least 30 hand-cut bronze gears into a shoebox-sized astronomical calculator.\nPart 3 of Quiet Wonders & Slow Science \u2014 Shorts: 60 seconds of calm historical engineering over gentle coastal tide swells and timber gallery stillness, 100% free of music.\n\nExplore the Quiet Wonders & Slow Science \u2014 Shorts Playlist: https://www.youtube.com/playlist?list=PLY-xpre4jtzU\nFree 14-Day Family Reset & Screen-Free Parent Kit: https://awkandari-source.github.io/ABR_Anti_Brain_Rot/\nContinue into 3-Hour Deep Sleep Nature Ambience (Night Pine Forest): https://www.youtube.com/watch?v=OwMTPuornpo\n\nABR Anti-Brain-Rot Audio & Visual Standard:\n- 1080x1920 @ 24 fps low-stimulation watercolor macro holds (up to 4 cuts, 1.0s cross-dissolves)\n- -14.0 LUFS calm baritone narration over -26.2 LUFS organic environmental foley (over +30 dB voice separation, 0% music)\n\nPrimary Sources (Smithsonian Magazine / Science Museum Group):\n- Smithsonian Magazine \u2014 Decoding the Antikythera Mechanism, the Ancient Greek Astronomical Calculator.\n- Science Museum Group Collection \u2014 Mechanical Models and Radiographic Studies of the Antikythera Mechanism.\n- Freeth, T., et al. (2006). Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism. Nature, 444, 587-591. https://doi.org/10.1038/nature05357\n\nDisclosure: ABR Anti-Brain Rot is viewer-supported; any optional family printables follow strict FTC guidelines.\n#QuietWonders #SlowScience #AntiBrainRot #ZeroMusic #CalmScience #LowStimulation #shorts"
   },
   "sop03_verification": {

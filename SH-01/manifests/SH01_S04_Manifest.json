@@ -20,7 +20,7 @@
   "narrator_name": "George-Daniel Baritone",
   "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
   "narrator_gender": "male",
-  "state": "QA_VERIFIED",
+  "state": "API_SCHEDULED",
   "sha256": "bbb4b6d02809b44353e8553052477d7c7accb0cf933fb2269e07771b286c09f9",
   "file_size_bytes": 29134048,
   "script_metrics": {
@@ -58,9 +58,9 @@
     "made_for_kids": false,
     "ad_policy": "SHORTS_FEED",
     "shelf_playlist_id": "PLUt7V0-ta200",
-    "youtube_video_id": null,
-    "shorts_url": null,
-    "youtube_sync_status": "QUOTA_CAP_QUEUED_NEXT_RESET",
+    "youtube_video_id": "GUK_uWgLku4",
+    "shorts_url": "https://www.youtube.com/shorts/GUK_uWgLku4",
+    "youtube_sync_status": "API_SCHEDULED",
     "prepared_description": "Tucked beneath snowy woodland bark, the banded woolly bear caterpillar survives subzero winter freezes by flooding its cells with natural glycerol cryoprotectant.\nPart 4 of Quiet Wonders & Slow Science \u2014 Shorts: 60 seconds of gentle nature science narrated over soft pine breeze and woodland leaf shelter with 0% music.\n\nExplore the Quiet Wonders & Slow Science \u2014 Shorts Playlist: https://www.youtube.com/playlist?list=PLY-xpre4jtzU\nFree 14-Day Family Reset & Screen-Free Parent Kit: https://awkandari-source.github.io/ABR_Anti_Brain_Rot/\nContinue into 3-Hour Deep Sleep Nature Ambience (Night Pine Forest): https://www.youtube.com/watch?v=OwMTPuornpo\n\nABR Anti-Brain-Rot Audio & Visual Standard:\n- 1080x1920 @ 24 fps low-stimulation watercolor macro holds (up to 4 cuts, 1.0s cross-dissolves)\n- -14.0 LUFS calm baritone narration over -26.2 LUFS organic environmental foley (over +30 dB voice separation, 0% music)\n\nPrimary Sources (U.S. Fish & Wildlife Service / National Weather Service):\n- U.S. Fish & Wildlife Service \u2014 Banded Woolly Bear (Pyrrharctia isabella) Overwintering Cryoprotection Profile.\n- National Weather Service \u2014 Folklore vs. Biology of the Banded Woolly Bear Caterpillar and Natural Glycerol Antifreeze.\n\nDisclosure: ABR Anti-Brain Rot is viewer-supported; any optional family printables follow strict FTC guidelines.\n#QuietWonders #SlowScience #AntiBrainRot #ZeroMusic #CalmScience #LowStimulation #shorts"
   },
   "sop03_verification": {
