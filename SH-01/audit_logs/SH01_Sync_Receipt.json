@@ -6,14 +6,14 @@
   "youtube_sync_status": "ALL_6_SCHEDULED",
   "youtube_oauth_error": null,
   "youtube_quota_note": null,
-  "quota_ledger_units_used": 4318,
+  "quota_ledger_units_used": 7,
   "quota_ledger_production_soft_cap": 9200,
-  "quota_ledger_next_reset_utc": "2026-11-19T08:00:05Z",
+  "quota_ledger_next_reset_utc": "2026-11-20T08:00:05Z",
   "drive_folder_id": "1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
   "drive_folder_url": "https://drive.google.com/drive/folders/1P2BKuRxabstVF-SLIK0aDFFTK61Gu-x5",
   "drive_manifest_file_id": "1-GxMs2HoJBVqueFlhFY2AQFQlQNz4tAO",
   "drive_audit_log_file_id": "1Y0BNkAM1nGnQhM6ky6VDw5BR3h18RRaS",
-  "synced_at_utc": "2026-11-19T03:15:41Z",
+  "synced_at_utc": "2026-11-19T11:31:10Z",
   "assets": [
     {
       "asset_id": "SH01_S01",
