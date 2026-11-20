@@ -16,7 +16,7 @@
 | **Shelf 0 (Top)** | `PLO3jEEgHm_Iw` | **180-Minute Neuro-Acoustic Sleep Sanctuaries** | 7 | https://www.youtube.com/playlist?list=PLO3jEEgHm_Iw |
 | **Shelf 1 (a)** | `PLUt7V0-ta200` | **Evidence-Based Media & Sleep Shorts** | 18 | https://www.youtube.com/playlist?list=PLUt7V0-ta200 |
 | **Shelf 2 (b)** | `PLEyZbMU0SV08` | **Slow-Paced Children's Storytelling** | 22 | https://www.youtube.com/playlist?list=PLEyZbMU0SV08 |
-| **Shelf 3 (c)** | `PLeHDZfHy-UxM` | **Historical & Scientific Deep Dives** | 38 | https://www.youtube.com/playlist?list=PLeHDZfHy-UxM |
+| **Shelf 3 (c)** | `PLeHDZfHy-UxM` | **Historical & Scientific Deep Dives** | 42 | https://www.youtube.com/playlist?list=PLeHDZfHy-UxM |
 | *Pillar 2 Catalog* | `PLSpo6LDB5RsE` | **Why Anti-Brain Rot Matters: Pediatric Brain Science & Parent Guides** | 39 | https://www.youtube.com/playlist?list=PLSpo6LDB5RsE |
 | *Pillar 3 Catalog* | `PLfO4Y6xIR8iU` | **Ancient History Mysteries, Lost Civilizations & Empire Wealth** | 110 | https://www.youtube.com/playlist?list=PLfO4Y6xIR8iU |
 | *Mini-Series (`MS01`)* | `PLXt-oo9Un1L0` | **Tales of the Quiet Meadow \| 5-Part Anti-Brain Rot Bedtime Series (Zero Music)** | 5 | https://www.youtube.com/playlist?list=PLXt-oo9Un1L0 |
