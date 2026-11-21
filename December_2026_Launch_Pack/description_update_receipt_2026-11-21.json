@@ -1,0 +1,158 @@
+{
+  "executed_at_utc": "2026-11-21T18:36:52Z",
+  "channel_id": "UCf2NyjoPIzR9j7Vt3C6Sqcw",
+  "total_channel_videos": 197,
+  "channel_about_updated": true,
+  "already_complete_before_run": 0,
+  "updated_this_run": 183,
+  "queued_for_next_pt_reset": 14,
+  "errors_count": 0,
+  "quota_ledger": {
+    "pt_date": "2026-11-21",
+    "next_reset_utc": "2026-11-22T08:00:05Z",
+    "hard_daily_cap": 10000,
+    "production_soft_cap": 9200,
+    "sweeper_reserved_units": 800,
+    "units_used": 9190,
+    "production_units_remaining": 10,
+    "total_units_remaining": 810,
+    "quota_exhausted": false,
+    "exhausted_reason": null,
+    "operations": {
+      "production:GET:channels": 5,
+      "production:GET:playlistItems": 17,
+      "production:GET:videos": 17,
+      "production:PUT:channels": 1,
+      "production:PUT:videos": 9150
+    }
+  },
+  "queued_videos": [
+    {
+      "video_id": "Rtatw8XWWi0",
+      "title": "The 3,700-Year-Old Stamped Clay Code Nobody Can Read #shorts",
+      "publishedAt": "2026-11-08T15:38:40Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "2Fb9MICIfcM",
+      "title": "How a 6-Ton Room of Solid Gold and Amber Vanished in WWII #shorts",
+      "publishedAt": "2026-11-08T15:38:39Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "4JrgiINkrsU",
+      "title": "The Ancient Superweapon That Burned on Water: Greek Fire #shorts",
+      "publishedAt": "2026-11-08T15:31:54Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "i6VcIzULEOs",
+      "title": "The 600-Year-Old Book No Codebreaker Can Read #shorts",
+      "publishedAt": "2026-11-08T12:39:14Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "S5JYLbR1qoM",
+      "title": "Did Ancient Mesopotamia Invent Electricity 2,000 Years Ago? #shorts",
+      "publishedAt": "2026-11-07T17:52:37Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "Aw32KZsNAiw",
+      "title": "50,000 Soldiers Vanished in a Single Sandstorm: The Lost Army #shorts",
+      "publishedAt": "2026-11-07T17:21:19Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "fGbLKSGycgM",
+      "title": "Why 2,000-Year-Old Roman Concrete Never Crumbles #shorts",
+      "publishedAt": "2026-11-07T17:19:14Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "yTI7jFcJqk4",
+      "title": "129 Men Vanished in the Arctic Ice: The Terror & Erebus Mystery #shorts",
+      "publishedAt": "2026-11-07T14:05:04Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "-wF9a3xEFTU",
+      "title": "The 2,000-Year-Old Computer Found in a Roman Shipwreck #shorts",
+      "publishedAt": "2026-11-07T14:01:29Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "zNcdSbQ7-ok",
+      "title": "The Ghost Ship Carroll A. Deering (1921): An Entire Crew Vanished #shorts",
+      "publishedAt": "2026-11-07T13:52:56Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "ccWu9c_wJ54",
+      "title": "Patra Secret Water Empire",
+      "publishedAt": "2026-11-07T13:14:39Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "XgMjsI-2Yco",
+      "title": "The Day the Desert Blew Black Gold",
+      "publishedAt": "2026-11-07T13:07:17Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "JKJM8tmYfCg",
+      "title": "Three Men Vanished From a Locked Lighthouse",
+      "publishedAt": "2026-11-07T12:41:53Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    },
+    {
+      "video_id": "0dDM-sRnIlo",
+      "title": "The Ghost Ship That Baffled the World: Mary Celeste",
+      "publishedAt": "2026-11-07T12:02:05Z",
+      "added_needed": [
+        "gumroad_cta",
+        "storefront_url"
+      ]
+    }
+  ],
+  "errors": []
+}
