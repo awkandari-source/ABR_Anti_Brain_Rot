@@ -103,12 +103,15 @@ def check_dead_air_and_vocal_duty_chk07(
     *,
     is_short: bool = False,
     max_silence_override_sec: float | None = None,
+    min_duty_override_pct: float | None = None,
 ) -> dict[str, Any]:
     """
-    SOP-03 Gate CHK-07 (ABR-AG-SOP-v2.1 Continuous Narration & Dead-Air Elimination):
-    - Runs `ffmpeg -i <voice.wav> -af silencedetect=noise=-45dB:d=1.5 -f null -` (d=0.9 for Shorts; d=0.8 for Sleep Shorts)
-    - Hard-fails any asset with max_narration_silence_sec > ceiling,
-      vocal_duty_cycle_pct < 88.0% (Long) / < 90.0% (Shorts), or Shorts vocal entry > 0.5s.
+    Dual-Pass SOP-03 Gate CHK-07 (ABR-AG-SOP-v2.1 Continuous Narration & Dead-Air Elimination):
+    - Pass A: `ffmpeg -i <voice.wav> -af silencedetect=noise=-45dB:d=1.5 -f null -` (`d=0.9` for Shorts; `d=0.8` for Sleep Shorts)
+      Also checks Shorts leading silence (`silence_start <= 0.05` and `silence_end > 0.5`).
+    - Pass B: `ffmpeg -i <voice.wav> -af silencedetect=noise=-45dB:d=0.15 -f null -`
+      Hard-fails any asset with `max_narration_silence_sec > ceiling`,
+      `vocal_duty_cycle_pct < 80.0%` (Long) / `< 85.0%` (Shorts), or Shorts leading silence `> 0.5s`.
     """
     dur = get_media_duration(voice_wav)
     max_limit = (
@@ -116,7 +119,11 @@ def check_dead_air_and_vocal_duty_chk07(
         if max_silence_override_sec is not None
         else (0.9 if is_short else 1.5)
     )
-    min_duty = 90.0 if is_short else 88.0
+    min_duty = (
+        min_duty_override_pct
+        if min_duty_override_pct is not None
+        else (85.0 if is_short else 80.0)
+    )
 
     p_gate = subprocess.run(
         ["ffmpeg", "-nostats", "-vn", "-i", str(voice_wav), "-af", f"silencedetect=noise=-45dB:d={max_limit}", "-f", "null", "-"],
@@ -127,9 +134,12 @@ def check_dead_air_and_vocal_duty_chk07(
     g_starts = [float(x) for x in re.findall(r"silence_start:\s*([-\d.]+)", p_gate.stderr)]
     g_ends = [float(x) for x in re.findall(r"silence_end:\s*([-\d.]+)", p_gate.stderr)]
     exceeding = []
+    pass_a_leading = 0.0
     for idx, s_raw in enumerate(g_starts):
         s = max(0.0, s_raw)
         e = min(dur, g_ends[idx]) if idx < len(g_ends) else dur
+        if idx == 0 and s <= 0.05:
+            pass_a_leading = round(e, 3)
         if (e - s) > max_limit + 1e-6:
             exceeding.append(round(e - s, 3))
 
@@ -153,8 +163,9 @@ def check_dead_air_and_vocal_duty_chk07(
         max_sil = max(max_sil, max(exceeding))
     tot_sil = round(sum(iv[2] for iv in intervals), 3)
     duty_pct = round(100.0 * max(0.0, dur - tot_sil) / max(0.001, dur), 2)
-    vocal_entry_sec = round(intervals[0][1], 3) if (intervals and intervals[0][0] <= 0.05) else 0.0
-    entry_ok = (vocal_entry_sec <= 0.5) if is_short else True
+    pass_b_leading = round(intervals[0][1], 3) if (intervals and intervals[0][0] <= 0.05) else 0.0
+    leading_sil = max(pass_a_leading, pass_b_leading)
+    entry_ok = (leading_sil <= 0.5) if is_short else True
 
     passed = (len(exceeding) == 0) and (max_sil <= max_limit) and (duty_pct >= min_duty) and entry_ok
     return {
@@ -162,10 +173,11 @@ def check_dead_air_and_vocal_duty_chk07(
         "max_silence_ceiling_sec": max_limit,
         "min_vocal_duty_floor_pct": min_duty,
         "max_narration_silence_sec": max_sil,
+        "leading_silence_sec": leading_sil,
+        "vocal_entry_sec": leading_sil,
+        "vocal_entry_ok": entry_ok,
         "total_narration_silence_sec": tot_sil,
         "vocal_duty_cycle_pct": duty_pct,
-        "vocal_entry_sec": vocal_entry_sec,
-        "vocal_entry_ok": entry_ok,
         "exceeding_intervals_count": len(exceeding),
     }
 

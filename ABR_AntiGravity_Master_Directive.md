@@ -1,16 +1,3 @@
----
-document_id: ABR-AG-SOP-v2.1
-supersedes: ABR-AG-SOP-v2.0
-protocol_binding: Universal Autonomous Prompt Enhancement Protocol (APEP)
-platform: Google AntiGravity (Google AI Ultra Tier)
-target_channel: "@ABR-AntiBrainRot"
-channel_url: "https://www.youtube.com/@ABR-AntiBrainRot"
-baseline_net_floor_usd: 3000
-monotonic_scaling: true
-zero_music_invariant: strict
-continuous_narration_invariant: strict
----
-
 # **MASTER AGENT DIRECTIVE, WORKSPACE INDEX & ENGINEERING SOP (v2.1)**
 
 ## **Technical Protocol Binding & Metadata Specification**
@@ -20,7 +7,7 @@ continuous_narration_invariant: strict
 * **protocol\_binding:** Universal Autonomous Prompt Enhancement Protocol (APEP)  
 * **platform:** Google AntiGravity (Google AI Ultra Tier)  
 * **target\_channel:** "@ABR-AntiBrainRot"  
-* **channel\_url:** [https://www.youtube.com/@ABR-AntiBrainRot](https://www.youtube.com/@ABR-AntiBrainRot)  
+* **channel\_url:** [https\://www\.youtube.com/@ABR-AntiBrainRot](https://www.youtube.com/@ABR-AntiBrainRot)  
 * **baseline\_net\_floor\_usd:** 3000  
 * **monotonic\_scaling:** true  
 * **zero\_music\_invariant:** strict  
@@ -28,7 +15,7 @@ continuous_narration_invariant: strict
 
 # **CHANGELOG: v2.0 \-\> v2.1 (CONTINUOUS NARRATION & DEAD-AIR ELIMINATION)**
 
-1. **Decoupled Continuous Voiceover Track:** Narration (Stem 1) is now synthesized and mastered as a continuous master audio stream rather than per-scene padded clips. Visual scene holds (15-20s long-form; 6-10s Shorts) dissolve smoothly over the continuous narration track so the narrator never stops speaking to wait for a scene cut.  
+1. **Decoupled Continuous Voiceover Track:** Narration (Stem 1\) is now synthesized and mastered as a continuous master audio stream rather than per-scene padded clips. Visual scene holds (15-20s long-form; 6-10s Shorts) dissolve smoothly over the continuous narration track so the narrator never stops speaking to wait for a scene cut.  
 2. **Hard Dead-Air Ceiling & Silence Clamping:** Replaced v2.0's 1.5-3.0s inter-sentence pauses and 45-55 x \[PAUSE 2.0s-2.5s\] markers with natural 0.4-0.8s inter-sentence breaths and 0.8-1.2s paragraph transitions. Enforced automated post-TTS FFmpeg silence clamping (`silenceremove`) and strict hard ceilings (`<= 1.5s` max silence in 15-min episodes; `<= 0.9s` in Shorts).  
 3. **Updated Spoken Word Budgets:** Increased 15-minute episode word count from 1,350-1,500 words to **1,650-1,850 spoken words** at **110-120 WPM** (achieving \>= 88% vocal duty cycle while keeping a calm, unhurried cadence).  
 4. **New SOP-03 Gate (CHK-07):** Added automated `silencedetect` verification before upload. Any narrated video with a gap \> 1.5s (long-form) or \> 0.9s (Shorts) fails QA and auto-rebuilds.
@@ -137,7 +124,7 @@ Before mixing Stem 1 with Stem 2, all synthesized TTS audio MUST pass through FF
 
 Every rendered long-form episode or Short MUST generate a companion manifest validated before upload:
 
-```json
+```
 {
   "asset_id": "MS01_E01",
   "format_type": "MINI_SERIES_EPISODE",
@@ -225,4 +212,4 @@ No file may invoke `youtube.videos.insert` unless all seven automated assertions
 
 ## **10.2 Revenue Stagnation Recovery & Monthly Executive P\&L Audit**
 
-If `P_net` stalls near \$3,000/month for 30 days, schedule an additional Parent Cognitive Science 5-part mini-series, compile a 120-minute Master Nighttime Rain & Story Vault, and expand weekly sponsor prospecting to 15 qualified leads. Deliver `/04_Commercial_And_Analytics/Executive_Report_YYYY_MM.md` on Day 1 of every month at 00:00 UTC.
+If `P_net` stalls near \$3,000/month for 30 days, schedule an additional Parent Cognitive Science 5-part mini-series, compile a 120-minute Master Nighttime Rain & Story Vault, and expand weekly sponsor prospecting to 15 qualified leads. Deliver /04\_Commercial\_And\_Analytics/Executive\_Report\_YYYY\_MM.md on Day 1 of every month at 00:00 UTC.

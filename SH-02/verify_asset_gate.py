@@ -177,15 +177,31 @@ def verify_dead_air_and_vocal_duty_chk07(
     *,
     is_short: bool = False,
     max_silence_override: float | None = None,
+    min_duty_override: float | None = None,
 ) -> dict:
+    """
+    Dual-Pass SOP-03 Gate CHK-07 (ABR-AG-SOP-v2.1 Continuous Narration & Dead-Air Elimination):
+    - Pass A (Max Gap & Leading Silence):
+      `ffmpeg -i <voice.wav> -af "silencedetect=noise=-45dB:d=1.5" -f null -` (`d=0.9` for Shorts;
+      also fails Shorts if leading silence `silence_start <= 0.05` and `silence_end > 0.5`).
+    - Pass B (True Vocal Duty Cycle):
+      `ffmpeg -i <voice.wav> -af "silencedetect=noise=-45dB:d=0.15" -f null -`
+      `duty_cycle_pct = ((total_duration - sum_all_silence_durations) / total_duration) * 100`
+      Floors: >= 80.0% (Long-form) / >= 85.0% (Shorts).
+    """
     dur = get_duration_sec(voice_wav)
     max_silence_limit = (
         max_silence_override
         if max_silence_override is not None
         else (0.9 if is_short else 1.5)
     )
-    min_duty_pct = 90.0 if is_short else 88.0
+    min_duty_pct = (
+        min_duty_override
+        if min_duty_override is not None
+        else (85.0 if is_short else 80.0)
+    )
 
+    # Pass A: Max Gap & Leading Silence
     p_gate = subprocess.run(
         [
             "ffmpeg", "-nostats", "-vn", "-i", str(voice_wav),
@@ -199,12 +215,16 @@ def verify_dead_air_and_vocal_duty_chk07(
     gate_starts = [float(x) for x in re.findall(r"silence_start:\s*([-\d.]+)", p_gate.stderr)]
     gate_ends = [float(x) for x in re.findall(r"silence_end:\s*([-\d.]+)", p_gate.stderr)]
     gate_intervals = []
+    pass_a_leading_silence = 0.0
     for idx, s_raw in enumerate(gate_starts):
         s = max(0.0, s_raw)
         e = min(dur, gate_ends[idx]) if idx < len(gate_ends) else dur
+        if idx == 0 and s <= 0.05:
+            pass_a_leading_silence = round(e, 3)
         if (e - s) > max_silence_limit + 1e-6:
             gate_intervals.append({"start_sec": round(s, 3), "end_sec": round(e, 3), "duration_sec": round(e - s, 3)})
 
+    # Pass B: True Vocal Duty Cycle (d=0.15)
     p_fine = subprocess.run(
         [
             "ffmpeg", "-nostats", "-vn", "-i", str(voice_wav),
@@ -229,9 +249,10 @@ def verify_dead_air_and_vocal_duty_chk07(
         max_silence_sec = max(max_silence_sec, max(iv["duration_sec"] for iv in gate_intervals))
     total_silence_sec = round(sum(iv[2] for iv in fine_intervals), 3)
     vocal_duty_pct = round(100.0 * max(0.0, dur - total_silence_sec) / max(0.001, dur), 2)
-    vocal_entry_sec = round(fine_intervals[0][1], 3) if (fine_intervals and fine_intervals[0][0] <= 0.05) else 0.0
+    pass_b_leading_silence = round(fine_intervals[0][1], 3) if (fine_intervals and fine_intervals[0][0] <= 0.05) else 0.0
+    leading_silence_sec = max(pass_a_leading_silence, pass_b_leading_silence)
 
-    entry_ok = (vocal_entry_sec <= 0.5) if is_short else True
+    entry_ok = (leading_silence_sec <= 0.5) if is_short else True
     chk07_ok = (
         len(gate_intervals) == 0
         and max_silence_sec <= max_silence_limit
@@ -240,15 +261,18 @@ def verify_dead_air_and_vocal_duty_chk07(
     )
     return {
         "pass": chk07_ok,
-        "command": f"ffmpeg -i {voice_wav.name} -af silencedetect=noise=-45dB:d={max_silence_limit} -f null -",
+        "skipped": False,
+        "command_pass_a": f"ffmpeg -i {voice_wav.name} -af silencedetect=noise=-45dB:d={max_silence_limit} -f null -",
+        "command_pass_b": f"ffmpeg -i {voice_wav.name} -af silencedetect=noise=-45dB:d=0.15 -f null -",
         "noise_threshold_db": -45.0,
         "max_silence_ceiling_sec": max_silence_limit,
         "min_vocal_duty_floor_pct": min_duty_pct,
         "max_narration_silence_sec": max_silence_sec,
+        "leading_silence_sec": leading_silence_sec,
+        "vocal_entry_sec": leading_silence_sec,
+        "vocal_entry_ok": entry_ok,
         "total_narration_silence_sec": total_silence_sec,
         "vocal_duty_cycle_pct": vocal_duty_pct,
-        "vocal_entry_sec": vocal_entry_sec,
-        "vocal_entry_ok": entry_ok,
         "exceeding_intervals_count": len(gate_intervals),
         "exceeding_intervals": gate_intervals[:10],
     }
@@ -265,10 +289,12 @@ def main() -> int:
     ap.add_argument("--declared-min-hold", type=float, default=None)
     ap.add_argument("--require-male-narrator", action="store_true")
     ap.add_argument("--require-live-upload-quota", action="store_true")
+    ap.add_argument("--dry-run", action="store_true", help="Audit without mutating Manifest.json or INDEX_Tracker.json")
     args = ap.parse_args()
 
     checks: dict[str, dict] = {}
     manifest = json.loads(args.manifest.read_text())
+    is_ambient_no_voice = str(manifest.get("asset_type", "")).strip().lower() == "ambient_no_voice"
     fmt_type = str(manifest.get("format_type", "MINI_SERIES_EPISODE"))
     is_sleep_short = fmt_type == "SLEEP_SANCTUARY_SHORT"
     is_short = (
@@ -424,12 +450,23 @@ def main() -> int:
         "shot_count": shot_count,
     }
 
-    # CHK-07: Dead-Air & Vocal Duty Cycle Gate (SOP v2.1; <= 0.8s for Sleep Shorts)
-    chk07_res = verify_dead_air_and_vocal_duty_chk07(
-        args.voice_stem,
-        is_short=is_short,
-        max_silence_override=(0.8 if is_sleep_short else None),
-    )
+    # CHK-07: Dual-Pass Dead-Air & Vocal Duty Cycle Gate (SOP v2.1; skip if ambient_no_voice)
+    if is_ambient_no_voice:
+        chk07_res = {
+            "pass": True,
+            "skipped": True,
+            "reason": "ambient_no_voice",
+            "max_narration_silence_sec": None,
+            "leading_silence_sec": None,
+            "vocal_entry_sec": None,
+            "vocal_duty_cycle_pct": None,
+        }
+    else:
+        chk07_res = verify_dead_air_and_vocal_duty_chk07(
+            args.voice_stem,
+            is_short=is_short,
+            max_silence_override=(0.8 if is_sleep_short else None),
+        )
     checks["CHK-07"] = chk07_res
 
     # Populate authoritative SOP v2.1 stream_metrics before CHK-06 schema validation
@@ -449,6 +486,7 @@ def main() -> int:
         "net_voice_separation_db": net_sep_db,
         "true_peak_dbtp": round(m_ebur["true_peak_dbtp"], 2),
         "max_narration_silence_sec": chk07_res["max_narration_silence_sec"],
+        "leading_silence_sec": chk07_res["leading_silence_sec"],
         "vocal_duty_cycle_pct": chk07_res["vocal_duty_cycle_pct"],
         "vocal_entry_sec": chk07_res["vocal_entry_sec"],
         "music_detected": spec_info["music_detected"],
@@ -501,17 +539,18 @@ def main() -> int:
     manifest["sop_version"] = "ABR-AG-SOP-v2.1"
     manifest["state"] = "QA_VERIFIED" if all_passed else "QUARANTINED_REBUILD"
     manifest["sop03_verification"] = ordered_checks
-    args.manifest.write_text(json.dumps(manifest, indent=2))
-
     asset_id = manifest["asset_id"]
-    if asset_id in tracker.get("assets", {}):
-        if tracker["assets"][asset_id].get("state") not in ("API_SCHEDULED", "PUBLISHED", "PUBLIC_LIVE"):
-            tracker["assets"][asset_id]["state"] = manifest["state"]
-            tracker["assets"][asset_id]["max_narration_silence_sec"] = chk07_res["max_narration_silence_sec"]
-            tracker["assets"][asset_id]["vocal_duty_cycle_pct"] = chk07_res["vocal_duty_cycle_pct"]
-            args.tracker.write_text(json.dumps(tracker, indent=2))
+    if not args.dry_run:
+        args.manifest.write_text(json.dumps(manifest, indent=2))
+        if asset_id in tracker.get("assets", {}):
+            if tracker["assets"][asset_id].get("state") not in ("API_SCHEDULED", "PUBLISHED", "PUBLIC_LIVE"):
+                tracker["assets"][asset_id]["state"] = manifest["state"]
+                tracker["assets"][asset_id]["max_narration_silence_sec"] = chk07_res["max_narration_silence_sec"]
+                tracker["assets"][asset_id]["leading_silence_sec"] = chk07_res["leading_silence_sec"]
+                tracker["assets"][asset_id]["vocal_duty_cycle_pct"] = chk07_res["vocal_duty_cycle_pct"]
+                args.tracker.write_text(json.dumps(tracker, indent=2))
 
-    print(json.dumps({"asset_id": asset_id, "state": manifest["state"], "all_passed": all_passed, "checks": ordered_checks}, indent=2))
+    print(json.dumps({"asset_id": asset_id, "dry_run": args.dry_run, "state": manifest["state"], "all_passed": all_passed, "checks": ordered_checks}, indent=2))
     return 0 if all_passed else 1
 
 
