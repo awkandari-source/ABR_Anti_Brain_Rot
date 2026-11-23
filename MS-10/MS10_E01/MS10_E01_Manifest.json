@@ -1,0 +1,43 @@
+{
+  "asset_id": "MS10_E01",
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "format_type": "MINI_SERIES_EPISODE",
+  "series_id": "MS-10",
+  "series_title": "The Slow Night Train",
+  "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+  "episode_index": 1,
+  "title": "The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station | 15-Min Bedtime Story (No Music)",
+  "youtube_title": "The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station | Bedtime Story",
+  "narrator_name": "George-Daniel Baritone",
+  "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
+  "narrator_gender": "male",
+  "state": "SCRIPT_LOCKED",
+  "script_metrics": {
+    "spoken_word_count": 1772,
+    "word_budget": [
+      1650,
+      1850
+    ],
+    "scene_count": 56,
+    "planned_duration_sec": 901.0,
+    "min_scene_hold_sec": 15.0,
+    "ellipses_count": 0,
+    "banned_pause_tags": 0,
+    "music_terms_detected": 0
+  },
+  "foley_palette": "Soft evening rain on pine needles and cedar carriage roof, gentle wooden platform footsteps, muted carriage door latch",
+  "foley_stems": [
+    "ms03_e02_greenhouse_soft_rain_48k24b.wav",
+    "ms01_e04_twilight_oak_timber_48k24b.wav"
+  ],
+  "foley_filter": "highpass=f=70,lowpass=f=720,acompressor=threshold=-32dB:ratio=10:attack=25:release=250",
+  "hero_concept_plate": "concept_plates/MS10_E01_Hero_Mossy_Pine_Station.jpg",
+  "youtube_routing": {
+    "privacy_status": "private",
+    "publish_at_utc": "2027-01-04T16:30:00Z",
+    "series_playlist_id": null,
+    "core_shelf_playlist_id": "PLEyZbMU0SV08",
+    "made_for_kids": false,
+    "ad_policy": "PRE_ROLL_ONLY"
+  }
+}

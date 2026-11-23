@@ -1,0 +1,187 @@
+{
+  "series_id": "MS-10",
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "series_title": "The Slow Night Train",
+  "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+  "pillar": "Pillar 1 \u2014 Slow-Paced Children's Bedtime Storytelling",
+  "channel_handle": "@ABR-AntiBrainRot",
+  "channel_id": "UCf2NyjoPIzR9j7Vt3C6Sqcw",
+  "core_shelf_playlist_id": "PLEyZbMU0SV08",
+  "workspace_path": "/home/antigravity/MS-10",
+  "encoding_guardrails": {
+    "resolution": "1920x1080",
+    "frame_rate": "24/1",
+    "video_codec": "libx264",
+    "profile": "High",
+    "x264_params": "stitchable=1:colorprim=bt709:transfer=bt709:colormatrix=bt709:keyint=48:min-keyint=24:scenecut=0:8x8dct=1:cabac=1",
+    "color_metadata": "BT.709",
+    "faststart": true,
+    "min_scene_hold_sec": 15.0,
+    "narration_target_lufs": -14.0,
+    "foley_stem_target_lufs": -26.2,
+    "min_voice_separation_db": 30.0,
+    "limiter": "alimiter=limit=0.72",
+    "true_peak_ceiling_dbfs": -2.0,
+    "music_detected": false,
+    "ad_policy": "PRE_ROLL_ONLY"
+  },
+  "deliverables": [
+    {
+      "asset_id": "MS10_E01",
+      "deliverable_type": "MINI_SERIES_EPISODE",
+      "episode_index": 1,
+      "title": "The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station | Bedtime Story",
+      "target_duration_display": "15:01",
+      "target_duration_sec": 901,
+      "spoken_word_count": 1772,
+      "foley_palette": "Soft evening rain on pine needles and cedar carriage roof, gentle wooden platform footsteps, muted carriage door latch",
+      "foley_stems": [
+        "ms03_e02_greenhouse_soft_rain_48k24b.wav",
+        "ms01_e04_twilight_oak_timber_48k24b.wav"
+      ],
+      "hero_concept_plate": "concept_plates/MS10_E01_Hero_Mossy_Pine_Station.jpg",
+      "publish_at_utc": "2027-01-04T16:30:00Z",
+      "master_file": "MS10_E01/MS10_E01_15m_Master.mp4",
+      "state": "SCRIPT_LOCKED",
+      "ad_policy": "PRE_ROLL_ONLY"
+    },
+    {
+      "asset_id": "MS10_E02",
+      "deliverable_type": "MINI_SERIES_EPISODE",
+      "episode_index": 2,
+      "title": "The Slow Night Train Ep. 2: The Warm Brass Teapot in the Quiet Dining Car | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 2: The Warm Brass Teapot in the Quiet Dining Car | Bedtime Story",
+      "target_duration_display": "15:01",
+      "target_duration_sec": 901,
+      "spoken_word_count": 1714,
+      "foley_palette": "Warm kettle steam whisper, soft ceramic pour, low timber carriage sway and rain on window glass",
+      "foley_stems": [
+        "ms03_ch08_warm_hearth_crackle_night_wind_48k24b.wav",
+        "ms03_e02_greenhouse_soft_rain_48k24b.wav"
+      ],
+      "hero_concept_plate": "concept_plates/MS10_E02_Hero_Warm_Tea_Car.jpg",
+      "publish_at_utc": "2027-01-09T16:30:00Z",
+      "master_file": "MS10_E02/MS10_E02_15m_Master.mp4",
+      "state": "SCRIPT_LOCKED",
+      "ad_policy": "PRE_ROLL_ONLY"
+    },
+    {
+      "asset_id": "MS10_E03",
+      "deliverable_type": "MINI_SERIES_EPISODE",
+      "episode_index": 3,
+      "title": "The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley | Bedtime Story",
+      "target_duration_display": "15:01",
+      "target_duration_sec": 901,
+      "spoken_word_count": 1698,
+      "foley_palette": "Distant valley river mist below stone arches, steady soft pine breeze, low muted wooden carriage rumble",
+      "foley_stems": [
+        "ms03_s02_ch05_open_meadow_wind_pebble_brook_48k24b.wav",
+        "ms02_e04_waterwheel_millpond_dusk_48k24b.wav"
+      ],
+      "hero_concept_plate": "concept_plates/MS10_E03_Hero_Mist_Valley_Viaduct.jpg",
+      "publish_at_utc": "2027-01-11T16:30:00Z",
+      "master_file": "MS10_E03/MS10_E03_15m_Master.mp4",
+      "state": "SCRIPT_LOCKED",
+      "ad_policy": "PRE_ROLL_ONLY"
+    },
+    {
+      "asset_id": "MS10_E04",
+      "deliverable_type": "MINI_SERIES_EPISODE",
+      "episode_index": 4,
+      "title": "The Slow Night Train Ep. 4: The Sleepy Mail Car & Mountain Village Parcels | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 4: The Sleepy Mail Car & Mountain Village Parcels | Bedtime Story",
+      "target_duration_display": "15:01",
+      "target_duration_sec": 901,
+      "spoken_word_count": 1777,
+      "foley_palette": "Soft parchment paper folding, linen mailbag rustle, quiet cedar timber sway, gentle hillside night wind",
+      "foley_stems": [
+        "ms01_e04_twilight_oak_timber_48k24b.wav",
+        "ms03_s02_ch07_dusk_millpond_ripples_reeds_48k24b.wav"
+      ],
+      "hero_concept_plate": "concept_plates/MS10_E04_Hero_Sleepy_Mail_Car.jpg",
+      "publish_at_utc": "2027-01-16T16:30:00Z",
+      "master_file": "MS10_E04/MS10_E04_15m_Master.mp4",
+      "state": "SCRIPT_LOCKED",
+      "ad_policy": "PRE_ROLL_ONLY"
+    },
+    {
+      "asset_id": "MS10_E05",
+      "deliverable_type": "MINI_SERIES_EPISODE",
+      "episode_index": 5,
+      "title": "The Slow Night Train Ep. 5: The Quiet Berth at Starlight Summit | 15-Min Bedtime Finale (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 5: The Quiet Berth at Starlight Summit | 15-Min Bedtime Finale",
+      "target_duration_display": "15:01",
+      "target_duration_sec": 901,
+      "spoken_word_count": 1706,
+      "foley_palette": "Low beechwood ember crackle, hushed alpine pine wind outside frosted glass, soft wool blanket stillness",
+      "foley_stems": [
+        "ms03_ch08_warm_hearth_crackle_night_wind_48k24b.wav",
+        "ms01_e03_pond_ripples_reeds_48k24b.wav"
+      ],
+      "hero_concept_plate": "concept_plates/MS10_E05_Hero_Starlight_Summit_Berth.jpg",
+      "publish_at_utc": "2027-01-18T16:30:00Z",
+      "master_file": "MS10_E05/MS10_E05_15m_Master.mp4",
+      "state": "SCRIPT_LOCKED",
+      "ad_policy": "PRE_ROLL_ONLY"
+    },
+    {
+      "asset_id": "MS10_COMP",
+      "deliverable_type": "MASTER_COMPILATION_75M",
+      "episode_index": 6,
+      "title": "The Slow Night Train | Complete 75-Minute Bedtime Story Collection (Ep. 1\u20135, Zero Music)",
+      "youtube_title": "The Slow Night Train | Complete 75-Minute Bedtime Story Collection (Ep. 1\u20135, No Music)",
+      "target_duration_display": "75:05",
+      "target_duration_sec": 4505,
+      "assembly_method": "Lossless -c copy concatenation from 5 QA_VERIFIED episode masters with +faststart and embedded FFMETADATA1 chapters",
+      "chapters": [
+        {
+          "start_hms": "00:00:00",
+          "start_sec": 0,
+          "end_sec": 901,
+          "title": "Ep. 1: Boarding the Cedar Car at Mossy Pine Station"
+        },
+        {
+          "start_hms": "00:15:01",
+          "start_sec": 901,
+          "end_sec": 1802,
+          "title": "Ep. 2: The Warm Brass Teapot in the Quiet Dining Car"
+        },
+        {
+          "start_hms": "00:30:02",
+          "start_sec": 1802,
+          "end_sec": 2703,
+          "title": "Ep. 3: Crossing the Stone Viaduct Above the Mist Valley"
+        },
+        {
+          "start_hms": "00:45:03",
+          "start_sec": 2703,
+          "end_sec": 3604,
+          "title": "Ep. 4: The Sleepy Mail Car & Mountain Village Parcels"
+        },
+        {
+          "start_hms": "01:00:04",
+          "start_sec": 3604,
+          "end_sec": 4505,
+          "title": "Ep. 5: The Quiet Berth at Starlight Summit"
+        }
+      ],
+      "hero_concept_plate": "concept_plates/MS10_E03_Hero_Mist_Valley_Viaduct.jpg",
+      "publish_at_utc": "2027-01-23T16:30:00Z",
+      "master_file": "MS10_COMP_75m_FullSeries.mp4",
+      "state": "SCRIPT_LOCKED",
+      "ad_policy": "PRE_ROLL_ONLY"
+    }
+  ],
+  "drive_series_archive": {
+    "folder_name": "MS10_The_Slow_Night_Train",
+    "root_folder_id": "1mlAlS_xpEn11gUGyKi_zuQiDZ0Co9Ay9",
+    "folder_id": null
+  },
+  "youtube_series_playlist": {
+    "playlist_id": null,
+    "title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)"
+  },
+  "series_status": "SCRIPT_LOCKED_READY_FOR_STUDIO_RENDER"
+}

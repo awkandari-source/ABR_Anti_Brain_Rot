@@ -1,0 +1,43 @@
+{
+  "asset_id": "MS10_E03",
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "format_type": "MINI_SERIES_EPISODE",
+  "series_id": "MS-10",
+  "series_title": "The Slow Night Train",
+  "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+  "episode_index": 3,
+  "title": "The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley | 15-Min Bedtime Story (No Music)",
+  "youtube_title": "The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley | Bedtime Story",
+  "narrator_name": "George-Daniel Baritone",
+  "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
+  "narrator_gender": "male",
+  "state": "SCRIPT_LOCKED",
+  "script_metrics": {
+    "spoken_word_count": 1698,
+    "word_budget": [
+      1650,
+      1850
+    ],
+    "scene_count": 56,
+    "planned_duration_sec": 901.0,
+    "min_scene_hold_sec": 15.0,
+    "ellipses_count": 0,
+    "banned_pause_tags": 0,
+    "music_terms_detected": 0
+  },
+  "foley_palette": "Distant valley river mist below stone arches, steady soft pine breeze, low muted wooden carriage rumble",
+  "foley_stems": [
+    "ms03_s02_ch05_open_meadow_wind_pebble_brook_48k24b.wav",
+    "ms02_e04_waterwheel_millpond_dusk_48k24b.wav"
+  ],
+  "foley_filter": "highpass=f=70,lowpass=f=640,acompressor=threshold=-32dB:ratio=10:attack=25:release=250",
+  "hero_concept_plate": "concept_plates/MS10_E03_Hero_Mist_Valley_Viaduct.jpg",
+  "youtube_routing": {
+    "privacy_status": "private",
+    "publish_at_utc": "2027-01-11T16:30:00Z",
+    "series_playlist_id": null,
+    "core_shelf_playlist_id": "PLEyZbMU0SV08",
+    "made_for_kids": false,
+    "ad_policy": "PRE_ROLL_ONLY"
+  }
+}

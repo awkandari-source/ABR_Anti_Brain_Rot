@@ -1,0 +1,182 @@
+{
+  "series_id": "MS-10",
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "series_title": "The Slow Night Train",
+  "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+  "pillar": "Pillar 1 — Slow-Paced Children's Bedtime Storytelling",
+  "channel_handle": "@ABR-AntiBrainRot",
+  "channel_id": "UCf2NyjoPIzR9j7Vt3C6Sqcw",
+  "core_shelf_playlist_id": "PLEyZbMU0SV08",
+  "core_shelf_playlist_title": "Slow-Paced Children's Storytelling",
+  "target_audience": "Children ages 3-8 and co-viewing parents seeking screen-calming, low-stimulation bedtime transition",
+  "ad_policy": "PRE_ROLL_ONLY",
+  "made_for_kids": false,
+  "narrator_profile": {
+    "narrator_name": "George-Daniel Baritone",
+    "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
+    "kokoro_blend": "0.75 * bm_george + 0.25 * bm_daniel",
+    "narrator_gender": "male",
+    "target_wpm": "110-120",
+    "segment_d_wpm": "105-110",
+    "zero_mid_episode_voice_switch": true
+  },
+  "audio_invariants": {
+    "zero_music_strict": true,
+    "prohibited_elements": [
+      "background music",
+      "lullabies",
+      "train bells",
+      "musical whistles",
+      "chimes",
+      "pianos",
+      "guitars",
+      "synth pads",
+      "drones"
+    ],
+    "stem1_voice_target_lufs": -14.0,
+    "stem1_tolerance_lufs": 0.5,
+    "stem2_foley_target_lufs": -26.2,
+    "stem2_standalone_ceiling_db": -43.0,
+    "min_voice_to_foley_separation_db": 30.0,
+    "true_peak_ceiling_dbfs": -2.0,
+    "limiter": "alimiter=limit=0.72",
+    "max_narration_silence_sec": 1.5,
+    "min_vocal_duty_cycle_pct": 88.0,
+    "post_tts_silence_clamp": "silenceremove=stop_periods=-1:stop_duration=1.1:stop_threshold=-45dB"
+  },
+  "visual_invariants": {
+    "resolution": "1920x1080",
+    "aspect_ratio": "16:9",
+    "frame_rate": "24/1",
+    "video_codec": "libx264",
+    "profile": "High",
+    "pixel_format": "yuv420p",
+    "color_space": "bt709",
+    "faststart": true,
+    "min_scene_hold_sec": 15.0,
+    "scene_count_per_episode": 56,
+    "episode_runtime_sec": 901.0,
+    "cross_dissolve_sec": 1.0,
+    "color_temperature_kelvin_max": 2700,
+    "art_style": "Traditional matte watercolor and gouache storybook plates on cold-press paper, zero burned-in text, zero letterboxing, zero rapid cuts",
+    "locked_hex_palette": {
+      "lantern_amber": "#D99B52",
+      "cedar_mahogany": "#4A2E1B",
+      "twilight_pine_slate": "#24312D",
+      "rain_misted_indigo": "#1C2530",
+      "cream_linen_parchment": "#EDE2CC",
+      "moss_wool_green": "#5B6B4F",
+      "soft_ochre_scarf": "#B88446"
+    }
+  },
+  "locked_characters": [
+    {
+      "name": "Conductor Barnaby",
+      "species": "Elderly European badger",
+      "visual_token": "Soft silver-striped badger in a tailored moss-green wool coat, round brass spectacles, and warm linen scarf, carrying a dull brass oil lantern",
+      "temperament": "Unhurried, reassuring, observant, speaks in quiet complete sentences"
+    },
+    {
+      "name": "Pip",
+      "species": "Small hazel dormouse",
+      "visual_token": "Velvety warm-brown dormouse wearing a knitted ochre scarf, carrying a tiny stitched linen satchel with a pressed cedar leaf",
+      "temperament": "Gentle, curious, gradually growing sleepier across each evening mile"
+    },
+    {
+      "name": "Mrs. Wren",
+      "species": "Speckled winter wren",
+      "visual_token": "Round cinnamon-brown speckled wren in a cream linen apron, steeping chamomile and roasted barley tea in a dull brass kettle",
+      "temperament": "Warm, methodical, calm and nurturing"
+    },
+    {
+      "name": "Old Fern",
+      "species": "Silver-muzzled brown bear",
+      "visual_token": "Broad-shouldered gentle bear in a patched tweed waistcoat, quietly tending a low amber beechwood firebox with a cedar scoop",
+      "temperament": "Steady, quiet, keeps the engine breathing at an even, restful pace"
+    }
+  ],
+  "approved_foley_palette": {
+    "MS10_E01": {
+      "description": "Soft evening rain on pine needles and cedar carriage roof, gentle wooden platform footsteps, muted carriage door latch",
+      "foley_stems": [
+        "ms03_e02_greenhouse_soft_rain_48k24b.wav",
+        "ms01_e04_twilight_oak_timber_48k24b.wav"
+      ],
+      "foley_filter": "highpass=f=70,lowpass=f=720,acompressor=threshold=-32dB:ratio=10:attack=25:release=250"
+    },
+    "MS10_E02": {
+      "description": "Warm kettle steam whisper, soft ceramic pour, low timber carriage sway and rain on window glass",
+      "foley_stems": [
+        "ms03_ch08_warm_hearth_crackle_night_wind_48k24b.wav",
+        "ms03_e02_greenhouse_soft_rain_48k24b.wav"
+      ],
+      "foley_filter": "highpass=f=70,lowpass=f=680,acompressor=threshold=-32dB:ratio=10:attack=25:release=250"
+    },
+    "MS10_E03": {
+      "description": "Distant valley river mist below stone arches, steady soft pine breeze, low muted wooden carriage rumble",
+      "foley_stems": [
+        "ms03_s02_ch05_open_meadow_wind_pebble_brook_48k24b.wav",
+        "ms02_e04_waterwheel_millpond_dusk_48k24b.wav"
+      ],
+      "foley_filter": "highpass=f=70,lowpass=f=640,acompressor=threshold=-32dB:ratio=10:attack=25:release=250"
+    },
+    "MS10_E04": {
+      "description": "Soft parchment paper folding, linen mailbag rustle, quiet cedar timber sway, gentle hillside night wind",
+      "foley_stems": [
+        "ms01_e04_twilight_oak_timber_48k24b.wav",
+        "ms03_s02_ch07_dusk_millpond_ripples_reeds_48k24b.wav"
+      ],
+      "foley_filter": "highpass=f=70,lowpass=f=700,acompressor=threshold=-32dB:ratio=10:attack=25:release=250"
+    },
+    "MS10_E05": {
+      "description": "Low beechwood ember crackle, hushed alpine pine wind outside frosted glass, soft wool blanket stillness",
+      "foley_stems": [
+        "ms03_ch08_warm_hearth_crackle_night_wind_48k24b.wav",
+        "ms01_e03_pond_ripples_reeds_48k24b.wav"
+      ],
+      "foley_filter": "highpass=f=70,lowpass=f=560,acompressor=threshold=-32dB:ratio=10:attack=25:release=250"
+    }
+  },
+  "episode_arc": [
+    {
+      "asset_id": "MS10_E01",
+      "episode_index": 1,
+      "title": "The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station | Bedtime Story",
+      "publish_at_utc": "2027-01-04T16:30:00Z",
+      "bridge_to_next": "Follows the warm scent of chamomile down the narrow wooden corridor toward Mrs. Wren's quiet dining car."
+    },
+    {
+      "asset_id": "MS10_E02",
+      "episode_index": 2,
+      "title": "The Slow Night Train Ep. 2: The Warm Brass Teapot in the Quiet Dining Car | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 2: The Warm Brass Teapot in the Quiet Dining Car | Bedtime Story",
+      "publish_at_utc": "2027-01-09T16:30:00Z",
+      "bridge_to_next": "Leaves the dining car as the cedar train curves gently toward the old stone viaduct spanning the misted valley."
+    },
+    {
+      "asset_id": "MS10_E03",
+      "episode_index": 3,
+      "title": "The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley | Bedtime Story",
+      "publish_at_utc": "2027-01-11T16:30:00Z",
+      "bridge_to_next": "Crosses into the mountain foothills where Conductor Barnaby sorts quiet evening parcels in the sleepy mail car."
+    },
+    {
+      "asset_id": "MS10_E04",
+      "episode_index": 4,
+      "title": "The Slow Night Train Ep. 4: The Sleepy Mail Car & Mountain Village Parcels | 15-Min Bedtime Story (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 4: The Sleepy Mail Car & Mountain Village Parcels | Bedtime Story",
+      "publish_at_utc": "2027-01-16T16:30:00Z",
+      "bridge_to_next": "Delivers the final village parcel as the train climbs slowly toward the quiet sleeping berth at Starlight Summit."
+    },
+    {
+      "asset_id": "MS10_E05",
+      "episode_index": 5,
+      "title": "The Slow Night Train Ep. 5: The Quiet Berth at Starlight Summit | 15-Min Bedtime Finale (No Music)",
+      "youtube_title": "The Slow Night Train Ep. 5: The Quiet Berth at Starlight Summit | 15-Min Bedtime Finale",
+      "publish_at_utc": "2027-01-18T16:30:00Z",
+      "bridge_to_next": "Complete series finale — Pip settles into the quilted top berth as the Slow Night Train rests beneath the pines at Starlight Summit."
+    }
+  ]
+}

@@ -115,6 +115,20 @@
 | `MS09_E05` | *Earth's Slowest Clocks Vol. II Ep. 5: Stromatolites — The 3.5-Billion-Year Living Stone \| 15-Min Finale* | `15:01` | `-14.0 LUFS` / `-2.8 dBFS` | **`+32.8 dB`** (`0%` Music) | **Scheduled** (`2026-12-15T15:00:00Z`) | [`E_IttW6ODNo`](https://www.youtube.com/watch?v=E_IttW6ODNo) | [`1UVkgMsDoP4BqGPYmREXjy4NA7wa4LgWW`](https://drive.google.com/drive/folders/1UVkgMsDoP4BqGPYmREXjy4NA7wa4LgWW) |
 | `MS09_COMP` | *Earth's Slowest Clocks — Volume II \| Complete 75-Minute Calm Documentary (Ep. 1–5)* | `01:15:05` | `-14.0 LUFS` / `-2.8 dBFS` | **`+33.0 dB`** (`0%` Music) | **Scheduled** (`2026-12-18T15:00:00Z`) | [`1oxDLc1Gcos`](https://www.youtube.com/watch?v=1oxDLc1Gcos) | [`15BVSEbdBEuz_GZbzaQX3yhuzeZbnFy_j`](https://drive.google.com/drive/folders/15BVSEbdBEuz_GZbzaQX3yhuzeZbnFy_j) |
 
+### 2.2 Mini-Series `MS-10`: *The Slow Night Train* (`16:9` 15-Min & 75-Min Zero-Music Bedtime Series)
+
+- **Core Shelf Playlist:** [`PLEyZbMU0SV08`](https://www.youtube.com/playlist?list=PLEyZbMU0SV08) (*Slow-Paced Children's Storytelling*) · **Ad Policy:** `PRE_ROLL_ONLY`
+- **Series Bible & Workspace:** `MS-10/MS10_Series_Bible.json` · **Status:** `SCRIPT_LOCKED` (Ready for Studio Render & YouTube Scheduling)
+
+| Asset ID | Video Title | Words | Planned Runtime | Planned Schedule (`16:30 UTC`) | Lifecycle State | Local Package |
+| :--- | :--- | :---: | :---: | :--- | :--- | :--- |
+| `MS10_E01` | *The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station \| 15-Min Bedtime Story (No Music)* | `1,772` | `15:01` | `2027-01-04T16:30:00Z` | **SCRIPT_LOCKED** | `MS-10/MS10_E01/` |
+| `MS10_E02` | *The Slow Night Train Ep. 2: The Warm Brass Teapot in the Quiet Dining Car \| 15-Min Bedtime Story (No Music)* | `1,714` | `15:01` | `2027-01-09T16:30:00Z` | **SCRIPT_LOCKED** | `MS-10/MS10_E02/` |
+| `MS10_E03` | *The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley \| 15-Min Bedtime Story (No Music)* | `1,698` | `15:01` | `2027-01-11T16:30:00Z` | **SCRIPT_LOCKED** | `MS-10/MS10_E03/` |
+| `MS10_E04` | *The Slow Night Train Ep. 4: The Sleepy Mail Car & Mountain Village Parcels \| 15-Min Bedtime Story (No Music)* | `1,777` | `15:01` | `2027-01-16T16:30:00Z` | **SCRIPT_LOCKED** | `MS-10/MS10_E04/` |
+| `MS10_E05` | *The Slow Night Train Ep. 5: The Quiet Berth at Starlight Summit \| 15-Min Bedtime Finale (No Music)* | `1,706` | `15:01` | `2027-01-18T16:30:00Z` | **SCRIPT_LOCKED** | `MS-10/MS10_E05/` |
+| `MS10_COMP` | *The Slow Night Train \| Complete 75-Minute Bedtime Story Collection (Ep. 1–5, Zero Music)* | `8,667` | `01:15:05` | `2027-01-23T16:30:00Z` | **SCRIPT_LOCKED** | `MS-10/MS10_COMP_Manifest.json` |
+
 ---
 
 ## 3. Complete `9:16` Zero-Music Shorts Catalog (115 Releases)

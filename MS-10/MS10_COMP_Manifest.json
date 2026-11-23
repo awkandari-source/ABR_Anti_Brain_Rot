@@ -1,0 +1,56 @@
+{
+  "asset_id": "MS10_COMP",
+  "sop_version": "ABR-AG-SOP-v2.1",
+  "format_type": "MASTER_COMPILATION_75M",
+  "series_id": "MS-10",
+  "series_title": "The Slow Night Train",
+  "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+  "episode_index": 6,
+  "title": "The Slow Night Train | Complete 75-Minute Bedtime Story Collection (Ep. 1\u20135, Zero Music)",
+  "youtube_title": "The Slow Night Train | Complete 75-Minute Bedtime Story Collection (Ep. 1\u20135, No Music)",
+  "state": "SCRIPT_LOCKED",
+  "target_duration_display": "75:05",
+  "target_duration_sec": 4505,
+  "assembly_method": "Lossless -c copy concatenation from 5 QA_VERIFIED episode masters with +faststart and embedded FFMETADATA1 chapters",
+  "chapters": [
+    {
+      "start_hms": "00:00:00",
+      "start_sec": 0,
+      "end_sec": 901,
+      "title": "Ep. 1: Boarding the Cedar Car at Mossy Pine Station"
+    },
+    {
+      "start_hms": "00:15:01",
+      "start_sec": 901,
+      "end_sec": 1802,
+      "title": "Ep. 2: The Warm Brass Teapot in the Quiet Dining Car"
+    },
+    {
+      "start_hms": "00:30:02",
+      "start_sec": 1802,
+      "end_sec": 2703,
+      "title": "Ep. 3: Crossing the Stone Viaduct Above the Mist Valley"
+    },
+    {
+      "start_hms": "00:45:03",
+      "start_sec": 2703,
+      "end_sec": 3604,
+      "title": "Ep. 4: The Sleepy Mail Car & Mountain Village Parcels"
+    },
+    {
+      "start_hms": "01:00:04",
+      "start_sec": 3604,
+      "end_sec": 4505,
+      "title": "Ep. 5: The Quiet Berth at Starlight Summit"
+    }
+  ],
+  "hero_concept_plate": "concept_plates/MS10_E03_Hero_Mist_Valley_Viaduct.jpg",
+  "youtube_routing": {
+    "privacy_status": "private",
+    "publish_at_utc": "2027-01-23T16:30:00Z",
+    "series_playlist_id": null,
+    "core_shelf_playlist_id": "PLEyZbMU0SV08",
+    "made_for_kids": false,
+    "ad_policy": "PRE_ROLL_ONLY"
+  }
+}
