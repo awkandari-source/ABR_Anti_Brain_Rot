@@ -8,7 +8,7 @@
   "episode_index": 6,
   "title": "The Slow Night Train | Complete 75-Minute Bedtime Story Collection (Ep. 1\u20135, Zero Music)",
   "youtube_title": "The Slow Night Train | Complete 75-Minute Bedtime Story Collection (Ep. 1\u20135, No Music)",
-  "state": "SCRIPT_LOCKED",
+  "state": "API_SCHEDULED",
   "target_duration_display": "75:05",
   "target_duration_sec": 4505,
   "assembly_method": "Lossless -c copy concatenation from 5 QA_VERIFIED episode masters with +faststart and embedded FFMETADATA1 chapters",
@@ -48,9 +48,17 @@
   "youtube_routing": {
     "privacy_status": "private",
     "publish_at_utc": "2027-01-23T16:30:00Z",
-    "series_playlist_id": null,
+    "series_playlist_id": "PLWg7rq5k3FMI",
     "core_shelf_playlist_id": "PLEyZbMU0SV08",
     "made_for_kids": false,
-    "ad_policy": "PRE_ROLL_ONLY"
-  }
+    "ad_policy": "PRE_ROLL_ONLY",
+    "youtube_video_id": "zqbjOJgJVIA",
+    "watch_url": "https://www.youtube.com/watch?v=zqbjOJgJVIA",
+    "studio_url": "https://studio.youtube.com/video/zqbjOJgJVIA/edit",
+    "playlist_bound_series": true,
+    "playlist_bound_bedtime_shelf": true,
+    "custom_thumbnail_applied": true
+  },
+  "sha256": "4ffbd468cb5776435be481ce14ab457d502bcbd8dd35c75ae38f9ec937df1831",
+  "file_size_bytes": 1128808141
 }

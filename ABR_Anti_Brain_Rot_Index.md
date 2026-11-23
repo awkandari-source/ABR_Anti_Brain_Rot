@@ -117,18 +117,18 @@
 
 ### 2.2 Mini-Series `MS-10`: *The Slow Night Train* (`16:9` 15-Min & 75-Min Zero-Music Bedtime Series)
 
+- **Official Series Playlist:** [`PLWg7rq5k3FMI`](https://www.youtube.com/playlist?list=PLWg7rq5k3FMI) (**The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)**)
 - **Core Shelf Playlist:** [`PLEyZbMU0SV08`](https://www.youtube.com/playlist?list=PLEyZbMU0SV08) (*Slow-Paced Children's Storytelling*) · **Ad Policy:** `PRE_ROLL_ONLY`
 - **Google Drive Series Archive:** [`1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt`](https://drive.google.com/drive/folders/1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt) (`MS10_The_Slow_Night_Train`)
-- **Series Bible & Workspace:** `MS-10/MS10_Series_Bible.json` · **Status:** `SCRIPT_LOCKED` (Archived in Drive & GitHub; ready for Studio Render)
 
-| Asset ID | Video Title | Words | Planned Runtime | Planned Schedule (`16:30 UTC`) | Lifecycle State | Drive Folder |
-| :--- | :--- | :---: | :---: | :--- | :--- | :--- |
-| `MS10_E01` | *The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station \| 15-Min Bedtime Story (No Music)* | `1,772` | `15:01` | `2027-01-04T16:30:00Z` | **SCRIPT_LOCKED** | [`1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y`](https://drive.google.com/drive/folders/1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y) |
-| `MS10_E02` | *The Slow Night Train Ep. 2: The Warm Brass Teapot in the Quiet Dining Car \| 15-Min Bedtime Story (No Music)* | `1,714` | `15:01` | `2027-01-09T16:30:00Z` | **SCRIPT_LOCKED** | [`1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-`](https://drive.google.com/drive/folders/1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-) |
-| `MS10_E03` | *The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley \| 15-Min Bedtime Story (No Music)* | `1,698` | `15:01` | `2027-01-11T16:30:00Z` | **SCRIPT_LOCKED** | [`1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu`](https://drive.google.com/drive/folders/1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu) |
-| `MS10_E04` | *The Slow Night Train Ep. 4: The Sleepy Mail Car & Mountain Village Parcels \| 15-Min Bedtime Story (No Music)* | `1,777` | `15:01` | `2027-01-16T16:30:00Z` | **SCRIPT_LOCKED** | [`1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7`](https://drive.google.com/drive/folders/1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7) |
-| `MS10_E05` | *The Slow Night Train Ep. 5: The Quiet Berth at Starlight Summit \| 15-Min Bedtime Finale (No Music)* | `1,706` | `15:01` | `2027-01-18T16:30:00Z` | **SCRIPT_LOCKED** | [`1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO`](https://drive.google.com/drive/folders/1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO) |
-| `MS10_COMP` | *The Slow Night Train \| Complete 75-Minute Bedtime Story Collection (Ep. 1–5, Zero Music)* | `8,667` | `01:15:05` | `2027-01-23T16:30:00Z` | **SCRIPT_LOCKED** | [`1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt`](https://drive.google.com/drive/folders/1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt) |
+| Asset ID | Video Title | Runtime | Loudness / Peak | Voice Sep | Schedule (`16:30 UTC`) | YouTube Link | Drive Folder |
+| :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
+| `MS10_E01` | *The Slow Night Train Ep. 1: Boarding the Cedar Car at Mossy Pine Station \| Bedtime Story* | `15:01` | `-14.0 LUFS` / `-4.8 dBFS` | **`>= +30 dB`** (`0%` Music) | **Scheduled** (`2027-01-04T16:30:00Z`) | [`RSQdlwxelD0`](https://www.youtube.com/watch?v=RSQdlwxelD0) | [`1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y`](https://drive.google.com/drive/folders/1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y) |
+| `MS10_E02` | *The Slow Night Train Ep. 2: The Warm Brass Teapot in the Quiet Dining Car \| Bedtime Story* | `15:01` | `-14.0 LUFS` / `< -2.0 dBFS` | **`>= +30 dB`** (`0%` Music) | **Scheduled** (`2027-01-09T16:30:00Z`) | [`v2tG789qMH4`](https://www.youtube.com/watch?v=v2tG789qMH4) | [`1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-`](https://drive.google.com/drive/folders/1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-) |
+| `MS10_E03` | *The Slow Night Train Ep. 3: Crossing the Stone Viaduct Above the Mist Valley \| Bedtime Story* | `15:01` | `-14.0 LUFS` / `< -2.0 dBFS` | **`>= +30 dB`** (`0%` Music) | **Scheduled** (`2027-01-11T16:30:00Z`) | [`ISGWyF0-CAM`](https://www.youtube.com/watch?v=ISGWyF0-CAM) | [`1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu`](https://drive.google.com/drive/folders/1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu) |
+| `MS10_E04` | *The Slow Night Train Ep. 4: The Sleepy Mail Car & Mountain Village Parcels \| Bedtime Story* | `15:01` | `-14.0 LUFS` / `< -2.0 dBFS` | **`>= +30 dB`** (`0%` Music) | **Scheduled** (`2027-01-16T16:30:00Z`) | [`wrIi6_v1nxY`](https://www.youtube.com/watch?v=wrIi6_v1nxY) | [`1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7`](https://drive.google.com/drive/folders/1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7) |
+| `MS10_E05` | *The Slow Night Train Ep. 5: The Quiet Berth at Starlight Summit \| 15-Min Bedtime Finale* | `15:01` | `-14.0 LUFS` / `< -2.0 dBFS` | **`>= +30 dB`** (`0%` Music) | **Scheduled** (`2027-01-18T16:30:00Z`) | [`ClZYC1x_Kew`](https://www.youtube.com/watch?v=ClZYC1x_Kew) | [`1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO`](https://drive.google.com/drive/folders/1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO) |
+| `MS10_COMP` | *The Slow Night Train \| Complete 75-Minute Bedtime Story Collection (Ep. 1–5, No Music)* | `01:15:05` | `-14.0 LUFS` / `< -2.0 dBFS` | **`>= +30 dB`** (`0%` Music) | **Scheduled** (`2027-01-23T16:30:00Z`) | [`zqbjOJgJVIA`](https://www.youtube.com/watch?v=zqbjOJgJVIA) | [`1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt`](https://drive.google.com/drive/folders/1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt) |
 
 ---
 

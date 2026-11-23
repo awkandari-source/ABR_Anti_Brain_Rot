@@ -1,0 +1,108 @@
+{
+  "mp4_path": "/tmp/abr_ms10_studio/rendered/MS10_E05/MS10_E05_15m_Master.mp4",
+  "file_size_bytes": 223651172,
+  "duration_sec": 901.083,
+  "duration_bounds_sec": [
+    885.0,
+    930.0
+  ],
+  "video_stream": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "field_order": "progressive",
+    "color_space": "bt709",
+    "color_primaries": "bt709",
+    "color_transfer": "bt709",
+    "r_frame_rate": "24/1",
+    "bit_rate_bps": 1591210
+  },
+  "audio_stream": {
+    "codec_name": "aac",
+    "profile": "LC",
+    "sample_rate": "48000",
+    "channels": 2,
+    "bit_rate_bps": 388894,
+    "bit_rate_kbps": 388.9
+  },
+  "container_atoms": {
+    "moov_offset": 32,
+    "mdat_offset": 625433,
+    "faststart_verified": true,
+    "top_level_atoms": {
+      "ftyp": 0,
+      "moov": 32,
+      "free": 625425,
+      "mdat": 625433
+    }
+  },
+  "master_loudness": {
+    "integrated_lufs": -14.0,
+    "lra_lu": 3.4,
+    "true_peak_dbfs": -4.1,
+    "mean_volume_db": -16.9,
+    "max_volume_db": -5.0
+  },
+  "gates": {
+    "video_h264_high_bt709_progressive": true,
+    "audio_48khz_stereo_aac_lc_384k": true,
+    "container_moov_faststart": true,
+    "duration_in_bounds": true,
+    "integrated_loudness_minus14_lufs": true,
+    "voice_to_foley_separation_gte_30db": true,
+    "zero_music_spectral_audit": true,
+    "dead_air_and_vocal_duty_chk07": true,
+    "true_peak_strictly_below_ceiling": true
+  },
+  "stems_audit": {
+    "voice_stem": {
+      "integrated_lufs": -14.8,
+      "lra_lu": 3.4,
+      "true_peak_dbfs": -1.9,
+      "mean_volume_db": -14.6,
+      "max_volume_db": -2.9,
+      "active_speech_mean_volume_db": -14.4
+    },
+    "foley_stem": {
+      "mean_volume_db": -64.1,
+      "max_volume_db": -49.1
+    },
+    "voice_lufs_minus_foley_mean_db": 49.3,
+    "voice_active_mean_minus_foley_mean_db": 49.7,
+    "voice_mean_minus_foley_mean_db": 49.5,
+    "effective_separation_db": 49.3,
+    "dead_air_and_vocal_duty_chk07": {
+      "passed": true,
+      "max_silence_ceiling_sec": 1.5,
+      "min_vocal_duty_floor_pct": 80.0,
+      "max_narration_silence_sec": 1.233,
+      "leading_silence_sec": 0.744,
+      "vocal_entry_sec": 0.744,
+      "vocal_entry_ok": true,
+      "total_narration_silence_sec": 97.777,
+      "vocal_duty_cycle_pct": 89.15,
+      "exceeding_intervals_count": 0
+    },
+    "zero_music_spectral": {
+      "passed": true,
+      "music_detected": false,
+      "tonal_windows": 0,
+      "band_hits": {
+        "drone_55_220hz": 0,
+        "melodic_220_1333hz": 0,
+        "chime_1333_3500hz": 0
+      },
+      "max_periodicity_ratio": 0.4493,
+      "windows_inspected": 5
+    },
+    "master_pause_zero_music": {
+      "passed": true,
+      "pauses_checked": 5,
+      "max_pause_mean_volume_db": -62.9,
+      "pause_tonal_hits": 0
+    }
+  },
+  "all_passed": true
+}

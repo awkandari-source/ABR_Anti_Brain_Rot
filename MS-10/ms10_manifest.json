@@ -43,13 +43,39 @@
       "hero_concept_plate": "concept_plates/MS10_E01_Hero_Mossy_Pine_Station.jpg",
       "publish_at_utc": "2027-01-04T16:30:00Z",
       "master_file": "MS10_E01/MS10_E01_15m_Master.mp4",
-      "state": "SCRIPT_LOCKED",
+      "state": "API_SCHEDULED",
       "ad_policy": "PRE_ROLL_ONLY",
       "drive_archive": {
         "asset_drive_folder_id": "1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y",
         "asset_drive_url": "https://drive.google.com/drive/folders/1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y",
         "script_file_id": "13LqjTfm7y64fGoL4EOv45V6xGaaqyIQ5",
         "manifest_file_id": "1y6nomoqer27HsE3G2PISpsSxJr166jHM"
+      },
+      "status": "API_SCHEDULED",
+      "sha256": "84dfdcbd311af69524ce53ace4f89608770a1f4a00b385eee0afb7ee8ebf3b68",
+      "file_size_bytes": 231848866,
+      "file_size_mb": 221.11,
+      "youtube": {
+        "video_id": "RSQdlwxelD0",
+        "watch_url": "https://www.youtube.com/watch?v=RSQdlwxelD0",
+        "publish_at_utc": "2027-01-04T16:30:00Z",
+        "playlist_id": "PLWg7rq5k3FMI",
+        "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+        "playlist_bound": true,
+        "bedtime_shelf_bound": true,
+        "custom_thumbnail_applied": true
+      },
+      "qa_metrics": {
+        "duration_sec": 901.083,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -4.8,
+        "aac_kbps": 388.9,
+        "effective_qc_separation_db": 48.9,
+        "max_narration_silence_sec": 1.238,
+        "vocal_duty_cycle_pct": 90.09,
+        "music_detected": false,
+        "all_passed": true,
+        "audit_report": "gate_audit_reports/MS10_E01_qc_gate_audit.json"
       }
     },
     {
@@ -69,13 +95,39 @@
       "hero_concept_plate": "concept_plates/MS10_E02_Hero_Warm_Tea_Car.jpg",
       "publish_at_utc": "2027-01-09T16:30:00Z",
       "master_file": "MS10_E02/MS10_E02_15m_Master.mp4",
-      "state": "SCRIPT_LOCKED",
+      "state": "API_SCHEDULED",
       "ad_policy": "PRE_ROLL_ONLY",
       "drive_archive": {
         "asset_drive_folder_id": "1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-",
         "asset_drive_url": "https://drive.google.com/drive/folders/1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-",
         "script_file_id": "1EoPCBObltlR56XO57nCSD3mtGSm97E3F",
         "manifest_file_id": "11YjLbOdKclL1Zl2sIZwS_N60TcF48ZIz"
+      },
+      "status": "API_SCHEDULED",
+      "sha256": "5b4819ed3100892c1418605b767ceec9725316c97583f4570f00ac29da1945c2",
+      "file_size_bytes": 224952538,
+      "file_size_mb": 214.53,
+      "youtube": {
+        "video_id": "v2tG789qMH4",
+        "watch_url": "https://www.youtube.com/watch?v=v2tG789qMH4",
+        "publish_at_utc": "2027-01-09T16:30:00Z",
+        "playlist_id": "PLWg7rq5k3FMI",
+        "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+        "playlist_bound": true,
+        "bedtime_shelf_bound": true,
+        "custom_thumbnail_applied": true
+      },
+      "qa_metrics": {
+        "duration_sec": 901.083,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -4.6,
+        "aac_kbps": 388.8,
+        "effective_qc_separation_db": 49.0,
+        "max_narration_silence_sec": 1.265,
+        "vocal_duty_cycle_pct": 89.78,
+        "music_detected": false,
+        "all_passed": true,
+        "audit_report": "gate_audit_reports/MS10_E02_qc_gate_audit.json"
       }
     },
     {
@@ -95,13 +147,39 @@
       "hero_concept_plate": "concept_plates/MS10_E03_Hero_Mist_Valley_Viaduct.jpg",
       "publish_at_utc": "2027-01-11T16:30:00Z",
       "master_file": "MS10_E03/MS10_E03_15m_Master.mp4",
-      "state": "SCRIPT_LOCKED",
+      "state": "API_SCHEDULED",
       "ad_policy": "PRE_ROLL_ONLY",
       "drive_archive": {
         "asset_drive_folder_id": "1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu",
         "asset_drive_url": "https://drive.google.com/drive/folders/1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu",
         "script_file_id": "1gMolwBCZtN_QkbE80BTFDnA6fvRrpQq5",
         "manifest_file_id": "1or_6GLnwx5JjopfaJqVzRp8GTU_F21xY"
+      },
+      "status": "API_SCHEDULED",
+      "sha256": "63e0c4754f5c38de31a6e2b183a3b11ab3a8ccdfc79e71e33744a778d1c3087e",
+      "file_size_bytes": 217486210,
+      "file_size_mb": 207.41,
+      "youtube": {
+        "video_id": "ISGWyF0-CAM",
+        "watch_url": "https://www.youtube.com/watch?v=ISGWyF0-CAM",
+        "publish_at_utc": "2027-01-11T16:30:00Z",
+        "playlist_id": "PLWg7rq5k3FMI",
+        "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+        "playlist_bound": true,
+        "bedtime_shelf_bound": true,
+        "custom_thumbnail_applied": true
+      },
+      "qa_metrics": {
+        "duration_sec": 901.083,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -4.5,
+        "aac_kbps": 389.0,
+        "effective_qc_separation_db": 50.5,
+        "max_narration_silence_sec": 1.261,
+        "vocal_duty_cycle_pct": 89.96,
+        "music_detected": false,
+        "all_passed": true,
+        "audit_report": "gate_audit_reports/MS10_E03_qc_gate_audit.json"
       }
     },
     {
@@ -121,13 +199,39 @@
       "hero_concept_plate": "concept_plates/MS10_E04_Hero_Sleepy_Mail_Car.jpg",
       "publish_at_utc": "2027-01-16T16:30:00Z",
       "master_file": "MS10_E04/MS10_E04_15m_Master.mp4",
-      "state": "SCRIPT_LOCKED",
+      "state": "API_SCHEDULED",
       "ad_policy": "PRE_ROLL_ONLY",
       "drive_archive": {
         "asset_drive_folder_id": "1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7",
         "asset_drive_url": "https://drive.google.com/drive/folders/1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7",
         "script_file_id": "13PLKa9q6XMDbbQk2DXySBR_iHk4jaYMW",
         "manifest_file_id": "1cuhv3tE-JtUToUE4MlXefq5oQYSiV0Fe"
+      },
+      "status": "API_SCHEDULED",
+      "sha256": "6b10b40c98b2ab39727d2e5589e99a0036235abb7101cf13e1d3f64c8668991b",
+      "file_size_bytes": 230782524,
+      "file_size_mb": 220.09,
+      "youtube": {
+        "video_id": "wrIi6_v1nxY",
+        "watch_url": "https://www.youtube.com/watch?v=wrIi6_v1nxY",
+        "publish_at_utc": "2027-01-16T16:30:00Z",
+        "playlist_id": "PLWg7rq5k3FMI",
+        "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+        "playlist_bound": true,
+        "bedtime_shelf_bound": true,
+        "custom_thumbnail_applied": true
+      },
+      "qa_metrics": {
+        "duration_sec": 901.083,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -4.4,
+        "aac_kbps": 389.0,
+        "effective_qc_separation_db": 48.9,
+        "max_narration_silence_sec": 1.207,
+        "vocal_duty_cycle_pct": 90.11,
+        "music_detected": false,
+        "all_passed": true,
+        "audit_report": "gate_audit_reports/MS10_E04_qc_gate_audit.json"
       }
     },
     {
@@ -147,13 +251,39 @@
       "hero_concept_plate": "concept_plates/MS10_E05_Hero_Starlight_Summit_Berth.jpg",
       "publish_at_utc": "2027-01-18T16:30:00Z",
       "master_file": "MS10_E05/MS10_E05_15m_Master.mp4",
-      "state": "SCRIPT_LOCKED",
+      "state": "API_SCHEDULED",
       "ad_policy": "PRE_ROLL_ONLY",
       "drive_archive": {
         "asset_drive_folder_id": "1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO",
         "asset_drive_url": "https://drive.google.com/drive/folders/1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO",
         "script_file_id": "1ancL6co55CnLUfR3t2MnDEjx7Mz5PTDO",
         "manifest_file_id": "1WGa3qmx1x0Q7mmmZOnQbz-yAzJgRlnjF"
+      },
+      "status": "API_SCHEDULED",
+      "sha256": "ac57f657eb84d7bf0879d07d6c2f77218dd81510579073c82ea7d9c855e7169b",
+      "file_size_bytes": 223651172,
+      "file_size_mb": 213.29,
+      "youtube": {
+        "video_id": "ClZYC1x_Kew",
+        "watch_url": "https://www.youtube.com/watch?v=ClZYC1x_Kew",
+        "publish_at_utc": "2027-01-18T16:30:00Z",
+        "playlist_id": "PLWg7rq5k3FMI",
+        "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+        "playlist_bound": true,
+        "bedtime_shelf_bound": true,
+        "custom_thumbnail_applied": true
+      },
+      "qa_metrics": {
+        "duration_sec": 901.083,
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -4.1,
+        "aac_kbps": 388.9,
+        "effective_qc_separation_db": 49.3,
+        "max_narration_silence_sec": 1.233,
+        "vocal_duty_cycle_pct": 89.15,
+        "music_detected": false,
+        "all_passed": true,
+        "audit_report": "gate_audit_reports/MS10_E05_qc_gate_audit.json"
       }
     },
     {
@@ -200,8 +330,22 @@
       "hero_concept_plate": "concept_plates/MS10_E03_Hero_Mist_Valley_Viaduct.jpg",
       "publish_at_utc": "2027-01-23T16:30:00Z",
       "master_file": "MS10_COMP_75m_FullSeries.mp4",
-      "state": "SCRIPT_LOCKED",
-      "ad_policy": "PRE_ROLL_ONLY"
+      "state": "API_SCHEDULED",
+      "ad_policy": "PRE_ROLL_ONLY",
+      "status": "API_SCHEDULED",
+      "sha256": "4ffbd468cb5776435be481ce14ab457d502bcbd8dd35c75ae38f9ec937df1831",
+      "file_size_bytes": 1128808141,
+      "file_size_mb": 1076.52,
+      "youtube": {
+        "video_id": "zqbjOJgJVIA",
+        "watch_url": "https://www.youtube.com/watch?v=zqbjOJgJVIA",
+        "publish_at_utc": "2027-01-23T16:30:00Z",
+        "playlist_id": "PLWg7rq5k3FMI",
+        "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+        "playlist_bound": true,
+        "bedtime_shelf_bound": true,
+        "custom_thumbnail_applied": true
+      }
     }
   ],
   "drive_series_archive": {
@@ -222,8 +366,9 @@
     "manifest_file_id": "1eonlukeg9-9kNjLo4Mcic-8SFr4-FsNR"
   },
   "youtube_series_playlist": {
-    "playlist_id": null,
-    "title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)"
+    "playlist_id": "PLWg7rq5k3FMI",
+    "title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+    "url": "https://www.youtube.com/playlist?list=PLWg7rq5k3FMI"
   },
-  "series_status": "SCRIPT_LOCKED_READY_FOR_STUDIO_RENDER"
+  "series_status": "API_SCHEDULED_AND_ARCHIVED"
 }

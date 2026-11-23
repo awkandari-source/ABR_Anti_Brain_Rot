@@ -11,7 +11,7 @@
   "narrator_name": "George-Daniel Baritone",
   "narrator_voice_id": "kokoro_bm_george_daniel_blend_v1",
   "narrator_gender": "male",
-  "state": "SCRIPT_LOCKED",
+  "state": "API_SCHEDULED",
   "script_metrics": {
     "spoken_word_count": 1706,
     "word_budget": [
@@ -35,10 +35,16 @@
   "youtube_routing": {
     "privacy_status": "private",
     "publish_at_utc": "2027-01-18T16:30:00Z",
-    "series_playlist_id": null,
+    "series_playlist_id": "PLWg7rq5k3FMI",
     "core_shelf_playlist_id": "PLEyZbMU0SV08",
     "made_for_kids": false,
-    "ad_policy": "PRE_ROLL_ONLY"
+    "ad_policy": "PRE_ROLL_ONLY",
+    "youtube_video_id": "ClZYC1x_Kew",
+    "watch_url": "https://www.youtube.com/watch?v=ClZYC1x_Kew",
+    "studio_url": "https://studio.youtube.com/video/ClZYC1x_Kew/edit",
+    "playlist_bound_series": true,
+    "playlist_bound_bedtime_shelf": true,
+    "custom_thumbnail_applied": true
   },
   "drive_archive": {
     "series_drive_folder_id": "1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt",
@@ -48,5 +54,7 @@
       "script_md": "1ancL6co55CnLUfR3t2MnDEjx7Mz5PTDO",
       "manifest_json": "1WGa3qmx1x0Q7mmmZOnQbz-yAzJgRlnjF"
     }
-  }
+  },
+  "sha256": "ac57f657eb84d7bf0879d07d6c2f77218dd81510579073c82ea7d9c855e7169b",
+  "file_size_bytes": 223651172
 }

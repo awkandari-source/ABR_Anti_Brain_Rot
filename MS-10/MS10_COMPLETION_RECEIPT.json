@@ -1,0 +1,74 @@
+{
+  "series_id": "MS-10",
+  "playlist_id": "PLWg7rq5k3FMI",
+  "playlist_title": "The Slow Night Train | 5-Part Calm Bedtime Story Series (Zero Music)",
+  "playlist_url": "https://www.youtube.com/playlist?list=PLWg7rq5k3FMI",
+  "videos": {
+    "MS10_E01": {
+      "status": "API_SCHEDULED",
+      "video_id": "RSQdlwxelD0",
+      "watch_url": "https://www.youtube.com/watch?v=RSQdlwxelD0",
+      "publish_at_utc": "2027-01-04T16:30:00Z",
+      "custom_thumbnail_applied": true,
+      "playlist_bound_series": true,
+      "playlist_bound_shelf": true,
+      "sha256": "84dfdcbd311af69524ce53ace4f89608770a1f4a00b385eee0afb7ee8ebf3b68",
+      "file_size_bytes": 231848866
+    },
+    "MS10_E02": {
+      "status": "API_SCHEDULED",
+      "video_id": "v2tG789qMH4",
+      "watch_url": "https://www.youtube.com/watch?v=v2tG789qMH4",
+      "publish_at_utc": "2027-01-09T16:30:00Z",
+      "custom_thumbnail_applied": true,
+      "playlist_bound_series": true,
+      "playlist_bound_shelf": true,
+      "sha256": "5b4819ed3100892c1418605b767ceec9725316c97583f4570f00ac29da1945c2",
+      "file_size_bytes": 224952538
+    },
+    "MS10_E03": {
+      "status": "API_SCHEDULED",
+      "video_id": "ISGWyF0-CAM",
+      "watch_url": "https://www.youtube.com/watch?v=ISGWyF0-CAM",
+      "publish_at_utc": "2027-01-11T16:30:00Z",
+      "custom_thumbnail_applied": true,
+      "playlist_bound_series": true,
+      "playlist_bound_shelf": true,
+      "sha256": "63e0c4754f5c38de31a6e2b183a3b11ab3a8ccdfc79e71e33744a778d1c3087e",
+      "file_size_bytes": 217486210
+    },
+    "MS10_E04": {
+      "status": "API_SCHEDULED",
+      "video_id": "wrIi6_v1nxY",
+      "watch_url": "https://www.youtube.com/watch?v=wrIi6_v1nxY",
+      "publish_at_utc": "2027-01-16T16:30:00Z",
+      "custom_thumbnail_applied": true,
+      "playlist_bound_series": true,
+      "playlist_bound_shelf": true,
+      "sha256": "6b10b40c98b2ab39727d2e5589e99a0036235abb7101cf13e1d3f64c8668991b",
+      "file_size_bytes": 230782524
+    },
+    "MS10_E05": {
+      "status": "API_SCHEDULED",
+      "video_id": "ClZYC1x_Kew",
+      "watch_url": "https://www.youtube.com/watch?v=ClZYC1x_Kew",
+      "publish_at_utc": "2027-01-18T16:30:00Z",
+      "custom_thumbnail_applied": true,
+      "playlist_bound_series": true,
+      "playlist_bound_shelf": true,
+      "sha256": "ac57f657eb84d7bf0879d07d6c2f77218dd81510579073c82ea7d9c855e7169b",
+      "file_size_bytes": 223651172
+    },
+    "MS10_COMP": {
+      "status": "API_SCHEDULED",
+      "video_id": "zqbjOJgJVIA",
+      "watch_url": "https://www.youtube.com/watch?v=zqbjOJgJVIA",
+      "publish_at_utc": "2027-01-23T16:30:00Z",
+      "custom_thumbnail_applied": true,
+      "playlist_bound_series": true,
+      "playlist_bound_shelf": true,
+      "sha256": "4ffbd468cb5776435be481ce14ab457d502bcbd8dd35c75ae38f9ec937df1831",
+      "file_size_bytes": 1128808141
+    }
+  }
+}
