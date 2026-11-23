@@ -44,7 +44,13 @@
       "publish_at_utc": "2027-01-04T16:30:00Z",
       "master_file": "MS10_E01/MS10_E01_15m_Master.mp4",
       "state": "SCRIPT_LOCKED",
-      "ad_policy": "PRE_ROLL_ONLY"
+      "ad_policy": "PRE_ROLL_ONLY",
+      "drive_archive": {
+        "asset_drive_folder_id": "1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y",
+        "asset_drive_url": "https://drive.google.com/drive/folders/1QZqqLvEDhVwdisObrmQHypvMbTEuZg1y",
+        "script_file_id": "13LqjTfm7y64fGoL4EOv45V6xGaaqyIQ5",
+        "manifest_file_id": "1y6nomoqer27HsE3G2PISpsSxJr166jHM"
+      }
     },
     {
       "asset_id": "MS10_E02",
@@ -64,7 +70,13 @@
       "publish_at_utc": "2027-01-09T16:30:00Z",
       "master_file": "MS10_E02/MS10_E02_15m_Master.mp4",
       "state": "SCRIPT_LOCKED",
-      "ad_policy": "PRE_ROLL_ONLY"
+      "ad_policy": "PRE_ROLL_ONLY",
+      "drive_archive": {
+        "asset_drive_folder_id": "1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-",
+        "asset_drive_url": "https://drive.google.com/drive/folders/1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-",
+        "script_file_id": "1EoPCBObltlR56XO57nCSD3mtGSm97E3F",
+        "manifest_file_id": "11YjLbOdKclL1Zl2sIZwS_N60TcF48ZIz"
+      }
     },
     {
       "asset_id": "MS10_E03",
@@ -84,7 +96,13 @@
       "publish_at_utc": "2027-01-11T16:30:00Z",
       "master_file": "MS10_E03/MS10_E03_15m_Master.mp4",
       "state": "SCRIPT_LOCKED",
-      "ad_policy": "PRE_ROLL_ONLY"
+      "ad_policy": "PRE_ROLL_ONLY",
+      "drive_archive": {
+        "asset_drive_folder_id": "1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu",
+        "asset_drive_url": "https://drive.google.com/drive/folders/1r7OIMxSDyz-jLrbCV-qwnFYsgzJhafCu",
+        "script_file_id": "1gMolwBCZtN_QkbE80BTFDnA6fvRrpQq5",
+        "manifest_file_id": "1or_6GLnwx5JjopfaJqVzRp8GTU_F21xY"
+      }
     },
     {
       "asset_id": "MS10_E04",
@@ -104,7 +122,13 @@
       "publish_at_utc": "2027-01-16T16:30:00Z",
       "master_file": "MS10_E04/MS10_E04_15m_Master.mp4",
       "state": "SCRIPT_LOCKED",
-      "ad_policy": "PRE_ROLL_ONLY"
+      "ad_policy": "PRE_ROLL_ONLY",
+      "drive_archive": {
+        "asset_drive_folder_id": "1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7",
+        "asset_drive_url": "https://drive.google.com/drive/folders/1ZiU0oNzGVoLYwqYoMtfxUhIu2bTtKoe7",
+        "script_file_id": "13PLKa9q6XMDbbQk2DXySBR_iHk4jaYMW",
+        "manifest_file_id": "1cuhv3tE-JtUToUE4MlXefq5oQYSiV0Fe"
+      }
     },
     {
       "asset_id": "MS10_E05",
@@ -124,7 +148,13 @@
       "publish_at_utc": "2027-01-18T16:30:00Z",
       "master_file": "MS10_E05/MS10_E05_15m_Master.mp4",
       "state": "SCRIPT_LOCKED",
-      "ad_policy": "PRE_ROLL_ONLY"
+      "ad_policy": "PRE_ROLL_ONLY",
+      "drive_archive": {
+        "asset_drive_folder_id": "1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO",
+        "asset_drive_url": "https://drive.google.com/drive/folders/1XUzBq6cQHQ69CY0yaQSqCID0P5X4T-OO",
+        "script_file_id": "1ancL6co55CnLUfR3t2MnDEjx7Mz5PTDO",
+        "manifest_file_id": "1WGa3qmx1x0Q7mmmZOnQbz-yAzJgRlnjF"
+      }
     },
     {
       "asset_id": "MS10_COMP",
@@ -177,7 +207,19 @@
   "drive_series_archive": {
     "folder_name": "MS10_The_Slow_Night_Train",
     "root_folder_id": "1mlAlS_xpEn11gUGyKi_zuQiDZ0Co9Ay9",
-    "folder_id": null
+    "folder_id": "1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt",
+    "url": "https://drive.google.com/drive/folders/1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt",
+    "series_bible_file_id": "1d3pYXcEwVrOOTwY0NZKGgzmKtOcPSmzP",
+    "comp_manifest_file_id": "1sdR-ACvbzUjAGGq5_zBd5Uvu8u6cq80Q",
+    "concept_plates_folder_id": "1gt49iA-H1jhdLYkKpWoTiJwYOIKi0T13",
+    "concept_plate_file_ids": {
+      "MS10_E01_Hero_Mossy_Pine_Station.jpg": "1J1mQhsLhK3C0fbsIvcWo8mOhJFSNpd6u",
+      "MS10_E02_Hero_Warm_Tea_Car.jpg": "1_76irTSRaKtzlsgyVqmGsY0q5Fbxo0z1",
+      "MS10_E03_Hero_Mist_Valley_Viaduct.jpg": "1-oiz-R-IWUN8TozBTMzthgD2YOBCpvNz",
+      "MS10_E04_Hero_Sleepy_Mail_Car.jpg": "1NffQk6vWN_86b6RhabbfAlkJDWvbvqwJ",
+      "MS10_E05_Hero_Starlight_Summit_Berth.jpg": "1WdFA2X195CMV6Rt_f-DpRjD6PetA7UVZ"
+    },
+    "manifest_file_id": "1eonlukeg9-9kNjLo4Mcic-8SFr4-FsNR"
   },
   "youtube_series_playlist": {
     "playlist_id": null,

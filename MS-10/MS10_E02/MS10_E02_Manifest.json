@@ -39,5 +39,14 @@
     "core_shelf_playlist_id": "PLEyZbMU0SV08",
     "made_for_kids": false,
     "ad_policy": "PRE_ROLL_ONLY"
+  },
+  "drive_archive": {
+    "series_drive_folder_id": "1a8UvCh_mz7F05oPq0RqPZkMCAvdKWeFt",
+    "asset_drive_folder_id": "1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-",
+    "asset_drive_url": "https://drive.google.com/drive/folders/1kmCFXfHFguCaAeqy5KMvBm0phKu2ZGp-",
+    "files": {
+      "script_md": "1EoPCBObltlR56XO57nCSD3mtGSm97E3F",
+      "manifest_json": "11YjLbOdKclL1Zl2sIZwS_N60TcF48ZIz"
+    }
   }
 }
